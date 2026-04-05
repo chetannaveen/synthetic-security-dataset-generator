@@ -1,186 +1,9 @@
 [
   {
-    "url": "https://github.com/docs/api",
-    "label": "benign",
-    "category": "legitimate",
-    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
-    "features": {
-      "domain_length": 10,
-      "entropy": 3.3219,
-      "number_of_subdomains": 0,
-      "contains_keyword": false,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 3,
-      "tld_risk_score": 0.2,
-      "domain_age_days": 3778,
-      "has_unicode_chars": false,
-      "path_depth": 2,
-      "path_complexity": 2.9477
-    },
-    "metadata": {
-      "brand_target": "github",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "github.com",
-        "registrar": "GoDaddy.com, LLC",
-        "created_at": "2015-12-01T00:50:58.568110Z",
-        "updated_at": "2018-07-02T00:50:58.568110Z",
-        "expiry_at": "2025-11-28T00:50:58.568110Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS16509",
-        "provider": "Amazon AWS",
-        "infra": "cloud"
-      }
-    }
-  },
-  {
-    "url": "https://nytimes.com/",
-    "label": "benign",
-    "category": "legitimate",
-    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
-    "features": {
-      "domain_length": 11,
-      "entropy": 3.2776,
-      "number_of_subdomains": 0,
-      "contains_keyword": false,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 3,
-      "tld_risk_score": 0.2,
-      "domain_age_days": 2816,
-      "has_unicode_chars": false,
-      "path_depth": 1,
-      "path_complexity": -0.0
-    },
-    "metadata": {
-      "brand_target": "nytimes",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "nytimes.com",
-        "registrar": "Porkbun LLC",
-        "created_at": "2018-07-20T00:50:58.560912Z",
-        "updated_at": "2020-06-23T00:50:58.560912Z",
-        "expiry_at": "2028-07-17T00:50:58.560912Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS14061",
-        "provider": "DigitalOcean",
-        "infra": "cloud"
-      }
-    }
-  },
-  {
-    "url": "https://secure-billing.paypal.verify-user.com/session/22ddfe57",
-    "label": "phishing",
-    "category": "subdomain_abuse",
-    "explanation": "URL exhibits subdomain_abuse indicators targeting paypal, with fresh domain registration (11 days) and hosting characteristics associated with abuse-prone infrastructure.",
-    "features": {
-      "domain_length": 37,
-      "entropy": 4.1008,
-      "number_of_subdomains": 2,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 28,
-      "tld_risk_score": 0.2,
-      "domain_age_days": 11,
-      "has_unicode_chars": false,
-      "path_depth": 2,
-      "path_complexity": 3.3372
-    },
-    "metadata": {
-      "brand_target": "paypal",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "secure-billing.paypal.verify-user.com",
-        "registrar": "NameSilo, LLC",
-        "created_at": "2026-03-25T00:50:58.565046Z",
-        "updated_at": "2026-03-27T00:50:58.565046Z",
-        "expiry_at": "2027-03-25T00:50:58.565046Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS16276",
-        "provider": "OVH SAS",
-        "infra": "unknown"
-      }
-    }
-  },
-  {
-    "url": "https://amazon-verify-portal.co/account/review/0783f2",
-    "label": "phishing",
-    "category": "keyword_abuse",
-    "explanation": "URL exhibits keyword_abuse indicators targeting amazon, with fresh domain registration (24 days) and hosting characteristics associated with abuse-prone infrastructure.",
-    "features": {
-      "domain_length": 23,
-      "entropy": 3.9362,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 16,
-      "tld_risk_score": 0.45,
-      "domain_age_days": 24,
-      "has_unicode_chars": false,
-      "path_depth": 3,
-      "path_complexity": 4.0615
-    },
-    "metadata": {
-      "brand_target": "amazon",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "amazon-verify-portal.co",
-        "registrar": "Tucows Domains Inc.",
-        "created_at": "2026-03-12T00:50:58.559367Z",
-        "updated_at": "2026-03-18T00:50:58.559367Z",
-        "expiry_at": "2027-03-12T00:50:58.559367Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS20473",
-        "provider": "Choopa",
-        "infra": "suspicious"
-      }
-    }
-  },
-  {
-    "url": "https://apple-secure.support/security/billing/confirm",
-    "label": "suspicious",
-    "category": "suspicious_pattern",
-    "explanation": "URL shows brand-adjacent wording for apple, elevated path complexity, and a relatively new registration hosted via OVH SAS.",
-    "features": {
-      "domain_length": 20,
-      "entropy": 3.3842,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 14,
-      "tld_risk_score": 0.64,
-      "domain_age_days": 30,
-      "has_unicode_chars": false,
-      "path_depth": 3,
-      "path_complexity": 3.8137
-    },
-    "metadata": {
-      "brand_target": "apple",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "apple-secure.support",
-        "registrar": "NameSilo, LLC",
-        "created_at": "2026-03-06T00:50:58.571042Z",
-        "updated_at": "2026-03-13T00:50:58.571042Z",
-        "expiry_at": "2027-03-06T00:50:58.571042Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS16276",
-        "provider": "OVH SAS",
-        "infra": "unknown"
-      }
-    }
-  },
-  {
-    "url": "https://google.com/products",
+    "url": "https://google.com/support/security",
+    "campaign_id": null,
+    "cluster_id": null,
+    "relationships": [],
     "label": "benign",
     "category": "legitimate",
     "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
@@ -188,35 +11,205 @@
       "domain_length": 10,
       "entropy": 2.6464,
       "number_of_subdomains": 0,
-      "contains_keyword": false,
+      "contains_keyword": true,
       "looks_like_brand": true,
       "levenshtein_distance_to_brand": 3,
       "tld_risk_score": 0.2,
-      "domain_age_days": 2802,
+      "domain_age_days": 1941,
       "has_unicode_chars": false,
-      "path_depth": 1,
-      "path_complexity": 3.1699
+      "path_depth": 2,
+      "path_complexity": 3.3816,
+      "campaign_frequency_hint": 0
     },
     "metadata": {
       "brand_target": "google",
       "source": "synthetic_url_engine",
       "whois": {
         "domain": "google.com",
-        "registrar": "GoDaddy.com, LLC",
-        "created_at": "2018-08-03T00:50:58.569859Z",
-        "updated_at": "2020-07-03T00:50:58.569859Z",
-        "expiry_at": "2028-07-31T00:50:58.569859Z",
+        "registrar": "Cloudflare Registrar",
+        "created_at": "2020-12-11T01:12:34.375362Z",
+        "updated_at": "2022-04-10T01:12:34.375362Z",
+        "expiry_at": "2030-12-09T01:12:34.375362Z",
         "privacy_protection": false
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      },
+      "campaign_id": null,
+      "cluster_id": null,
+      "email_context": {
+        "sender_name": "Google Notifications",
+        "sender_email": "alerts@google.com",
+        "subject": "Your Google account update"
+      }
+    }
+  },
+  {
+    "url": "https://dropbox.support/identity/account",
+    "campaign_id": "phishcamp-20cbc7ba00",
+    "cluster_id": "cluster-d3084a471b",
+    "relationships": [
+      {
+        "src": "phishcamp-20cbc7ba00",
+        "dst": "dropbox.support",
+        "relation": "uses_domain"
+      }
+    ],
+    "label": "phishing",
+    "category": "homoglyph",
+    "explanation": "URL exhibits homoglyph indicators targeting dropbox, with fresh domain registration (22 days) and hosting characteristics associated with abuse-prone infrastructure.",
+    "features": {
+      "domain_length": 15,
+      "entropy": 3.1396,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 7,
+      "tld_risk_score": 0.64,
+      "domain_age_days": 22,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.3372,
+      "campaign_frequency_hint": 27
+    },
+    "metadata": {
+      "brand_target": "dropbox",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "dropbox.support",
+        "registrar": "Tucows Domains Inc.",
+        "created_at": "2026-03-14T01:12:34.372322Z",
+        "updated_at": "2026-03-19T01:12:34.372322Z",
+        "expiry_at": "2027-03-14T01:12:34.372322Z",
+        "privacy_protection": true
       },
       "hosting": {
         "asn": "AS14061",
         "provider": "DigitalOcean",
         "infra": "cloud"
+      },
+      "campaign_id": "phishcamp-20cbc7ba00",
+      "cluster_id": "cluster-d3084a471b",
+      "email_context": {
+        "sender_name": "Dropbox Support",
+        "sender_email": "alerts@phishcamp-.mail-notify.net",
+        "subject": "Dropbox billing verification needed"
       }
     }
   },
   {
-    "url": "https://wikipedia.org/account/security",
+    "url": "https://xn--googl-fsa.net/signin",
+    "campaign_id": "phishcamp-94ba073465",
+    "cluster_id": "cluster-13866e216c",
+    "relationships": [
+      {
+        "src": "phishcamp-94ba073465",
+        "dst": "xn--googl-fsa.net",
+        "relation": "uses_domain"
+      }
+    ],
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators targeting bankofamerica, with fresh domain registration (20 days) and hosting characteristics associated with abuse-prone infrastructure.",
+    "features": {
+      "domain_length": 17,
+      "entropy": 3.4548,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 15,
+      "tld_risk_score": 0.25,
+      "domain_age_days": 20,
+      "has_unicode_chars": false,
+      "path_depth": 1,
+      "path_complexity": 2.2359,
+      "campaign_frequency_hint": 29
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "xn--googl-fsa.net",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2026-03-16T01:12:34.380149Z",
+        "updated_at": "2026-03-21T01:12:34.380149Z",
+        "expiry_at": "2027-03-16T01:12:34.380149Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS9009",
+        "provider": "M247",
+        "infra": "unknown"
+      },
+      "campaign_id": "phishcamp-94ba073465",
+      "cluster_id": "cluster-13866e216c",
+      "email_context": {
+        "sender_name": "Bankofamerica Support",
+        "sender_email": "alerts@phishcamp-.mail-notify.net",
+        "subject": "Unusual sign-in attempt on your Bankofamerica account"
+      }
+    }
+  },
+  {
+    "url": "https://google-secure.info/helpdesk/ticket/identity-check",
+    "campaign_id": "phishcamp-20cbc7ba00",
+    "cluster_id": "cluster-d3084a471b",
+    "relationships": [
+      {
+        "src": "phishcamp-20cbc7ba00",
+        "dst": "google-secure.info",
+        "relation": "uses_domain"
+      }
+    ],
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL shows brand-adjacent wording for google, elevated path complexity, and a relatively new registration hosted via Amazon AWS.",
+    "features": {
+      "domain_length": 18,
+      "entropy": 3.5305,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 11,
+      "tld_risk_score": 0.72,
+      "domain_age_days": 26,
+      "has_unicode_chars": false,
+      "path_depth": 3,
+      "path_complexity": 3.5791,
+      "campaign_frequency_hint": 27
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "google-secure.info",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2026-03-10T01:12:34.369754Z",
+        "updated_at": "2026-03-16T01:12:34.369754Z",
+        "expiry_at": "2027-03-10T01:12:34.369754Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      },
+      "campaign_id": "phishcamp-20cbc7ba00",
+      "cluster_id": "cluster-d3084a471b",
+      "email_context": {
+        "sender_name": "Dropbox Support",
+        "sender_email": "alerts@phishcamp-.mail-notify.net",
+        "subject": "Dropbox billing verification needed"
+      }
+    }
+  },
+  {
+    "url": "https://wikipedia.org/",
+    "campaign_id": null,
+    "cluster_id": null,
+    "relationships": [],
     "label": "benign",
     "category": "legitimate",
     "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
@@ -224,14 +217,15 @@
       "domain_length": 13,
       "entropy": 3.3347,
       "number_of_subdomains": 0,
-      "contains_keyword": true,
+      "contains_keyword": false,
       "looks_like_brand": true,
       "levenshtein_distance_to_brand": 3,
       "tld_risk_score": 0.15,
-      "domain_age_days": 5794,
+      "domain_age_days": 901,
       "has_unicode_chars": false,
-      "path_depth": 2,
-      "path_complexity": 3.4548
+      "path_depth": 1,
+      "path_complexity": -0.0,
+      "campaign_frequency_hint": 0
     },
     "metadata": {
       "brand_target": "wikipedia",
@@ -239,272 +233,30 @@
       "whois": {
         "domain": "wikipedia.org",
         "registrar": "NameSilo, LLC",
-        "created_at": "2010-05-25T00:50:58.570397Z",
-        "updated_at": "2014-05-12T00:50:58.570397Z",
-        "expiry_at": "2020-05-22T00:50:58.570397Z",
+        "created_at": "2023-10-17T01:12:34.379913Z",
+        "updated_at": "2024-05-29T01:12:34.379913Z",
+        "expiry_at": "2033-10-14T01:12:34.379913Z",
         "privacy_protection": false
       },
       "hosting": {
         "asn": "AS16509",
         "provider": "Amazon AWS",
         "infra": "cloud"
-      }
-    }
-  },
-  {
-    "url": "https://bankofamerica-billing.support/account/verify",
-    "label": "suspicious",
-    "category": "suspicious_pattern",
-    "explanation": "URL shows brand-adjacent wording for bankofamerica, elevated path complexity, and a relatively new registration hosted via Amazon AWS.",
-    "features": {
-      "domain_length": 29,
-      "entropy": 4.1163,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 15,
-      "tld_risk_score": 0.64,
-      "domain_age_days": 7,
-      "has_unicode_chars": false,
-      "path_depth": 2,
-      "path_complexity": 3.6402
-    },
-    "metadata": {
-      "brand_target": "bankofamerica",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "bankofamerica-billing.support",
-        "registrar": "GoDaddy.com, LLC",
-        "created_at": "2026-03-29T00:50:58.564854Z",
-        "updated_at": "2026-03-30T00:50:58.564854Z",
-        "expiry_at": "2027-03-29T00:50:58.564854Z",
-        "privacy_protection": true
       },
-      "hosting": {
-        "asn": "AS16509",
-        "provider": "Amazon AWS",
-        "infra": "cloud"
+      "campaign_id": null,
+      "cluster_id": null,
+      "email_context": {
+        "sender_name": "Wikipedia Notifications",
+        "sender_email": "alerts@wikipedia.com",
+        "subject": "Your Wikipedia account update"
       }
     }
   },
   {
-    "url": "https://app1e.net/security/billing/confirm",
-    "label": "phishing",
-    "category": "typosquatting",
-    "explanation": "URL exhibits typosquatting indicators targeting apple, with fresh domain registration (3 days) and hosting characteristics associated with abuse-prone infrastructure.",
-    "features": {
-      "domain_length": 9,
-      "entropy": 2.7255,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 4,
-      "tld_risk_score": 0.25,
-      "domain_age_days": 3,
-      "has_unicode_chars": false,
-      "path_depth": 3,
-      "path_complexity": 3.8137
-    },
-    "metadata": {
-      "brand_target": "apple",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "app1e.net",
-        "registrar": "Tucows Domains Inc.",
-        "created_at": "2026-04-02T00:50:58.568670Z",
-        "updated_at": "2026-04-03T00:50:58.568670Z",
-        "expiry_at": "2027-04-02T00:50:58.568670Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS16509",
-        "provider": "Amazon AWS",
-        "infra": "cloud"
-      }
-    }
-  },
-  {
-    "url": "https://google-billing.co/portal/update",
-    "label": "suspicious",
-    "category": "suspicious_pattern",
-    "explanation": "URL shows brand-adjacent wording for google, elevated path complexity, and a relatively new registration hosted via Choopa.",
-    "features": {
-      "domain_length": 17,
-      "entropy": 3.1307,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 10,
-      "tld_risk_score": 0.45,
-      "domain_age_days": 6,
-      "has_unicode_chars": false,
-      "path_depth": 2,
-      "path_complexity": 3.2359
-    },
-    "metadata": {
-      "brand_target": "google",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "google-billing.co",
-        "registrar": "Porkbun LLC",
-        "created_at": "2026-03-30T00:50:58.560187Z",
-        "updated_at": "2026-03-31T00:50:58.560187Z",
-        "expiry_at": "2027-03-30T00:50:58.560187Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS20473",
-        "provider": "Choopa",
-        "infra": "suspicious"
-      }
-    }
-  },
-  {
-    "url": "https://amazon-secure.info/signin",
-    "label": "suspicious",
-    "category": "suspicious_pattern",
-    "explanation": "URL shows brand-adjacent wording for amazon, elevated path complexity, and a relatively new registration hosted via M247.",
-    "features": {
-      "domain_length": 18,
-      "entropy": 3.7255,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 11,
-      "tld_risk_score": 0.72,
-      "domain_age_days": 17,
-      "has_unicode_chars": false,
-      "path_depth": 1,
-      "path_complexity": 2.2359
-    },
-    "metadata": {
-      "brand_target": "amazon",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "amazon-secure.info",
-        "registrar": "Tucows Domains Inc.",
-        "created_at": "2026-03-19T00:50:58.567166Z",
-        "updated_at": "2026-03-23T00:50:58.567166Z",
-        "expiry_at": "2027-03-19T00:50:58.567166Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS9009",
-        "provider": "M247",
-        "infra": "unknown"
-      }
-    }
-  },
-  {
-    "url": "https://microsoft-support.co/account/verify",
-    "label": "suspicious",
-    "category": "suspicious_pattern",
-    "explanation": "URL shows brand-adjacent wording for microsoft, elevated path complexity, and a relatively new registration hosted via OVH SAS.",
-    "features": {
-      "domain_length": 20,
-      "entropy": 3.4219,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 10,
-      "tld_risk_score": 0.45,
-      "domain_age_days": 35,
-      "has_unicode_chars": false,
-      "path_depth": 2,
-      "path_complexity": 3.6402
-    },
-    "metadata": {
-      "brand_target": "microsoft",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "microsoft-support.co",
-        "registrar": "GoDaddy.com, LLC",
-        "created_at": "2026-03-01T00:50:58.567700Z",
-        "updated_at": "2026-03-09T00:50:58.567700Z",
-        "expiry_at": "2027-03-01T00:50:58.567700Z",
-        "privacy_protection": true
-      },
-      "hosting": {
-        "asn": "AS16276",
-        "provider": "OVH SAS",
-        "infra": "unknown"
-      }
-    }
-  },
-  {
-    "url": "https://amazon.com/account/security",
-    "label": "benign",
-    "category": "legitimate",
-    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
-    "features": {
-      "domain_length": 10,
-      "entropy": 2.7219,
-      "number_of_subdomains": 0,
-      "contains_keyword": true,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 3,
-      "tld_risk_score": 0.2,
-      "domain_age_days": 5880,
-      "has_unicode_chars": false,
-      "path_depth": 2,
-      "path_complexity": 3.4548
-    },
-    "metadata": {
-      "brand_target": "amazon",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "amazon.com",
-        "registrar": "NameSilo, LLC",
-        "created_at": "2010-02-28T00:50:58.560726Z",
-        "updated_at": "2014-03-09T00:50:58.560726Z",
-        "expiry_at": "2020-02-26T00:50:58.560726Z",
-        "privacy_protection": false
-      },
-      "hosting": {
-        "asn": "AS16509",
-        "provider": "Amazon AWS",
-        "infra": "cloud"
-      }
-    }
-  },
-  {
-    "url": "https://amazon.com/products",
-    "label": "benign",
-    "category": "legitimate",
-    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
-    "features": {
-      "domain_length": 10,
-      "entropy": 2.7219,
-      "number_of_subdomains": 0,
-      "contains_keyword": false,
-      "looks_like_brand": true,
-      "levenshtein_distance_to_brand": 3,
-      "tld_risk_score": 0.2,
-      "domain_age_days": 3702,
-      "has_unicode_chars": false,
-      "path_depth": 1,
-      "path_complexity": 3.1699
-    },
-    "metadata": {
-      "brand_target": "amazon",
-      "source": "synthetic_url_engine",
-      "whois": {
-        "domain": "amazon.com",
-        "registrar": "NameSilo, LLC",
-        "created_at": "2016-02-15T00:50:58.571124Z",
-        "updated_at": "2018-08-28T00:50:58.571124Z",
-        "expiry_at": "2026-02-12T00:50:58.571124Z",
-        "privacy_protection": false
-      },
-      "hosting": {
-        "asn": "AS16509",
-        "provider": "Amazon AWS",
-        "infra": "cloud"
-      }
-    }
-  },
-  {
-    "url": "https://github.com/products",
+    "url": "https://github.com/account/security",
+    "campaign_id": null,
+    "cluster_id": null,
+    "relationships": [],
     "label": "benign",
     "category": "legitimate",
     "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
@@ -512,30 +264,332 @@
       "domain_length": 10,
       "entropy": 3.3219,
       "number_of_subdomains": 0,
-      "contains_keyword": false,
+      "contains_keyword": true,
       "looks_like_brand": true,
       "levenshtein_distance_to_brand": 3,
       "tld_risk_score": 0.2,
-      "domain_age_days": 1895,
+      "domain_age_days": 3926,
       "has_unicode_chars": false,
-      "path_depth": 1,
-      "path_complexity": 3.1699
+      "path_depth": 2,
+      "path_complexity": 3.4548,
+      "campaign_frequency_hint": 0
     },
     "metadata": {
       "brand_target": "github",
       "source": "synthetic_url_engine",
       "whois": {
         "domain": "github.com",
-        "registrar": "GoDaddy.com, LLC",
-        "created_at": "2021-01-26T00:50:58.570765Z",
-        "updated_at": "2022-05-14T00:50:58.570765Z",
-        "expiry_at": "2031-01-24T00:50:58.570765Z",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2015-07-06T01:12:34.374840Z",
+        "updated_at": "2018-03-13T01:12:34.374840Z",
+        "expiry_at": "2025-07-03T01:12:34.374840Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS14061",
+        "provider": "DigitalOcean",
+        "infra": "cloud"
+      },
+      "campaign_id": null,
+      "cluster_id": null,
+      "email_context": {
+        "sender_name": "Github Notifications",
+        "sender_email": "alerts@github.com",
+        "subject": "Your Github account update"
+      }
+    }
+  },
+  {
+    "url": "https://chase-update.co/helpdesk/ticket/identity-check",
+    "campaign_id": "phishcamp-20cbc7ba00",
+    "cluster_id": "cluster-d3084a471b",
+    "relationships": [
+      {
+        "src": "phishcamp-20cbc7ba00",
+        "dst": "chase-update.co",
+        "relation": "uses_domain"
+      }
+    ],
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL shows brand-adjacent wording for chase, elevated path complexity, and a relatively new registration hosted via Choopa.",
+    "features": {
+      "domain_length": 15,
+      "entropy": 3.5069,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 9,
+      "tld_risk_score": 0.45,
+      "domain_age_days": 43,
+      "has_unicode_chars": false,
+      "path_depth": 3,
+      "path_complexity": 3.5791,
+      "campaign_frequency_hint": 27
+    },
+    "metadata": {
+      "brand_target": "chase",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "chase-update.co",
+        "registrar": "Porkbun LLC",
+        "created_at": "2026-02-21T01:12:34.375086Z",
+        "updated_at": "2026-03-03T01:12:34.375086Z",
+        "expiry_at": "2027-02-21T01:12:34.375086Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS20473",
+        "provider": "Choopa",
+        "infra": "suspicious"
+      },
+      "campaign_id": "phishcamp-20cbc7ba00",
+      "cluster_id": "cluster-d3084a471b",
+      "email_context": {
+        "sender_name": "Dropbox Support",
+        "sender_email": "alerts@phishcamp-.mail-notify.net",
+        "subject": "Dropbox billing verification needed"
+      }
+    }
+  },
+  {
+    "url": "https://amazon.com/products",
+    "campaign_id": null,
+    "cluster_id": null,
+    "relationships": [],
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 5233,
+      "has_unicode_chars": false,
+      "path_depth": 1,
+      "path_complexity": 3.1699,
+      "campaign_frequency_hint": 0
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "amazon.com",
+        "registrar": "Porkbun LLC",
+        "created_at": "2011-12-07T01:12:34.373886Z",
+        "updated_at": "2015-07-07T01:12:34.373886Z",
+        "expiry_at": "2021-12-04T01:12:34.373886Z",
         "privacy_protection": false
       },
       "hosting": {
         "asn": "AS16509",
         "provider": "Amazon AWS",
         "infra": "cloud"
+      },
+      "campaign_id": null,
+      "cluster_id": null,
+      "email_context": {
+        "sender_name": "Amazon Notifications",
+        "sender_email": "alerts@amazon.com",
+        "subject": "Your Amazon account update"
+      }
+    }
+  },
+  {
+    "url": "https://google.com/account/security",
+    "campaign_id": null,
+    "cluster_id": null,
+    "relationships": [],
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 4724,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.4548,
+      "campaign_frequency_hint": 0
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "google.com",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2013-04-29T01:12:34.379166Z",
+        "updated_at": "2016-07-23T01:12:34.379166Z",
+        "expiry_at": "2023-04-27T01:12:34.379166Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      },
+      "campaign_id": null,
+      "cluster_id": null,
+      "email_context": {
+        "sender_name": "Google Notifications",
+        "sender_email": "alerts@google.com",
+        "subject": "Your Google account update"
+      }
+    }
+  },
+  {
+    "url": "https://apple.com/docs/api",
+    "campaign_id": null,
+    "cluster_id": null,
+    "relationships": [],
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 9,
+      "entropy": 2.9477,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 2582,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 2.9477,
+      "campaign_frequency_hint": 0
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "apple.com",
+        "registrar": "Tucows Domains Inc.",
+        "created_at": "2019-03-11T01:12:34.372587Z",
+        "updated_at": "2020-12-15T01:12:34.372587Z",
+        "expiry_at": "2029-03-08T01:12:34.372587Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      },
+      "campaign_id": null,
+      "cluster_id": null,
+      "email_context": {
+        "sender_name": "Apple Notifications",
+        "sender_email": "alerts@apple.com",
+        "subject": "Your Apple account update"
+      }
+    }
+  },
+  {
+    "url": "https://microsoft-secure-portal.info/account/review/8542e0",
+    "campaign_id": "phishcamp-3eb856c052",
+    "cluster_id": "cluster-00e9672f14",
+    "relationships": [
+      {
+        "src": "phishcamp-3eb856c052",
+        "dst": "microsoft-secure-portal.info",
+        "relation": "uses_domain"
+      }
+    ],
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting microsoft, with fresh domain registration (22 days) and hosting characteristics associated with abuse-prone infrastructure.",
+    "features": {
+      "domain_length": 28,
+      "entropy": 3.8518,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 18,
+      "tld_risk_score": 0.72,
+      "domain_age_days": 22,
+      "has_unicode_chars": false,
+      "path_depth": 3,
+      "path_complexity": 3.9363,
+      "campaign_frequency_hint": 59
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "microsoft-secure-portal.info",
+        "registrar": "Cloudflare Registrar",
+        "created_at": "2026-03-14T01:12:34.378121Z",
+        "updated_at": "2026-03-19T01:12:34.378121Z",
+        "expiry_at": "2027-03-14T01:12:34.378121Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16276",
+        "provider": "OVH SAS",
+        "infra": "unknown"
+      },
+      "campaign_id": "phishcamp-3eb856c052",
+      "cluster_id": "cluster-00e9672f14",
+      "email_context": {
+        "sender_name": "Microsoft Support",
+        "sender_email": "alerts@phishcamp-.mail-notify.net",
+        "subject": "Unusual sign-in attempt on your Microsoft account"
+      }
+    }
+  },
+  {
+    "url": "https://wikipedia.org/docs/api",
+    "campaign_id": null,
+    "cluster_id": null,
+    "relationships": [],
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.15,
+      "domain_age_days": 1067,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 2.9477,
+      "campaign_frequency_hint": 0
+    },
+    "metadata": {
+      "brand_target": "wikipedia",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "wikipedia.org",
+        "registrar": "Porkbun LLC",
+        "created_at": "2023-05-04T01:12:34.371390Z",
+        "updated_at": "2024-01-25T01:12:34.371390Z",
+        "expiry_at": "2033-05-01T01:12:34.371390Z",
+        "privacy_protection": false
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      },
+      "campaign_id": null,
+      "cluster_id": null,
+      "email_context": {
+        "sender_name": "Wikipedia Notifications",
+        "sender_email": "alerts@wikipedia.com",
+        "subject": "Your Wikipedia account update"
       }
     }
   }

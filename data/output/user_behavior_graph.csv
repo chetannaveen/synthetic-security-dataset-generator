@@ -1,0 +1,999 @@
+src,dst,relation
+user-1916,198.51.101.184,uses_ip
+user-1916,New York,visits_location
+user-1916,198.51.101.50,uses_ip
+user-1916,New York,visits_location
+user-1916,198.51.101.124,uses_ip
+user-1916,New York,visits_location
+user-1916,198.51.101.157,uses_ip
+user-1916,New York,visits_location
+user-7438,198.51.102.240,uses_ip
+user-7438,San Francisco,visits_location
+user-7438,198.51.102.41,uses_ip
+user-7438,San Francisco,visits_location
+user-7438,198.51.102.184,uses_ip
+user-7438,San Francisco,visits_location
+user-8167,198.51.102.58,uses_ip
+user-8167,San Francisco,visits_location
+user-8167,198.51.102.235,uses_ip
+user-8167,San Francisco,visits_location
+user-8167,198.51.102.79,uses_ip
+user-8167,San Francisco,visits_location
+user-4878,198.51.102.22,uses_ip
+user-4878,San Francisco,visits_location
+user-4878,198.51.102.216,uses_ip
+user-4878,San Francisco,visits_location
+user-4878,198.51.102.239,uses_ip
+user-4878,San Francisco,visits_location
+user-7206,198.51.101.126,uses_ip
+user-7206,New York,visits_location
+user-7206,198.51.101.92,uses_ip
+user-7206,New York,visits_location
+user-7206,198.51.101.238,uses_ip
+user-7206,New York,visits_location
+user-7206,198.51.101.149,uses_ip
+user-7206,New York,visits_location
+user-1708,198.51.100.120,uses_ip
+user-1708,Chicago,visits_location
+user-1708,198.51.100.235,uses_ip
+user-1708,Chicago,visits_location
+user-1708,198.51.100.239,uses_ip
+user-1708,Chicago,visits_location
+user-1708,198.51.100.189,uses_ip
+user-1708,Chicago,visits_location
+user-8219,198.51.100.177,uses_ip
+user-8219,Chicago,visits_location
+user-8219,203.0.113.110,uses_ip
+user-8219,London,visits_location
+user-8219,203.0.113.91,uses_ip
+user-8219,London,visits_location
+user-3571,198.51.100.148,uses_ip
+user-3571,Chicago,visits_location
+user-3571,203.0.114.153,uses_ip
+user-3571,Singapore,visits_location
+user-3571,203.0.114.63,uses_ip
+user-3571,Singapore,visits_location
+user-8751,198.51.100.149,uses_ip
+user-8751,Chicago,visits_location
+user-8751,198.51.100.8,uses_ip
+user-8751,Chicago,visits_location
+user-8751,198.51.100.240,uses_ip
+user-8751,Chicago,visits_location
+user-8751,198.51.100.16,uses_ip
+user-8751,Chicago,visits_location
+user-5703,198.51.102.96,uses_ip
+user-5703,San Francisco,visits_location
+user-5703,198.51.102.197,uses_ip
+user-5703,San Francisco,visits_location
+user-5703,198.51.102.4,uses_ip
+user-5703,San Francisco,visits_location
+user-5703,198.51.102.23,uses_ip
+user-5703,San Francisco,visits_location
+user-9138,198.51.100.107,uses_ip
+user-9138,Chicago,visits_location
+user-9138,198.51.100.227,uses_ip
+user-9138,Chicago,visits_location
+user-9138,198.51.100.245,uses_ip
+user-9138,Chicago,visits_location
+user-9138,198.51.100.129,uses_ip
+user-9138,Chicago,visits_location
+user-6265,198.51.101.7,uses_ip
+user-6265,New York,visits_location
+user-6265,203.0.114.199,uses_ip
+user-6265,Singapore,visits_location
+user-6265,203.0.114.93,uses_ip
+user-6265,Singapore,visits_location
+user-2014,198.51.102.174,uses_ip
+user-2014,San Francisco,visits_location
+user-2014,198.51.102.185,uses_ip
+user-2014,San Francisco,visits_location
+user-2014,198.51.102.22,uses_ip
+user-2014,San Francisco,visits_location
+user-2014,198.51.102.153,uses_ip
+user-2014,San Francisco,visits_location
+user-8526,198.51.102.9,uses_ip
+user-8526,San Francisco,visits_location
+user-8526,198.51.102.38,uses_ip
+user-8526,San Francisco,visits_location
+user-8526,198.51.102.59,uses_ip
+user-8526,San Francisco,visits_location
+user-8526,198.51.102.42,uses_ip
+user-8526,San Francisco,visits_location
+user-4536,198.51.100.124,uses_ip
+user-4536,Chicago,visits_location
+user-4536,198.51.100.39,uses_ip
+user-4536,Chicago,visits_location
+user-4536,198.51.100.196,uses_ip
+user-4536,Chicago,visits_location
+user-4536,198.51.100.225,uses_ip
+user-4536,Chicago,visits_location
+user-4887,198.51.100.109,uses_ip
+user-4887,Chicago,visits_location
+user-4887,198.51.100.188,uses_ip
+user-4887,Chicago,visits_location
+user-4887,198.51.100.24,uses_ip
+user-4887,Chicago,visits_location
+user-4887,198.51.100.208,uses_ip
+user-4887,Chicago,visits_location
+user-1930,198.51.100.225,uses_ip
+user-1930,Chicago,visits_location
+user-1930,198.51.100.235,uses_ip
+user-1930,Chicago,visits_location
+user-1930,198.51.100.66,uses_ip
+user-1930,Chicago,visits_location
+user-1930,198.51.100.83,uses_ip
+user-1930,Chicago,visits_location
+user-1817,198.51.102.250,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.19,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.189,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.204,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.145,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.101,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.46,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.85,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.165,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.28,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.34,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.34,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.130,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.172,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.199,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.99,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.197,uses_ip
+user-1817,San Francisco,visits_location
+user-1817,198.51.102.16,uses_ip
+user-1817,San Francisco,visits_location
+user-1907,198.51.102.199,uses_ip
+user-1907,San Francisco,visits_location
+user-1907,198.51.102.158,uses_ip
+user-1907,San Francisco,visits_location
+user-1907,198.51.102.64,uses_ip
+user-1907,San Francisco,visits_location
+user-1907,198.51.102.153,uses_ip
+user-1907,San Francisco,visits_location
+user-6545,198.51.102.109,uses_ip
+user-6545,San Francisco,visits_location
+user-6545,198.51.102.59,uses_ip
+user-6545,San Francisco,visits_location
+user-6545,198.51.102.196,uses_ip
+user-6545,San Francisco,visits_location
+user-6545,198.51.102.60,uses_ip
+user-6545,San Francisco,visits_location
+user-6579,198.51.100.81,uses_ip
+user-6579,Chicago,visits_location
+user-6579,198.51.100.8,uses_ip
+user-6579,Chicago,visits_location
+user-6579,198.51.100.146,uses_ip
+user-6579,Chicago,visits_location
+user-6579,198.51.100.135,uses_ip
+user-6579,Chicago,visits_location
+user-4807,198.51.101.48,uses_ip
+user-4807,New York,visits_location
+user-4807,198.51.101.242,uses_ip
+user-4807,New York,visits_location
+user-4807,198.51.101.173,uses_ip
+user-4807,New York,visits_location
+user-4807,198.51.101.104,uses_ip
+user-4807,New York,visits_location
+user-8905,198.51.102.227,uses_ip
+user-8905,San Francisco,visits_location
+user-8905,198.51.102.137,uses_ip
+user-8905,San Francisco,visits_location
+user-8905,198.51.102.217,uses_ip
+user-8905,San Francisco,visits_location
+user-8905,198.51.102.139,uses_ip
+user-8905,San Francisco,visits_location
+user-2789,198.51.102.59,uses_ip
+user-2789,San Francisco,visits_location
+user-2789,198.51.102.95,uses_ip
+user-2789,San Francisco,visits_location
+user-2789,198.51.102.68,uses_ip
+user-2789,San Francisco,visits_location
+user-6106,198.51.100.50,uses_ip
+user-6106,Chicago,visits_location
+user-6106,198.51.100.202,uses_ip
+user-6106,Chicago,visits_location
+user-6106,198.51.100.150,uses_ip
+user-6106,Chicago,visits_location
+user-6106,198.51.100.175,uses_ip
+user-6106,Chicago,visits_location
+user-1180,198.51.100.18,uses_ip
+user-1180,Chicago,visits_location
+user-1180,198.51.100.214,uses_ip
+user-1180,Chicago,visits_location
+user-1180,198.51.100.34,uses_ip
+user-1180,Chicago,visits_location
+user-1180,198.51.100.138,uses_ip
+user-1180,Chicago,visits_location
+user-2875,198.51.101.71,uses_ip
+user-2875,New York,visits_location
+user-2875,198.51.101.22,uses_ip
+user-2875,New York,visits_location
+user-2875,198.51.101.225,uses_ip
+user-2875,New York,visits_location
+user-2875,198.51.101.172,uses_ip
+user-2875,New York,visits_location
+user-2875,198.51.101.33,uses_ip
+user-2875,New York,visits_location
+user-5385,198.51.100.110,uses_ip
+user-5385,Chicago,visits_location
+user-5385,203.0.114.7,uses_ip
+user-5385,Singapore,visits_location
+user-5385,203.0.114.111,uses_ip
+user-5385,Singapore,visits_location
+user-2922,198.51.101.130,uses_ip
+user-2922,New York,visits_location
+user-2922,203.0.114.135,uses_ip
+user-2922,Singapore,visits_location
+user-2922,203.0.114.86,uses_ip
+user-2922,Singapore,visits_location
+user-3155,198.51.101.150,uses_ip
+user-3155,New York,visits_location
+user-3155,198.51.101.157,uses_ip
+user-3155,New York,visits_location
+user-3155,198.51.101.81,uses_ip
+user-3155,New York,visits_location
+user-3771,198.51.100.86,uses_ip
+user-3771,Chicago,visits_location
+user-3771,198.51.100.62,uses_ip
+user-3771,Chicago,visits_location
+user-3771,198.51.100.90,uses_ip
+user-3771,Chicago,visits_location
+user-9613,198.51.102.249,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.225,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.174,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.170,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.66,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.7,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.198,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.184,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.24,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.49,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.44,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.63,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.253,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.203,uses_ip
+user-9613,San Francisco,visits_location
+user-9613,198.51.102.182,uses_ip
+user-9613,San Francisco,visits_location
+user-8917,198.51.101.122,uses_ip
+user-8917,New York,visits_location
+user-8917,198.51.101.160,uses_ip
+user-8917,New York,visits_location
+user-8917,198.51.101.133,uses_ip
+user-8917,New York,visits_location
+user-8917,198.51.101.116,uses_ip
+user-8917,New York,visits_location
+user-5351,198.51.101.107,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.22,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.122,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.221,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.83,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.82,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.156,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.34,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.52,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.161,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.211,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.249,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.60,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.6,uses_ip
+user-5351,New York,visits_location
+user-5351,198.51.101.112,uses_ip
+user-5351,New York,visits_location
+user-2221,198.51.100.248,uses_ip
+user-2221,Chicago,visits_location
+user-2221,198.51.100.249,uses_ip
+user-2221,Chicago,visits_location
+user-2221,198.51.100.34,uses_ip
+user-2221,Chicago,visits_location
+user-2221,198.51.100.82,uses_ip
+user-2221,Chicago,visits_location
+user-7334,198.51.100.191,uses_ip
+user-7334,Chicago,visits_location
+user-7334,203.0.114.94,uses_ip
+user-7334,Singapore,visits_location
+user-7334,203.0.114.78,uses_ip
+user-7334,Singapore,visits_location
+user-2072,198.51.100.254,uses_ip
+user-2072,Chicago,visits_location
+user-2072,198.51.100.187,uses_ip
+user-2072,Chicago,visits_location
+user-2072,198.51.100.161,uses_ip
+user-2072,Chicago,visits_location
+user-2072,198.51.100.143,uses_ip
+user-2072,Chicago,visits_location
+user-6161,198.51.101.123,uses_ip
+user-6161,New York,visits_location
+user-6161,198.51.101.36,uses_ip
+user-6161,New York,visits_location
+user-6161,198.51.101.57,uses_ip
+user-6161,New York,visits_location
+user-8165,198.51.101.204,uses_ip
+user-8165,New York,visits_location
+user-8165,198.51.101.4,uses_ip
+user-8165,New York,visits_location
+user-8165,198.51.101.97,uses_ip
+user-8165,New York,visits_location
+user-8165,198.51.101.59,uses_ip
+user-8165,New York,visits_location
+user-4994,198.51.102.124,uses_ip
+user-4994,San Francisco,visits_location
+user-4994,198.51.102.8,uses_ip
+user-4994,San Francisco,visits_location
+user-4994,198.51.102.113,uses_ip
+user-4994,San Francisco,visits_location
+user-4994,198.51.102.182,uses_ip
+user-4994,San Francisco,visits_location
+user-5455,198.51.101.52,uses_ip
+user-5455,New York,visits_location
+user-5455,203.0.113.171,uses_ip
+user-5455,London,visits_location
+user-5455,203.0.113.215,uses_ip
+user-5455,London,visits_location
+user-5222,198.51.102.209,uses_ip
+user-5222,San Francisco,visits_location
+user-5222,203.0.114.224,uses_ip
+user-5222,Singapore,visits_location
+user-5222,203.0.114.35,uses_ip
+user-5222,Singapore,visits_location
+user-9724,198.51.100.16,uses_ip
+user-9724,Chicago,visits_location
+user-9724,198.51.100.150,uses_ip
+user-9724,Chicago,visits_location
+user-9724,198.51.100.100,uses_ip
+user-9724,Chicago,visits_location
+user-9724,198.51.100.168,uses_ip
+user-9724,Chicago,visits_location
+user-1642,198.51.101.83,uses_ip
+user-1642,New York,visits_location
+user-1642,198.51.101.114,uses_ip
+user-1642,New York,visits_location
+user-1642,198.51.101.159,uses_ip
+user-1642,New York,visits_location
+user-3820,198.51.100.238,uses_ip
+user-3820,Chicago,visits_location
+user-3820,198.51.100.153,uses_ip
+user-3820,Chicago,visits_location
+user-3820,198.51.100.173,uses_ip
+user-3820,Chicago,visits_location
+user-3820,198.51.100.244,uses_ip
+user-3820,Chicago,visits_location
+user-6584,198.51.101.52,uses_ip
+user-6584,New York,visits_location
+user-6584,198.51.101.88,uses_ip
+user-6584,New York,visits_location
+user-6584,198.51.101.35,uses_ip
+user-6584,New York,visits_location
+user-4902,198.51.102.201,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.238,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.56,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.112,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.163,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.16,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.158,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.167,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.217,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.47,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.181,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.170,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.156,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.68,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.247,uses_ip
+user-4902,San Francisco,visits_location
+user-4902,198.51.102.214,uses_ip
+user-4902,San Francisco,visits_location
+user-2114,198.51.101.109,uses_ip
+user-2114,New York,visits_location
+user-2114,198.51.101.251,uses_ip
+user-2114,New York,visits_location
+user-2114,198.51.101.246,uses_ip
+user-2114,New York,visits_location
+user-2114,198.51.101.231,uses_ip
+user-2114,New York,visits_location
+user-4703,198.51.100.176,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.56,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.79,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.178,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.191,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.132,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.117,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.175,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.91,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.8,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.34,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.69,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.123,uses_ip
+user-4703,Chicago,visits_location
+user-4703,198.51.100.130,uses_ip
+user-4703,Chicago,visits_location
+user-2038,198.51.100.149,uses_ip
+user-2038,Chicago,visits_location
+user-2038,198.51.100.203,uses_ip
+user-2038,Chicago,visits_location
+user-2038,198.51.100.207,uses_ip
+user-2038,Chicago,visits_location
+user-2038,198.51.100.191,uses_ip
+user-2038,Chicago,visits_location
+user-7636,198.51.101.12,uses_ip
+user-7636,New York,visits_location
+user-7636,203.0.113.66,uses_ip
+user-7636,London,visits_location
+user-7636,203.0.113.33,uses_ip
+user-7636,London,visits_location
+user-9886,198.51.100.42,uses_ip
+user-9886,Chicago,visits_location
+user-9886,198.51.100.131,uses_ip
+user-9886,Chicago,visits_location
+user-9886,198.51.100.199,uses_ip
+user-9886,Chicago,visits_location
+user-9886,198.51.100.244,uses_ip
+user-9886,Chicago,visits_location
+user-7377,198.51.100.148,uses_ip
+user-7377,Chicago,visits_location
+user-7377,203.0.113.197,uses_ip
+user-7377,London,visits_location
+user-7377,203.0.113.254,uses_ip
+user-7377,London,visits_location
+user-3625,198.51.102.76,uses_ip
+user-3625,San Francisco,visits_location
+user-3625,198.51.102.33,uses_ip
+user-3625,San Francisco,visits_location
+user-3625,198.51.102.191,uses_ip
+user-3625,San Francisco,visits_location
+user-3625,198.51.102.162,uses_ip
+user-3625,San Francisco,visits_location
+user-2546,198.51.101.72,uses_ip
+user-2546,New York,visits_location
+user-2546,198.51.101.178,uses_ip
+user-2546,New York,visits_location
+user-2546,198.51.101.7,uses_ip
+user-2546,New York,visits_location
+user-2546,198.51.101.33,uses_ip
+user-2546,New York,visits_location
+user-1186,198.51.101.144,uses_ip
+user-1186,New York,visits_location
+user-1186,198.51.101.44,uses_ip
+user-1186,New York,visits_location
+user-1186,198.51.101.11,uses_ip
+user-1186,New York,visits_location
+user-1186,198.51.101.113,uses_ip
+user-1186,New York,visits_location
+user-5993,198.51.101.247,uses_ip
+user-5993,New York,visits_location
+user-5993,203.0.114.193,uses_ip
+user-5993,Singapore,visits_location
+user-5993,203.0.114.144,uses_ip
+user-5993,Singapore,visits_location
+user-4459,198.51.101.226,uses_ip
+user-4459,New York,visits_location
+user-4459,198.51.101.11,uses_ip
+user-4459,New York,visits_location
+user-4459,198.51.101.203,uses_ip
+user-4459,New York,visits_location
+user-4459,198.51.101.73,uses_ip
+user-4459,New York,visits_location
+user-6804,198.51.101.186,uses_ip
+user-6804,New York,visits_location
+user-6804,198.51.101.194,uses_ip
+user-6804,New York,visits_location
+user-6804,198.51.101.205,uses_ip
+user-6804,New York,visits_location
+user-6804,198.51.101.30,uses_ip
+user-6804,New York,visits_location
+user-6659,198.51.102.13,uses_ip
+user-6659,San Francisco,visits_location
+user-6659,198.51.102.239,uses_ip
+user-6659,San Francisco,visits_location
+user-6659,198.51.102.196,uses_ip
+user-6659,San Francisco,visits_location
+user-6659,198.51.102.13,uses_ip
+user-6659,San Francisco,visits_location
+user-6012,198.51.100.196,uses_ip
+user-6012,Chicago,visits_location
+user-6012,198.51.100.135,uses_ip
+user-6012,Chicago,visits_location
+user-6012,198.51.100.172,uses_ip
+user-6012,Chicago,visits_location
+user-6012,198.51.100.60,uses_ip
+user-6012,Chicago,visits_location
+user-4559,198.51.101.243,uses_ip
+user-4559,New York,visits_location
+user-4559,198.51.101.248,uses_ip
+user-4559,New York,visits_location
+user-4559,198.51.101.72,uses_ip
+user-4559,New York,visits_location
+user-4559,198.51.101.48,uses_ip
+user-4559,New York,visits_location
+user-4460,198.51.100.81,uses_ip
+user-4460,Chicago,visits_location
+user-4460,198.51.100.4,uses_ip
+user-4460,Chicago,visits_location
+user-4460,198.51.100.57,uses_ip
+user-4460,Chicago,visits_location
+user-4460,198.51.100.99,uses_ip
+user-4460,Chicago,visits_location
+user-9329,198.51.101.137,uses_ip
+user-9329,New York,visits_location
+user-9329,198.51.101.215,uses_ip
+user-9329,New York,visits_location
+user-9329,198.51.101.142,uses_ip
+user-9329,New York,visits_location
+user-9329,198.51.101.241,uses_ip
+user-9329,New York,visits_location
+user-1856,198.51.102.161,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.112,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.20,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.225,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.142,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.231,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.72,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.191,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.211,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.191,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.248,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.114,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.140,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.201,uses_ip
+user-1856,San Francisco,visits_location
+user-1856,198.51.102.30,uses_ip
+user-1856,San Francisco,visits_location
+user-6986,198.51.101.21,uses_ip
+user-6986,New York,visits_location
+user-6986,203.0.114.41,uses_ip
+user-6986,Singapore,visits_location
+user-6986,203.0.114.19,uses_ip
+user-6986,Singapore,visits_location
+user-2746,198.51.101.20,uses_ip
+user-2746,New York,visits_location
+user-2746,198.51.101.178,uses_ip
+user-2746,New York,visits_location
+user-2746,198.51.101.65,uses_ip
+user-2746,New York,visits_location
+user-2746,198.51.101.60,uses_ip
+user-2746,New York,visits_location
+user-8827,198.51.100.126,uses_ip
+user-8827,Chicago,visits_location
+user-8827,198.51.100.87,uses_ip
+user-8827,Chicago,visits_location
+user-8827,198.51.100.26,uses_ip
+user-8827,Chicago,visits_location
+user-8827,198.51.100.128,uses_ip
+user-8827,Chicago,visits_location
+user-8593,198.51.102.31,uses_ip
+user-8593,San Francisco,visits_location
+user-8593,198.51.102.21,uses_ip
+user-8593,San Francisco,visits_location
+user-8593,198.51.102.29,uses_ip
+user-8593,San Francisco,visits_location
+user-8593,198.51.102.90,uses_ip
+user-8593,San Francisco,visits_location
+user-3185,198.51.102.115,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.188,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.241,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.200,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.184,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.163,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.249,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.252,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.221,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.7,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.159,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.52,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.115,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.103,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.48,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.154,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.166,uses_ip
+user-3185,San Francisco,visits_location
+user-3185,198.51.102.81,uses_ip
+user-3185,San Francisco,visits_location
+user-8563,198.51.101.186,uses_ip
+user-8563,New York,visits_location
+user-8563,198.51.101.242,uses_ip
+user-8563,New York,visits_location
+user-8563,198.51.101.237,uses_ip
+user-8563,New York,visits_location
+user-8563,198.51.101.10,uses_ip
+user-8563,New York,visits_location
+user-1462,198.51.100.48,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.38,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.114,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.166,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.142,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.1,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.80,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.124,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.113,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.120,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.183,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.122,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.108,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.83,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.172,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.152,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.201,uses_ip
+user-1462,Chicago,visits_location
+user-1462,198.51.100.211,uses_ip
+user-1462,Chicago,visits_location
+user-3467,198.51.101.38,uses_ip
+user-3467,New York,visits_location
+user-3467,198.51.101.174,uses_ip
+user-3467,New York,visits_location
+user-3467,198.51.101.236,uses_ip
+user-3467,New York,visits_location
+user-3467,198.51.101.202,uses_ip
+user-3467,New York,visits_location
+user-9339,198.51.100.127,uses_ip
+user-9339,Chicago,visits_location
+user-9339,198.51.100.223,uses_ip
+user-9339,Chicago,visits_location
+user-9339,198.51.100.106,uses_ip
+user-9339,Chicago,visits_location
+user-9339,198.51.100.45,uses_ip
+user-9339,Chicago,visits_location
+user-9339,198.51.100.215,uses_ip
+user-9339,Chicago,visits_location
+user-7609,198.51.100.241,uses_ip
+user-7609,Chicago,visits_location
+user-7609,198.51.100.70,uses_ip
+user-7609,Chicago,visits_location
+user-7609,198.51.100.3,uses_ip
+user-7609,Chicago,visits_location
+user-7609,198.51.100.22,uses_ip
+user-7609,Chicago,visits_location
+user-2195,198.51.100.118,uses_ip
+user-2195,Chicago,visits_location
+user-2195,198.51.100.199,uses_ip
+user-2195,Chicago,visits_location
+user-2195,198.51.100.131,uses_ip
+user-2195,Chicago,visits_location
+user-2195,198.51.100.50,uses_ip
+user-2195,Chicago,visits_location
+user-4581,198.51.102.145,uses_ip
+user-4581,San Francisco,visits_location
+user-4581,198.51.102.121,uses_ip
+user-4581,San Francisco,visits_location
+user-4581,198.51.102.110,uses_ip
+user-4581,San Francisco,visits_location
+user-4581,198.51.102.41,uses_ip
+user-4581,San Francisco,visits_location
+user-3913,198.51.102.12,uses_ip
+user-3913,San Francisco,visits_location
+user-3913,198.51.102.171,uses_ip
+user-3913,San Francisco,visits_location
+user-3913,198.51.102.166,uses_ip
+user-3913,San Francisco,visits_location
+user-3913,198.51.102.139,uses_ip
+user-3913,San Francisco,visits_location
+user-3002,198.51.101.47,uses_ip
+user-3002,New York,visits_location
+user-3002,198.51.101.34,uses_ip
+user-3002,New York,visits_location
+user-3002,198.51.101.205,uses_ip
+user-3002,New York,visits_location
+user-3002,198.51.101.11,uses_ip
+user-3002,New York,visits_location
+user-5564,198.51.100.219,uses_ip
+user-5564,Chicago,visits_location
+user-5564,198.51.100.132,uses_ip
+user-5564,Chicago,visits_location
+user-5564,198.51.100.210,uses_ip
+user-5564,Chicago,visits_location
+user-5564,198.51.100.21,uses_ip
+user-5564,Chicago,visits_location
+user-5564,198.51.100.185,uses_ip
+user-5564,Chicago,visits_location
+user-2369,198.51.101.18,uses_ip
+user-2369,New York,visits_location
+user-2369,198.51.101.196,uses_ip
+user-2369,New York,visits_location
+user-2369,198.51.101.44,uses_ip
+user-2369,New York,visits_location
+user-2369,198.51.101.12,uses_ip
+user-2369,New York,visits_location
+user-1334,198.51.101.168,uses_ip
+user-1334,New York,visits_location
+user-1334,198.51.101.252,uses_ip
+user-1334,New York,visits_location
+user-1334,198.51.101.71,uses_ip
+user-1334,New York,visits_location
+user-1334,198.51.101.76,uses_ip
+user-1334,New York,visits_location
+user-2405,198.51.101.85,uses_ip
+user-2405,New York,visits_location
+user-2405,198.51.101.24,uses_ip
+user-2405,New York,visits_location
+user-2405,198.51.101.205,uses_ip
+user-2405,New York,visits_location
+user-2405,198.51.101.143,uses_ip
+user-2405,New York,visits_location
+user-2405,198.51.101.124,uses_ip
+user-2405,New York,visits_location
+user-6191,198.51.100.238,uses_ip
+user-6191,Chicago,visits_location
+user-6191,198.51.100.10,uses_ip
+user-6191,Chicago,visits_location
+user-6191,198.51.100.73,uses_ip
+user-6191,Chicago,visits_location
+user-6191,198.51.100.164,uses_ip
+user-6191,Chicago,visits_location
+user-1943,198.51.101.146,uses_ip
+user-1943,New York,visits_location
+user-1943,198.51.101.167,uses_ip
+user-1943,New York,visits_location
+user-1943,198.51.101.9,uses_ip
+user-1943,New York,visits_location
+user-1943,198.51.101.131,uses_ip
+user-1943,New York,visits_location
+user-5481,198.51.102.145,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.16,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.194,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.143,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.152,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.112,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.27,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.163,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.106,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.191,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.141,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.159,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.179,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.151,uses_ip
+user-5481,San Francisco,visits_location
+user-5481,198.51.102.70,uses_ip
+user-5481,San Francisco,visits_location
+user-1911,198.51.100.9,uses_ip
+user-1911,Chicago,visits_location
+user-1911,198.51.100.48,uses_ip
+user-1911,Chicago,visits_location
+user-1911,198.51.100.78,uses_ip
+user-1911,Chicago,visits_location
+user-1911,198.51.100.110,uses_ip
+user-1911,Chicago,visits_location
+user-9202,198.51.102.26,uses_ip
+user-9202,San Francisco,visits_location
+user-9202,198.51.102.127,uses_ip
+user-9202,San Francisco,visits_location
+user-9202,198.51.102.1,uses_ip
+user-9202,San Francisco,visits_location
+user-9202,198.51.102.210,uses_ip
+user-9202,San Francisco,visits_location
+user-4733,198.51.102.48,uses_ip
+user-4733,San Francisco,visits_location
+user-4733,198.51.102.146,uses_ip
+user-4733,San Francisco,visits_location
+user-4733,198.51.102.129,uses_ip
+user-4733,San Francisco,visits_location
+user-4733,198.51.102.204,uses_ip
+user-4733,San Francisco,visits_location
+user-6412,198.51.101.98,uses_ip
+user-6412,New York,visits_location
+user-6412,198.51.101.121,uses_ip
+user-6412,New York,visits_location
+user-6412,198.51.101.89,uses_ip
+user-6412,New York,visits_location
+user-6412,198.51.101.61,uses_ip
+user-6412,New York,visits_location
+user-7260,198.51.102.72,uses_ip
+user-7260,San Francisco,visits_location
+user-7260,198.51.102.48,uses_ip
+user-7260,San Francisco,visits_location
+user-7260,198.51.102.168,uses_ip
+user-7260,San Francisco,visits_location
+user-7260,198.51.102.170,uses_ip
+user-7260,San Francisco,visits_location
+user-5123,198.51.100.138,uses_ip
+user-5123,Chicago,visits_location
+user-5123,198.51.100.192,uses_ip
+user-5123,Chicago,visits_location
+user-5123,198.51.100.196,uses_ip
+user-5123,Chicago,visits_location
+user-5123,198.51.100.141,uses_ip
+user-5123,Chicago,visits_location
+user-9869,198.51.100.64,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.124,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.98,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.217,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.140,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.242,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.64,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.218,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.66,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.173,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.202,uses_ip
+user-9869,Chicago,visits_location
+user-9869,198.51.100.170,uses_ip
+user-9869,Chicago,visits_location
+user-1999,198.51.101.90,uses_ip
+user-1999,New York,visits_location
+user-1999,198.51.101.123,uses_ip
+user-1999,New York,visits_location
+user-1999,198.51.101.165,uses_ip
+user-1999,New York,visits_location
+user-1999,198.51.101.124,uses_ip
+user-1999,New York,visits_location
+user-2151,198.51.101.85,uses_ip
+user-2151,New York,visits_location
+user-2151,198.51.101.16,uses_ip
+user-2151,New York,visits_location
+user-2151,198.51.101.184,uses_ip
+user-2151,New York,visits_location
+user-2151,198.51.101.226,uses_ip
+user-2151,New York,visits_location
+user-3263,198.51.100.156,uses_ip
+user-3263,Chicago,visits_location
+user-3263,198.51.100.234,uses_ip
+user-3263,Chicago,visits_location
+user-3263,198.51.100.206,uses_ip
+user-3263,Chicago,visits_location
+user-3263,198.51.100.80,uses_ip
+user-3263,Chicago,visits_location
+user-6174,198.51.102.168,uses_ip
+user-6174,San Francisco,visits_location
+user-6174,198.51.102.75,uses_ip
+user-6174,San Francisco,visits_location
+user-6174,198.51.102.72,uses_ip
+user-6174,San Francisco,visits_location
+user-6174,198.51.102.166,uses_ip
+user-6174,San Francisco,visits_location
+user-6447,198.51.102.37,uses_ip
+user-6447,San Francisco,visits_location
+user-6447,198.51.102.23,uses_ip
+user-6447,San Francisco,visits_location
+user-6447,198.51.102.220,uses_ip
+user-6447,San Francisco,visits_location
+user-6447,198.51.102.66,uses_ip
+user-6447,San Francisco,visits_location
+user-3936,198.51.102.161,uses_ip
+user-3936,San Francisco,visits_location
+user-3936,198.51.102.52,uses_ip
+user-3936,San Francisco,visits_location
+user-3936,198.51.102.121,uses_ip
+user-3936,San Francisco,visits_location
+user-3936,198.51.102.165,uses_ip
+user-3936,San Francisco,visits_location
+user-2123,198.51.100.45,uses_ip
+user-2123,Chicago,visits_location
+user-2123,198.51.100.61,uses_ip
+user-2123,Chicago,visits_location
+user-2123,198.51.100.35,uses_ip
+user-2123,Chicago,visits_location
+user-2123,198.51.100.7,uses_ip
+user-2123,Chicago,visits_location

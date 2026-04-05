@@ -22,9 +22,14 @@ class AttackLogGenerator(BaseGenerator):
         session_id = self.random.sequence_id("sess")
         campaign_id = self.random.sequence_id("camp") if label != "normal" else None
         base_time = utc_now() - timedelta(minutes=self.random.randint(60, 720))
-        events = self._build_normal_sequence(base_time, session_id, campaign_id)
+        overlap_window_id = f"window-{self.random.randint(1, 12)}"
+        events = self._build_normal_sequence(base_time, session_id, campaign_id, overlap_window_id)
         if label != "normal":
-            events.extend(self._build_attack_chain(base_time + timedelta(minutes=15), session_id, campaign_id, label))
+            events.extend(
+                self._build_attack_chain(base_time + timedelta(minutes=15), session_id, campaign_id, label, overlap_window_id)
+            )
+        events.extend(self._build_background_noise(base_time + timedelta(minutes=5), session_id, campaign_id, overlap_window_id))
+        events = sorted(events, key=lambda event: event["offset_seconds"])
 
         status_codes = [event["status_code"] for event in events]
         attack_stages = [event["attack_stage"] for event in events]
@@ -35,17 +40,35 @@ class AttackLogGenerator(BaseGenerator):
             "duration_seconds": events[-1]["offset_seconds"],
             "attack_stage_count": len({stage for stage in attack_stages if stage != "normal"}),
             "distinct_ips": len({event["ip"] for event in events}),
+            "background_noise_events": sum(event["attack_stage"] == "background_noise" for event in events),
+            "retry_ratio": round(sum(event.get("is_retry", False) for event in events) / len(events), 4),
         }
         decision = LabelDecision(
             label=label,
             category=label,
             explanation=ATTACK_SCENARIOS.get(label, "Routine user-driven traffic pattern with ambient noise."),
             features=features,
-            metadata={"session_id": session_id, "campaign_id": campaign_id, "source": "synthetic_log_engine"},
+            metadata={
+                "session_id": session_id,
+                "campaign_id": campaign_id,
+                "overlap_window_id": overlap_window_id,
+                "source": "synthetic_log_engine",
+            },
         )
-        return self.labeling.attach({"session_id": session_id, "campaign_id": campaign_id, "events": events}, decision)
+        return self.labeling.attach(
+            {
+                "session_id": session_id,
+                "campaign_id": campaign_id,
+                "overlap_window_id": overlap_window_id,
+                "events": events,
+                "relationships": [{"src": session_id, "dst": campaign_id, "relation": "associated_campaign"}]
+                if campaign_id
+                else [],
+            },
+            decision,
+        )
 
-    def _build_normal_sequence(self, base_time, session_id: str, campaign_id: str | None) -> list[dict[str, Any]]:
+    def _build_normal_sequence(self, base_time, session_id: str, campaign_id: str | None, overlap_window_id: str) -> list[dict[str, Any]]:
         count = self.random.randint(5, 8)
         entries = []
         offset = 0
@@ -64,12 +87,20 @@ class AttackLogGenerator(BaseGenerator):
                 attack_stage="normal",
                 previous_event_id=previous_event_id,
                 campaign_id=campaign_id,
+                overlap_window_id=overlap_window_id,
             )
             previous_event_id = event["event_id"]
             entries.append(event)
         return entries
 
-    def _build_attack_chain(self, base_time, session_id: str, campaign_id: str | None, chain_name: str) -> list[dict[str, Any]]:
+    def _build_attack_chain(
+        self,
+        base_time,
+        session_id: str,
+        campaign_id: str | None,
+        chain_name: str,
+        overlap_window_id: str,
+    ) -> list[dict[str, Any]]:
         events: list[dict[str, Any]] = []
         offset = 0
         previous_event_id = None
@@ -101,10 +132,56 @@ class AttackLogGenerator(BaseGenerator):
                     attack_stage=stage,
                     previous_event_id=previous_event_id,
                     campaign_id=campaign_id,
+                    overlap_window_id=overlap_window_id,
+                    is_retry=status_code in {401, 403, 500} and self.random.random() < 0.4,
                 )
                 previous_event_id = event["event_id"]
                 events.append(event)
+                if status_code in {401, 403, 500} and self.random.random() < 0.45:
+                    offset += self.random.randint(1, 5)
+                    retry_event = self._event(
+                        base_time,
+                        session_id,
+                        current_ip,
+                        endpoint,
+                        status_code,
+                        self.random.choice(USER_AGENTS),
+                        offset,
+                        user=event["user"],
+                        method=event["method"],
+                        attack_stage=stage,
+                        previous_event_id=previous_event_id,
+                        campaign_id=campaign_id,
+                        overlap_window_id=overlap_window_id,
+                        is_retry=True,
+                    )
+                    previous_event_id = retry_event["event_id"]
+                    events.append(retry_event)
         return events
+
+    def _build_background_noise(self, base_time, session_id: str, campaign_id: str | None, overlap_window_id: str) -> list[dict[str, Any]]:
+        noise: list[dict[str, Any]] = []
+        offset = 0
+        previous_event_id = None
+        for _ in range(self.random.randint(3, 6)):
+            offset += self.random.randint(15, 120)
+            event = self._event(
+                base_time,
+                session_id,
+                self._ip("198.51.10"),
+                self.random.choice(["/reports", "/api/v1/session", "/health", "/dashboard"]),
+                self.random.choice([200, 200, 302, 404]),
+                self.random.choice(USER_AGENTS),
+                offset,
+                user=self.random.choice(["alex", "maria", "samir", "priya"]),
+                attack_stage="background_noise",
+                previous_event_id=previous_event_id,
+                campaign_id=campaign_id,
+                overlap_window_id=overlap_window_id,
+            )
+            previous_event_id = event["event_id"]
+            noise.append(event)
+        return noise
 
     def _event(
         self,
@@ -121,11 +198,14 @@ class AttackLogGenerator(BaseGenerator):
         attack_stage: str = "normal",
         previous_event_id: str | None = None,
         campaign_id: str | None = None,
+        overlap_window_id: str | None = None,
+        is_retry: bool = False,
     ) -> dict[str, Any]:
         return {
             "event_id": self.random.sequence_id("evt"),
             "session_id": session_id,
             "campaign_id": campaign_id,
+            "overlap_window_id": overlap_window_id,
             "timestamp": isoformat(base_time + timedelta(seconds=offset)),
             "offset_seconds": offset,
             "ip": ip,
@@ -137,6 +217,7 @@ class AttackLogGenerator(BaseGenerator):
             "bytes_sent": bytes_sent if bytes_sent is not None else self.random.randint(256, 8192),
             "attack_stage": attack_stage,
             "previous_event_id": previous_event_id,
+            "is_retry": is_retry,
         }
 
     def _ip(self, prefix: str) -> str:

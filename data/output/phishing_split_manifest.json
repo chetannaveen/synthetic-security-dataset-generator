@@ -1,6 +1,7 @@
 {
   "dataset_name": "phishing",
   "dataset_version": "v0.2.0",
+  "schema_version": "2026.04",
   "record_count": 100,
   "generation_config": {
     "count": 100,
@@ -8,23 +9,26 @@
     "seed": 1337,
     "attack_types": [],
     "format": "json",
-    "code_dataset_mode": "classification"
+    "code_dataset_mode": "classification",
+    "chunk_size": 500,
+    "ml_format": false
   },
   "label_distribution": {
-    "benign": 50,
     "phishing": 35,
+    "benign": 50,
     "suspicious": 15
   },
   "category_distribution": {
+    "typosquatting": 2,
     "legitimate": 50,
-    "typosquatting": 8,
-    "keyword_abuse": 9,
-    "subdomain_abuse": 8,
-    "punycode": 6,
     "suspicious_pattern": 15,
-    "homoglyph": 4
+    "keyword_abuse": 7,
+    "homoglyph": 10,
+    "subdomain_abuse": 6,
+    "punycode": 10
   },
   "feature_list": [
+    "campaign_frequency_hint",
     "contains_keyword",
     "domain_age_days",
     "domain_length",
@@ -41,5 +45,78 @@
     "train": "data/output/phishing_train.json",
     "validation": "data/output/phishing_validation.json",
     "test": "data/output/phishing_test.json"
-  }
+  },
+  "split_analysis": {
+    "overall_distribution": {
+      "labels": {
+        "phishing": 0.35,
+        "benign": 0.5,
+        "suspicious": 0.15
+      },
+      "categories": {
+        "typosquatting": 0.02,
+        "legitimate": 0.5,
+        "suspicious_pattern": 0.15,
+        "keyword_abuse": 0.07,
+        "homoglyph": 0.1,
+        "subdomain_abuse": 0.06,
+        "punycode": 0.1
+      }
+    },
+    "split_distributions": {
+      "train": {
+        "labels": {
+          "phishing": 0.3382,
+          "benign": 0.5147,
+          "suspicious": 0.1471
+        },
+        "categories": {
+          "punycode": 0.1029,
+          "legitimate": 0.5147,
+          "homoglyph": 0.1029,
+          "keyword_abuse": 0.0588,
+          "suspicious_pattern": 0.1471,
+          "subdomain_abuse": 0.0588,
+          "typosquatting": 0.0147
+        }
+      },
+      "validation": {
+        "labels": {
+          "benign": 0.5833,
+          "phishing": 0.25,
+          "suspicious": 0.1667
+        },
+        "categories": {
+          "legitimate": 0.5833,
+          "homoglyph": 0.0833,
+          "punycode": 0.0833,
+          "suspicious_pattern": 0.1667,
+          "keyword_abuse": 0.0833
+        }
+      },
+      "test": {
+        "labels": {
+          "benign": 0.4,
+          "suspicious": 0.15,
+          "phishing": 0.45
+        },
+        "categories": {
+          "legitimate": 0.4,
+          "suspicious_pattern": 0.15,
+          "punycode": 0.1,
+          "keyword_abuse": 0.1,
+          "homoglyph": 0.1,
+          "subdomain_abuse": 0.1,
+          "typosquatting": 0.05
+        }
+      }
+    },
+    "imbalance_by_label": {
+      "phishing": 0.1,
+      "benign": 0.1,
+      "suspicious": 0.0167
+    },
+    "warnings": []
+  },
+  "graph_outputs": {}
 }

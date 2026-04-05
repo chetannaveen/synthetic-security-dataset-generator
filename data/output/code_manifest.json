@@ -1,6 +1,7 @@
 {
   "dataset_name": "code",
   "dataset_version": "v0.2.0",
+  "schema_version": "2026.04",
   "record_count": 100,
   "generation_config": {
     "count": 100,
@@ -8,7 +9,9 @@
     "seed": 1337,
     "attack_types": [],
     "format": "json",
-    "code_dataset_mode": "classification"
+    "code_dataset_mode": "classification",
+    "chunk_size": 500,
+    "ml_format": false
   },
   "label_distribution": {
     "safe": 65,
@@ -31,5 +34,9 @@
   ],
   "outputs": {
     "full": "data/output/code.json"
+  },
+  "split_analysis": {},
+  "graph_outputs": {
+    "edges": "data/output/code_graph.csv"
   }
 }

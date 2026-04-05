@@ -8,7 +8,7 @@ Security and AI teams need large, diverse, and explainable datasets, but real pr
 
 Resume-ready summary:
 
-Built a modular security data platform that generates high-fidelity synthetic datasets across phishing, multi-stage intrusion logs, vulnerable and secure code, and user-behavior anomalies; added reproducible generation, feature engineering, dataset validation, manifests, train/validation/test splitting, streaming exports, and an end-to-end ML demo for security detection use cases.
+Built a modular security data platform that generates high-fidelity synthetic datasets across phishing, multi-stage intrusion logs, vulnerable and secure code, and user-behavior anomalies; added reproducible generation, schema-aware validation, quality scoring, graph export, stratified train/validation/test splitting, ML-oriented export modes, dataset reporting, and end-to-end benchmarking for security detection use cases.
 
 ## Updated architecture
 
@@ -16,7 +16,8 @@ Built a modular security data platform that generates high-fidelity synthetic da
 synthetic-security-dataset-generator/
 ├── data/output/                                   # Generated datasets, manifests, split outputs
 ├── examples/
-│   └── train_simple_model.py                      # Baseline phishing classifier demo
+│   ├── benchmark.py                               # Multi-model phishing benchmark
+│   └── train_simple_model.py                      # Original baseline demo
 ├── synthetic_security_dataset_generator/
 │   ├── cli/main.py                                # Generate, validate, split, summarize
 │   ├── core/
@@ -25,14 +26,17 @@ synthetic-security-dataset-generator/
 │   │   ├── dataset_manager.py                     # Splits, manifests, metadata summaries
 │   │   ├── labeling_engine.py
 │   │   ├── randomness_engine.py
+│   │   ├── reporting.py                           # Dataset report generation
+│   │   ├── schema.py                              # Schema versioning and feature contracts
 │   │   └── validator.py                           # Schema and quality checks
 │   ├── dataset_generators/
-│   │   ├── phishing_generator.py                  # Homoglyphs, WHOIS, hosting, domain-age realism
-│   │   ├── log_generator.py                       # Multi-stage campaigns with event chaining
+│   │   ├── phishing_generator.py                  # Campaign-aware phishing + email context
+│   │   ├── log_generator.py                       # Multi-stage campaigns with overlap and retries
 │   │   ├── code_vuln_generator.py                 # Mixed safe/vulnerable code and localization labels
-│   │   └── user_behavior_generator.py             # Baseline-aware time-series behavior and anomalies
+│   │   └── user_behavior_generator.py             # Long-term baseline behavior and anomalies
 │   ├── exporters/
 │   │   ├── csv_exporter.py
+│   │   ├── graph_exporter.py                      # Edge list export for graph analytics
 │   │   ├── json_exporter.py
 │   │   └── parquet_exporter.py                    # Optional pyarrow-backed parquet export
 │   ├── heuristics/
@@ -50,13 +54,13 @@ synthetic-security-dataset-generator/
 
 ## Major upgrades
 
-- Advanced phishing realism: homoglyph domains, unicode brands, domain-age simulation, WHOIS-like metadata, hosting/ASN signals, path complexity, TLD risk, and edit-distance features.
-- Multi-stage intrusion telemetry: attack chains now include `recon -> scan -> initial access -> lateral movement -> exfiltration` with event linking, campaign IDs, multiple IPs, and realistic time progression mixed with benign traffic.
+- Advanced phishing realism: homoglyph domains, unicode brands, domain-age simulation, WHOIS-like metadata, hosting/ASN signals, path complexity, TLD risk, campaign clustering, and email lure context.
+- Multi-stage intrusion telemetry: attack chains now include `recon -> scan -> initial access -> lateral movement -> exfiltration` with event linking, campaign IDs, multiple IPs, background noise, partial retries, and overlapping sessions.
 - ML-ready code datasets: mixed vulnerable and safe samples, classification and localization modes, vulnerable line numbers, span indices, and CWE mappings.
-- Baseline-aware user behavior: anomalies are generated relative to each user’s historical baseline and include risk scores plus session anomaly scores.
-- Dataset operations: versioned manifests, feature inventories, dataset splitting, summaries, and validation checks.
-- Export flexibility: JSON, CSV, optional Parquet, flattening for tabular ML workflows, and streaming-friendly JSON writes.
-- End-to-end benchmark: a baseline phishing classifier in `examples/train_simple_model.py`.
+- Baseline-aware user behavior: anomalies are generated relative to each user’s historical baseline and include weekly patterns, time-of-day behavior, long-term history summaries, risk scores, and session anomaly scores.
+- Dataset operations: stratified splitting, schema versioning, feature inventories, quality scoring, imbalance analysis, graph extraction, report generation, and validation checks.
+- Export flexibility: JSON, CSV, optional Parquet, flattening for tabular ML workflows, ML-friendly numeric flattening, edge-list graph export, and streaming-friendly writes.
+- End-to-end benchmark: multi-model phishing benchmarking with accuracy, precision, recall, F1, and ROC-AUC.
 
 ## Dataset domains
 
@@ -68,6 +72,8 @@ The phishing generator now produces:
 - Unicode brand impersonation
 - Punycode domains
 - Suspicious keyword and path abuse
+- Campaign-level URL clustering
+- Email subject, sender, and lure context
 - Benign brand and public web properties for balance
 - Fake-but-realistic WHOIS and hosting metadata
 
@@ -88,8 +94,10 @@ The log generator now simulates campaign-driven intrusion sequences with:
 - `attack_stage`
 - `previous_event_id`
 - `campaign_id`
+- `overlap_window_id`
+- Retry behavior and partial failures
 - Different IPs across attacker stages
-- Normal user activity mixed into the same session timeline
+- Normal user activity and background noise mixed into the same session timeline
 
 This makes the dataset usable for session classification, stage prediction, and graph/event correlation tasks.
 
@@ -110,6 +118,9 @@ This is suitable for secure-code classification, line-level localization, and re
 User-behavior generation now includes:
 
 - Historical baselines per user
+- Long-term history summaries
+- Weekday versus weekend activity patterns
+- Time-of-day distributions
 - Relative anomaly generation instead of hard-coded global rules
 - Event-level `risk_score`
 - Session-level anomaly score
@@ -126,24 +137,26 @@ python3 -m pip install -e .[dev]
 Generate:
 
 ```bash
-python3 -m synthetic_security_dataset_generator.cli.main generate phishing --count 1000 --format json
+python3 -m synthetic_security_dataset_generator.cli.main generate phishing --count 1000 --format json --graph-export
 python3 -m synthetic_security_dataset_generator.cli.main generate logs --attack-type intrusion_chain --count 250
 python3 -m synthetic_security_dataset_generator.cli.main generate code --code-mode localization --count 100
-python3 -m synthetic_security_dataset_generator.cli.main generate all --size small --flatten --stream
+python3 -m synthetic_security_dataset_generator.cli.main generate all --size small --flatten --stream --chunk-size 250 --ml-format
 ```
 
-Validate, split, summarize:
+Validate, split, summarize, report, graph:
 
 ```bash
 python3 -m synthetic_security_dataset_generator.cli.main validate phishing --input-format json
 python3 -m synthetic_security_dataset_generator.cli.main split phishing --train 0.7 --val 0.15 --test 0.15
 python3 -m synthetic_security_dataset_generator.cli.main summarize logs
+python3 -m synthetic_security_dataset_generator.cli.main report phishing --report-format json
+python3 -m synthetic_security_dataset_generator.cli.main graph phishing
 ```
 
-Run the demo model:
+Run the benchmarks:
 
 ```bash
-python3 examples/train_simple_model.py
+python3 examples/benchmark.py
 ```
 
 ## Manifest and validation
@@ -151,18 +164,25 @@ python3 examples/train_simple_model.py
 Each generated dataset writes a manifest containing:
 
 - Dataset name and version
+- Schema version
 - Generation config
 - Label distribution
 - Category distribution
 - Feature list
 - Output file locations
+- Split imbalance analysis
+- Graph export locations when enabled
 
 Validation checks currently cover:
 
-- Required schema fields
+- Required schema fields per dataset
+- Required and optional feature contracts
+- Extra-field detection
 - Label/category consistency
 - Feature completeness
 - Label diversity sanity
+- Realism heuristics
+- Overall `quality_score` in `[0, 1]`
 
 ## Example outputs
 
@@ -181,6 +201,12 @@ Validation checks currently cover:
     "path_complexity": 3.625
   },
   "metadata": {
+    "campaign_id": "phishcamp-1a2b3c4d5e",
+    "cluster_id": "cluster-5e4d3c2b1a",
+    "email_context": {
+      "sender_name": "Microsoft Security Team",
+      "subject": "Unusual sign-in attempt on your Microsoft account"
+    },
     "hosting": {
       "asn": "AS20473",
       "provider": "Choopa",
@@ -206,6 +232,7 @@ Validation checks currently cover:
       "event_id": "evt-b621ecc18c",
       "attack_stage": "recon",
       "previous_event_id": null,
+      "overlap_window_id": "window-4",
       "ip": "45.83.64.17",
       "endpoint": "/robots.txt"
     },
@@ -213,6 +240,7 @@ Validation checks currently cover:
       "event_id": "evt-c7433e8c2d",
       "attack_stage": "data_exfiltration",
       "previous_event_id": "evt-901ff01792",
+      "is_retry": false,
       "ip": "10.10.20.44",
       "endpoint": "/reports/export"
     }
@@ -243,7 +271,35 @@ Validation checks currently cover:
   "category": "slow_data_exfiltration",
   "features": {
     "session_anomaly_score": 0.392,
-    "baseline_location_count": 2
+    "baseline_location_count": 2,
+    "history_days": 173,
+    "weekend_session": false
+  }
+}
+```
+
+### Report sample
+
+```json
+{
+  "dataset_name": "phishing",
+  "record_count": 100,
+  "quality_score": 0.93,
+  "anomalies_count": 35,
+  "feature_stats": {
+    "entropy": {"min": 2.6464, "max": 4.1147, "mean": 3.2861},
+    "domain_age_days": {"min": 4.0, "max": 6111.0, "mean": 1673.93}
+  }
+}
+```
+
+### Benchmark sample
+
+```json
+{
+  "models": {
+    "logistic_regression": {"accuracy": 1.0, "precision": 1.0, "recall": 1.0, "f1": 1.0, "roc_auc": 1.0},
+    "random_threshold_forest": {"accuracy": 0.8235, "precision": 1.0, "recall": 0.6667, "f1": 0.8, "roc_auc": 0.8889}
   }
 }
 ```
@@ -253,6 +309,7 @@ Validation checks currently cover:
 - Phishing URL classification and ranking
 - Session-level attack chain detection
 - Stage prediction and event-correlation experiments
+- Graph analytics across campaigns, domains, users, and IPs
 - Secure-code classification and vulnerability localization
 - User-behavior analytics and anomaly scoring
 - LLM finetuning and evaluation for security tasks
@@ -269,6 +326,7 @@ The test suite now covers:
 
 - Generator correctness and feature presence
 - Attack-chain linking
-- Validation logic
-- Manifest and split generation
+- Validation logic and quality scoring
+- Stratified split correctness and imbalance analysis
+- Manifest, report, and graph generation
 - Schema checks for ML-ready outputs

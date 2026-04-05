@@ -1,6 +1,7 @@
 {
   "dataset_name": "user_behavior",
   "dataset_version": "v0.2.0",
+  "schema_version": "2026.04",
   "record_count": 100,
   "generation_config": {
     "count": 100,
@@ -8,7 +9,9 @@
     "seed": 1337,
     "attack_types": [],
     "format": "json",
-    "code_dataset_mode": "classification"
+    "code_dataset_mode": "classification",
+    "chunk_size": 500,
+    "ml_format": false
   },
   "label_distribution": {
     "normal": 65,
@@ -16,11 +19,11 @@
   },
   "category_distribution": {
     "normal": 65,
-    "slow_data_exfiltration": 10,
-    "impossible_travel": 11,
-    "privilege_escalation": 4,
-    "new_geo": 6,
-    "high_frequency_actions": 4
+    "privilege_escalation": 9,
+    "new_geo": 5,
+    "impossible_travel": 7,
+    "high_frequency_actions": 10,
+    "slow_data_exfiltration": 4
   },
   "feature_list": [
     "action_velocity",
@@ -28,9 +31,15 @@
     "contains_admin_action",
     "distinct_locations",
     "event_count",
-    "session_anomaly_score"
+    "history_days",
+    "session_anomaly_score",
+    "weekend_session"
   ],
   "outputs": {
     "full": "data/output/user_behavior.json"
+  },
+  "split_analysis": {},
+  "graph_outputs": {
+    "edges": "data/output/user_behavior_graph.csv"
   }
 }

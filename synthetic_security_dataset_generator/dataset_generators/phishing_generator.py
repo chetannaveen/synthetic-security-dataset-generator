@@ -31,6 +31,10 @@ from synthetic_security_dataset_generator.utils.time_utils import isoformat, utc
 class PhishingURLGenerator(BaseGenerator):
     dataset_name = "phishing"
 
+    def __init__(self, config) -> None:
+        super().__init__(config)
+        self._campaign_templates = self._build_campaign_templates()
+
     def build_balance_plan(self) -> list[bool | None]:
         malicious = int(self.config.count * self.config.malicious_ratio)
         suspicious = int(self.config.count * self.config.suspicious_ratio)
@@ -39,15 +43,16 @@ class PhishingURLGenerator(BaseGenerator):
         return self.random.shuffle(plan)
 
     def generate_record(self, malicious: bool | None = None, attack_type: str | None = None) -> dict[str, Any]:
+        campaign = self.random.choice(self._campaign_templates)
         if malicious is True:
             attack_type = attack_type or self.random.choice(
                 ["typosquatting", "subdomain_abuse", "keyword_abuse", "punycode", "homoglyph"]
             )
-            url, brand = self._make_malicious_url(attack_type)
+            url, brand = self._make_malicious_url(attack_type, campaign)
             label = "phishing"
         elif malicious is None:
             attack_type = "suspicious_pattern"
-            url, brand = self._make_suspicious_url()
+            url, brand = self._make_suspicious_url(campaign)
             label = "suspicious"
         else:
             attack_type = "legitimate"
@@ -72,8 +77,10 @@ class PhishingURLGenerator(BaseGenerator):
             "has_unicode_chars": has_unicode_chars(domain),
             "path_depth": path.count("/"),
             "path_complexity": round(shannon_entropy(path), 4),
+            "campaign_frequency_hint": campaign["frequency_hint"] if label != "benign" else 0,
         }
         whois_metadata = self._whois_metadata(domain, domain_age_days, label)
+        email_context = self._email_context(matched_brand, label, campaign)
         decision = LabelDecision(
             label=label,
             category=attack_type,
@@ -84,9 +91,24 @@ class PhishingURLGenerator(BaseGenerator):
                 "source": "synthetic_url_engine",
                 "whois": whois_metadata,
                 "hosting": hosting,
+                "campaign_id": campaign["campaign_id"] if label != "benign" else None,
+                "cluster_id": campaign["cluster_id"] if label != "benign" else None,
+                "email_context": email_context,
             },
         )
-        return self.labeling.attach({"url": url}, decision)
+        return self.labeling.attach(
+            {
+                "url": url,
+                "campaign_id": campaign["campaign_id"] if label != "benign" else None,
+                "cluster_id": campaign["cluster_id"] if label != "benign" else None,
+                "relationships": [
+                    {"src": campaign["campaign_id"], "dst": whois_metadata["domain"], "relation": "uses_domain"}
+                ]
+                if label != "benign"
+                else [],
+            },
+            decision,
+        )
 
     def _make_benign_url(self) -> tuple[str, str]:
         base = self.random.choice(BENIGN_DOMAINS)
@@ -94,29 +116,64 @@ class PhishingURLGenerator(BaseGenerator):
         brand = next((candidate for candidate in BRANDS if candidate in base), base.split(".")[0])
         return f"https://{base}{path}", brand
 
-    def _make_suspicious_url(self) -> tuple[str, str]:
+    def _make_suspicious_url(self, campaign: dict[str, Any]) -> tuple[str, str]:
         brand = self.random.choice(BRANDS)
         keyword = self.random.choice(PHISHING_KEYWORDS)
         tld = self.random.choice([".co", ".support", ".info"])
-        return f"https://{brand}-{keyword}{tld}{self.random.choice(PATH_PATTERNS)}", brand
+        return f"https://{brand}-{keyword}{tld}{campaign['path_template']}", brand
 
-    def _make_malicious_url(self, attack_type: str) -> tuple[str, str]:
-        brand = self.random.choice(BRANDS)
-        keyword = self.random.choice(PHISHING_KEYWORDS)
+    def _make_malicious_url(self, attack_type: str, campaign: dict[str, Any]) -> tuple[str, str]:
+        brand = campaign["brand"]
+        keyword = campaign["keyword"]
         if attack_type == "typosquatting":
             host = f"{TYPO_SWAPS.get(brand, brand[:-1] + '1')}{self.random.choice(TLDS + ['.top'])}"
-            return f"https://{host}{self.random.choice(PATH_PATTERNS)}", brand
+            return f"https://{host}{campaign['path_template']}", brand
         if attack_type == "subdomain_abuse":
             host = f"secure-{keyword}.{brand}.verify-user.com"
             return f"https://{host}/session/{self.random.token('abcdef0123456789', 8)}", brand
         if attack_type == "punycode":
             host = self.random.choice(PUNYCODE_DOMAINS)
-            return f"https://{host}{self.random.choice(PATH_PATTERNS)}", brand
+            return f"https://{host}{campaign['path_template']}", brand
         if attack_type == "homoglyph":
             host = f"{UNICODE_HOMOGLYPHS.get(brand, brand)}{self.random.choice(['.com', '.support', '.info'])}"
             return f"https://{host}/identity/{keyword}", brand
         host = f"{brand}-{keyword}-portal{self.random.choice(['.co', '.info', '.support'])}"
         return f"https://{host}/account/review/{self.random.token('abcdef1234567890', 6)}", brand
+
+    def _build_campaign_templates(self) -> list[dict[str, Any]]:
+        templates = []
+        for _ in range(max(3, min(8, self.config.count // 20 or 3))):
+            brand = self.random.choice(BRANDS)
+            keyword = self.random.choice(PHISHING_KEYWORDS)
+            templates.append(
+                {
+                    "campaign_id": self.random.sequence_id("phishcamp"),
+                    "cluster_id": self.random.sequence_id("cluster"),
+                    "brand": brand,
+                    "keyword": keyword,
+                    "subject_template": self.random.choice(
+                        [
+                            f"{brand.title()} account action required",
+                            f"Unusual sign-in attempt on your {brand.title()} account",
+                            f"{brand.title()} billing verification needed",
+                        ]
+                    ),
+                    "sender_name": self.random.choice(
+                        [f"{brand.title()} Security Team", f"{brand.title()} Billing", f"{brand.title()} Support"]
+                    ),
+                    "path_template": self.random.choice(PATH_PATTERNS),
+                    "frequency_hint": self.random.randint(8, 70),
+                }
+            )
+        return templates
+
+    def _email_context(self, brand: str, label: str, campaign: dict[str, Any]) -> dict[str, Any]:
+        sender_domain = f"{brand}.com" if label == "benign" else campaign["campaign_id"][:10] + ".mail-notify.net"
+        return {
+            "sender_name": campaign["sender_name"] if label != "benign" else f"{brand.title()} Notifications",
+            "sender_email": f"alerts@{sender_domain}",
+            "subject": campaign["subject_template"] if label != "benign" else f"Your {brand.title()} account update",
+        }
 
     def _whois_metadata(self, domain: str, age_days: int, label: str) -> dict[str, Any]:
         created = utc_now() - timedelta(days=age_days)

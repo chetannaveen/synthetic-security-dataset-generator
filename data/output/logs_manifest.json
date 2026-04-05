@@ -1,6 +1,7 @@
 {
   "dataset_name": "logs",
   "dataset_version": "v0.2.0",
+  "schema_version": "2026.04",
   "record_count": 100,
   "generation_config": {
     "count": 100,
@@ -8,27 +9,35 @@
     "seed": 1337,
     "attack_types": [],
     "format": "json",
-    "code_dataset_mode": "classification"
+    "code_dataset_mode": "classification",
+    "chunk_size": 500,
+    "ml_format": false
   },
   "label_distribution": {
     "normal": 65,
-    "app_takeover": 21,
-    "intrusion_chain": 14
+    "app_takeover": 19,
+    "intrusion_chain": 16
   },
   "category_distribution": {
     "normal": 65,
-    "app_takeover": 21,
-    "intrusion_chain": 14
+    "app_takeover": 19,
+    "intrusion_chain": 16
   },
   "feature_list": [
     "attack_stage_count",
+    "background_noise_events",
     "distinct_ips",
     "duration_seconds",
     "error_rate",
     "request_count",
+    "retry_ratio",
     "unique_endpoints"
   ],
   "outputs": {
     "full": "data/output/logs.json"
+  },
+  "split_analysis": {},
+  "graph_outputs": {
+    "edges": "data/output/logs_graph.csv"
   }
 }

@@ -34,6 +34,20 @@ class BaseGenerator(ABC):
         ]
         return dataset
 
+    def generate_dataset_batches(self, chunk_size: int, progress_callback: Any | None = None) -> list[list[dict[str, Any]]]:
+        plan = self.build_balance_plan()
+        batches: list[list[dict[str, Any]]] = []
+        for start in range(0, len(plan), chunk_size):
+            batch_flags = plan[start : start + chunk_size]
+            batch = [
+                self.generate_record(malicious=flag, attack_type=self.pick_attack_type(flag))
+                for flag in batch_flags
+            ]
+            batches.append(batch)
+            if progress_callback:
+                progress_callback(min(start + len(batch_flags), len(plan)), len(plan))
+        return batches
+
     def pick_attack_type(self, malicious: bool | None) -> str | None:
         if not malicious or not self.config.attack_types:
             return None

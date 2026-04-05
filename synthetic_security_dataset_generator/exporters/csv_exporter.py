@@ -15,9 +15,10 @@ class CsvExporter:
         destination: Path,
         flatten_nested: bool = False,
         stream_write: bool = False,
+        ml_format: bool = False,
     ) -> Path:
         destination.parent.mkdir(parents=True, exist_ok=True)
-        rows = [flatten_record(record) if flatten_nested else record for record in records]
+        rows = [flatten_record(record, ml_format=ml_format) if (flatten_nested or ml_format) else record for record in records]
         fieldnames = self._collect_fields(rows)
         with destination.open("w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(handle, fieldnames=fieldnames)

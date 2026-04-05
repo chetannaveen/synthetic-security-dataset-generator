@@ -6,14 +6,23 @@ from typing import Any
 import csv
 
 
-def flatten_record(record: dict[str, Any], prefix: str = "") -> dict[str, Any]:
+def flatten_record(record: dict[str, Any], prefix: str = "", ml_format: bool = False) -> dict[str, Any]:
     flattened: dict[str, Any] = {}
     for key, value in record.items():
         flat_key = f"{prefix}{key}" if not prefix else f"{prefix}_{key}"
         if isinstance(value, dict):
-            flattened.update(flatten_record(value, flat_key))
+            flattened.update(flatten_record(value, flat_key, ml_format=ml_format))
         elif isinstance(value, list):
-            flattened[flat_key] = json.dumps(value, sort_keys=True)
+            if ml_format:
+                flattened[flat_key] = float(len(value))
+            else:
+                flattened[flat_key] = json.dumps(value, sort_keys=True)
+        elif ml_format and isinstance(value, bool):
+            flattened[flat_key] = float(value)
+        elif ml_format and value is None:
+            flattened[flat_key] = 0.0
+        elif ml_format and not isinstance(value, (int, float, str)):
+            flattened[flat_key] = str(value)
         else:
             flattened[flat_key] = value
     return flattened

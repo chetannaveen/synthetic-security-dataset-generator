@@ -1,11 +1,17 @@
 from pathlib import Path
 
-from synthetic_security_dataset_generator.cli.main import generate_one, split_dataset, validate_dataset
+from synthetic_security_dataset_generator.cli.main import (
+    export_graph,
+    generate_one,
+    report_dataset,
+    split_dataset,
+    validate_dataset,
+)
 
 
 class Args:
     dataset = "phishing"
-    count = 10
+    count = 18
     malicious_ratio = 0.4
     seed = 9
     attack_type = []
@@ -16,19 +22,24 @@ class Args:
     stream = False
     dataset_version = "v0.2.0"
     code_mode = "classification"
+    chunk_size = 10
+    ml_format = False
+    progress = False
+    graph_export = True
 
 
-def test_generate_one_writes_json(tmp_path: Path):
+def test_generate_one_writes_json_and_manifest(tmp_path: Path):
     args = Args()
     args.output_dir = str(tmp_path)
     result = generate_one("phishing", args)
     output = Path(result["output"])
     assert output.exists()
-    assert result["summary"]["records"] == 10
+    assert result["summary"]["records"] == 18
     assert Path(result["manifest"]).exists()
+    assert (tmp_path / "phishing_graph.csv").exists()
 
 
-def test_split_and_validate_dataset(tmp_path: Path):
+def test_split_validate_report_and_graph(tmp_path: Path):
     args = Args()
     args.output_dir = str(tmp_path)
     generate_one("phishing", args)
@@ -56,4 +67,24 @@ def test_split_and_validate_dataset(tmp_path: Path):
         output_dir = str(tmp_path)
 
     validation = validate_dataset("phishing", ValidateArgs())
-    assert validation["stats"]["record_count"] == 10
+    assert validation["stats"]["record_count"] == 18
+    assert validation["quality_score"] > 0
+
+    class ReportArgs:
+        dataset = "phishing"
+        input = None
+        input_format = "json"
+        output_dir = str(tmp_path)
+        report_format = "json"
+
+    report = report_dataset("phishing", ReportArgs())
+    assert Path(report["output"]).exists()
+
+    class GraphArgs:
+        dataset = "phishing"
+        input = None
+        input_format = "json"
+        output_dir = str(tmp_path)
+
+    graph = export_graph("phishing", GraphArgs())
+    assert graph["edges"] > 0

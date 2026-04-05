@@ -21,6 +21,10 @@ class GenerationConfig:
     train_ratio: float = 0.7
     val_ratio: float = 0.15
     test_ratio: float = 0.15
+    chunk_size: int = 500
+    ml_format: bool = False
+    progress: bool = False
+    schema_version: str = "2026.04"
     metadata: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
@@ -34,6 +38,8 @@ class GenerationConfig:
             raise ValueError("code_dataset_mode must be 'classification' or 'localization'")
         if round(self.train_ratio + self.val_ratio + self.test_ratio, 6) != 1.0:
             raise ValueError("train/val/test ratios must sum to 1.0")
+        if self.chunk_size <= 0:
+            raise ValueError("chunk_size must be positive")
 
     @property
     def suspicious_ratio(self) -> float:

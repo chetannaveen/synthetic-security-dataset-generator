@@ -34,7 +34,8 @@ class UserBehaviorGenerator(BaseGenerator):
         anomaly_type = attack_type or ("normal" if not malicious else self.random.choice(list(ANOMALIES)))
         baseline = self._build_baseline()
         user_id = f"user-{self.random.randint(1000, 9999)}"
-        base_time = utc_now() - timedelta(hours=self.random.randint(24, 240))
+        base_time = self._sample_session_time(baseline)
+        history_summary = self._history_summary(baseline)
         sequence = (
             self._normal_sequence(user_id, base_time, baseline)
             if anomaly_type == "normal"
@@ -48,15 +49,30 @@ class UserBehaviorGenerator(BaseGenerator):
             "contains_admin_action": any(event["action"] == "grant_admin_role" for event in sequence),
             "session_anomaly_score": session_anomaly_score,
             "baseline_location_count": len(baseline["common_locations"]),
+            "weekend_session": base_time.weekday() >= 5,
+            "history_days": history_summary["history_days"],
         }
         decision = LabelDecision(
             label="normal" if anomaly_type == "normal" else "anomaly",
             category=anomaly_type,
             explanation=ANOMALIES.get(anomaly_type, "Routine user behavior."),
             features=features,
-            metadata={"user_id": user_id, "baseline": baseline, "source": "synthetic_behavior_engine"},
+            metadata={
+                "user_id": user_id,
+                "baseline": baseline,
+                "history_summary": history_summary,
+                "source": "synthetic_behavior_engine",
+            },
         )
-        return self.labeling.attach({"user_id": user_id, "events": sequence}, decision)
+        return self.labeling.attach(
+            {
+                "user_id": user_id,
+                "events": sequence,
+                "history_summary": history_summary,
+                "relationships": [{"src": user_id, "dst": event["ip"], "relation": "uses_ip"} for event in sequence],
+            },
+            decision,
+        )
 
     def _build_baseline(self) -> dict[str, Any]:
         primary = self.random.choice(LOCATIONS[:3])
@@ -68,6 +84,8 @@ class UserBehaviorGenerator(BaseGenerator):
             "avg_login_hour_utc": avg_login_hour,
             "avg_daily_actions": avg_daily_actions,
             "usual_actions": ["login", "view_dashboard", "download_report", "logout"],
+            "weekday_activity_bias": round(self.random.uniform(0.65, 0.9), 2),
+            "weekend_activity_bias": round(self.random.uniform(0.1, 0.35), 2),
         }
 
     def _normal_sequence(self, user_id: str, base_time, baseline: dict[str, Any]) -> list[dict[str, Any]]:
@@ -150,6 +168,8 @@ class UserBehaviorGenerator(BaseGenerator):
             "ip": f"{prefix}.{self.random.randint(1, 254)}",
             "risk_score": risk_score,
             "data_volume_mb": data_volume_mb,
+            "hour_of_day_utc": (base_time + timedelta(minutes=offset_minutes)).hour,
+            "day_of_week": (base_time + timedelta(minutes=offset_minutes)).strftime("%A"),
         }
 
     def _risk_score(
@@ -170,3 +190,19 @@ class UserBehaviorGenerator(BaseGenerator):
         if data_volume_mb > 100:
             score += min(data_volume_mb / 500, 0.4)
         return round(min(score, 0.99), 4)
+
+    def _sample_session_time(self, baseline: dict[str, Any]):
+        days_back = self.random.randint(14, 180)
+        session = utc_now() - timedelta(days=days_back)
+        bias = baseline["weekday_activity_bias"] if session.weekday() < 5 else baseline["weekend_activity_bias"]
+        hour = baseline["avg_login_hour_utc"] if self.random.random() < bias else self.random.randint(0, 23)
+        return session.replace(hour=hour, minute=self.random.randint(0, 50), second=0, microsecond=0)
+
+    def _history_summary(self, baseline: dict[str, Any]) -> dict[str, Any]:
+        history_days = self.random.randint(45, 365)
+        return {
+            "history_days": history_days,
+            "avg_weekday_actions": baseline["avg_daily_actions"],
+            "avg_weekend_actions": max(1, baseline["avg_daily_actions"] - self.random.randint(1, 3)),
+            "common_login_hours": [baseline["avg_login_hour_utc"], min(23, baseline["avg_login_hour_utc"] + 1)],
+        }

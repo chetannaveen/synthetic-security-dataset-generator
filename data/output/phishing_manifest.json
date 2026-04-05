@@ -1,6 +1,7 @@
 {
   "dataset_name": "phishing",
   "dataset_version": "v0.2.0",
+  "schema_version": "2026.04",
   "record_count": 100,
   "generation_config": {
     "count": 100,
@@ -8,23 +9,26 @@
     "seed": 1337,
     "attack_types": [],
     "format": "json",
-    "code_dataset_mode": "classification"
+    "code_dataset_mode": "classification",
+    "chunk_size": 500,
+    "ml_format": false
   },
   "label_distribution": {
-    "benign": 50,
     "phishing": 35,
+    "benign": 50,
     "suspicious": 15
   },
   "category_distribution": {
+    "typosquatting": 2,
     "legitimate": 50,
-    "typosquatting": 8,
-    "keyword_abuse": 9,
-    "subdomain_abuse": 8,
-    "punycode": 6,
     "suspicious_pattern": 15,
-    "homoglyph": 4
+    "keyword_abuse": 7,
+    "homoglyph": 10,
+    "subdomain_abuse": 6,
+    "punycode": 10
   },
   "feature_list": [
+    "campaign_frequency_hint",
     "contains_keyword",
     "domain_age_days",
     "domain_length",
@@ -39,5 +43,9 @@
   ],
   "outputs": {
     "full": "data/output/phishing.json"
+  },
+  "split_analysis": {},
+  "graph_outputs": {
+    "edges": "data/output/phishing_graph.csv"
   }
 }
