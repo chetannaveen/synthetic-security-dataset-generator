@@ -1,0 +1,43 @@
+{
+  "dataset_name": "phishing",
+  "dataset_version": "v0.2.0",
+  "record_count": 100,
+  "generation_config": {
+    "count": 100,
+    "malicious_ratio": 0.35,
+    "seed": 1337,
+    "attack_types": [],
+    "format": "json",
+    "code_dataset_mode": "classification"
+  },
+  "label_distribution": {
+    "benign": 50,
+    "phishing": 35,
+    "suspicious": 15
+  },
+  "category_distribution": {
+    "legitimate": 50,
+    "typosquatting": 8,
+    "keyword_abuse": 9,
+    "subdomain_abuse": 8,
+    "punycode": 6,
+    "suspicious_pattern": 15,
+    "homoglyph": 4
+  },
+  "feature_list": [
+    "contains_keyword",
+    "domain_age_days",
+    "domain_length",
+    "entropy",
+    "has_unicode_chars",
+    "levenshtein_distance_to_brand",
+    "looks_like_brand",
+    "number_of_subdomains",
+    "path_complexity",
+    "path_depth",
+    "tld_risk_score"
+  ],
+  "outputs": {
+    "full": "data/output/phishing.json"
+  }
+}

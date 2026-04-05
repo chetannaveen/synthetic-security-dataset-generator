@@ -1,0 +1,542 @@
+[
+  {
+    "url": "https://github.com/docs/api",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 3778,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 2.9477
+    },
+    "metadata": {
+      "brand_target": "github",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "github.com",
+        "registrar": "GoDaddy.com, LLC",
+        "created_at": "2015-12-01T00:50:58.568110Z",
+        "updated_at": "2018-07-02T00:50:58.568110Z",
+        "expiry_at": "2025-11-28T00:50:58.568110Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://nytimes.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 2816,
+      "has_unicode_chars": false,
+      "path_depth": 1,
+      "path_complexity": -0.0
+    },
+    "metadata": {
+      "brand_target": "nytimes",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "nytimes.com",
+        "registrar": "Porkbun LLC",
+        "created_at": "2018-07-20T00:50:58.560912Z",
+        "updated_at": "2020-06-23T00:50:58.560912Z",
+        "expiry_at": "2028-07-17T00:50:58.560912Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS14061",
+        "provider": "DigitalOcean",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://secure-billing.paypal.verify-user.com/session/22ddfe57",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting paypal, with fresh domain registration (11 days) and hosting characteristics associated with abuse-prone infrastructure.",
+    "features": {
+      "domain_length": 37,
+      "entropy": 4.1008,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 28,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 11,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.3372
+    },
+    "metadata": {
+      "brand_target": "paypal",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "secure-billing.paypal.verify-user.com",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2026-03-25T00:50:58.565046Z",
+        "updated_at": "2026-03-27T00:50:58.565046Z",
+        "expiry_at": "2027-03-25T00:50:58.565046Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16276",
+        "provider": "OVH SAS",
+        "infra": "unknown"
+      }
+    }
+  },
+  {
+    "url": "https://amazon-verify-portal.co/account/review/0783f2",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting amazon, with fresh domain registration (24 days) and hosting characteristics associated with abuse-prone infrastructure.",
+    "features": {
+      "domain_length": 23,
+      "entropy": 3.9362,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 16,
+      "tld_risk_score": 0.45,
+      "domain_age_days": 24,
+      "has_unicode_chars": false,
+      "path_depth": 3,
+      "path_complexity": 4.0615
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "amazon-verify-portal.co",
+        "registrar": "Tucows Domains Inc.",
+        "created_at": "2026-03-12T00:50:58.559367Z",
+        "updated_at": "2026-03-18T00:50:58.559367Z",
+        "expiry_at": "2027-03-12T00:50:58.559367Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS20473",
+        "provider": "Choopa",
+        "infra": "suspicious"
+      }
+    }
+  },
+  {
+    "url": "https://apple-secure.support/security/billing/confirm",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL shows brand-adjacent wording for apple, elevated path complexity, and a relatively new registration hosted via OVH SAS.",
+    "features": {
+      "domain_length": 20,
+      "entropy": 3.3842,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 14,
+      "tld_risk_score": 0.64,
+      "domain_age_days": 30,
+      "has_unicode_chars": false,
+      "path_depth": 3,
+      "path_complexity": 3.8137
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "apple-secure.support",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2026-03-06T00:50:58.571042Z",
+        "updated_at": "2026-03-13T00:50:58.571042Z",
+        "expiry_at": "2027-03-06T00:50:58.571042Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16276",
+        "provider": "OVH SAS",
+        "infra": "unknown"
+      }
+    }
+  },
+  {
+    "url": "https://google.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 2802,
+      "has_unicode_chars": false,
+      "path_depth": 1,
+      "path_complexity": 3.1699
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "google.com",
+        "registrar": "GoDaddy.com, LLC",
+        "created_at": "2018-08-03T00:50:58.569859Z",
+        "updated_at": "2020-07-03T00:50:58.569859Z",
+        "expiry_at": "2028-07-31T00:50:58.569859Z",
+        "privacy_protection": false
+      },
+      "hosting": {
+        "asn": "AS14061",
+        "provider": "DigitalOcean",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://wikipedia.org/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.15,
+      "domain_age_days": 5794,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.4548
+    },
+    "metadata": {
+      "brand_target": "wikipedia",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "wikipedia.org",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2010-05-25T00:50:58.570397Z",
+        "updated_at": "2014-05-12T00:50:58.570397Z",
+        "expiry_at": "2020-05-22T00:50:58.570397Z",
+        "privacy_protection": false
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://bankofamerica-billing.support/account/verify",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL shows brand-adjacent wording for bankofamerica, elevated path complexity, and a relatively new registration hosted via Amazon AWS.",
+    "features": {
+      "domain_length": 29,
+      "entropy": 4.1163,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 15,
+      "tld_risk_score": 0.64,
+      "domain_age_days": 7,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.6402
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "bankofamerica-billing.support",
+        "registrar": "GoDaddy.com, LLC",
+        "created_at": "2026-03-29T00:50:58.564854Z",
+        "updated_at": "2026-03-30T00:50:58.564854Z",
+        "expiry_at": "2027-03-29T00:50:58.564854Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://app1e.net/security/billing/confirm",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators targeting apple, with fresh domain registration (3 days) and hosting characteristics associated with abuse-prone infrastructure.",
+    "features": {
+      "domain_length": 9,
+      "entropy": 2.7255,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 4,
+      "tld_risk_score": 0.25,
+      "domain_age_days": 3,
+      "has_unicode_chars": false,
+      "path_depth": 3,
+      "path_complexity": 3.8137
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "app1e.net",
+        "registrar": "Tucows Domains Inc.",
+        "created_at": "2026-04-02T00:50:58.568670Z",
+        "updated_at": "2026-04-03T00:50:58.568670Z",
+        "expiry_at": "2027-04-02T00:50:58.568670Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://google-billing.co/portal/update",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL shows brand-adjacent wording for google, elevated path complexity, and a relatively new registration hosted via Choopa.",
+    "features": {
+      "domain_length": 17,
+      "entropy": 3.1307,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 10,
+      "tld_risk_score": 0.45,
+      "domain_age_days": 6,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.2359
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "google-billing.co",
+        "registrar": "Porkbun LLC",
+        "created_at": "2026-03-30T00:50:58.560187Z",
+        "updated_at": "2026-03-31T00:50:58.560187Z",
+        "expiry_at": "2027-03-30T00:50:58.560187Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS20473",
+        "provider": "Choopa",
+        "infra": "suspicious"
+      }
+    }
+  },
+  {
+    "url": "https://amazon-secure.info/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL shows brand-adjacent wording for amazon, elevated path complexity, and a relatively new registration hosted via M247.",
+    "features": {
+      "domain_length": 18,
+      "entropy": 3.7255,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 11,
+      "tld_risk_score": 0.72,
+      "domain_age_days": 17,
+      "has_unicode_chars": false,
+      "path_depth": 1,
+      "path_complexity": 2.2359
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "amazon-secure.info",
+        "registrar": "Tucows Domains Inc.",
+        "created_at": "2026-03-19T00:50:58.567166Z",
+        "updated_at": "2026-03-23T00:50:58.567166Z",
+        "expiry_at": "2027-03-19T00:50:58.567166Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS9009",
+        "provider": "M247",
+        "infra": "unknown"
+      }
+    }
+  },
+  {
+    "url": "https://microsoft-support.co/account/verify",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL shows brand-adjacent wording for microsoft, elevated path complexity, and a relatively new registration hosted via OVH SAS.",
+    "features": {
+      "domain_length": 20,
+      "entropy": 3.4219,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 10,
+      "tld_risk_score": 0.45,
+      "domain_age_days": 35,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.6402
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "microsoft-support.co",
+        "registrar": "GoDaddy.com, LLC",
+        "created_at": "2026-03-01T00:50:58.567700Z",
+        "updated_at": "2026-03-09T00:50:58.567700Z",
+        "expiry_at": "2027-03-01T00:50:58.567700Z",
+        "privacy_protection": true
+      },
+      "hosting": {
+        "asn": "AS16276",
+        "provider": "OVH SAS",
+        "infra": "unknown"
+      }
+    }
+  },
+  {
+    "url": "https://amazon.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 5880,
+      "has_unicode_chars": false,
+      "path_depth": 2,
+      "path_complexity": 3.4548
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "amazon.com",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2010-02-28T00:50:58.560726Z",
+        "updated_at": "2014-03-09T00:50:58.560726Z",
+        "expiry_at": "2020-02-26T00:50:58.560726Z",
+        "privacy_protection": false
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://amazon.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 3702,
+      "has_unicode_chars": false,
+      "path_depth": 1,
+      "path_complexity": 3.1699
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "amazon.com",
+        "registrar": "NameSilo, LLC",
+        "created_at": "2016-02-15T00:50:58.571124Z",
+        "updated_at": "2018-08-28T00:50:58.571124Z",
+        "expiry_at": "2026-02-12T00:50:58.571124Z",
+        "privacy_protection": false
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      }
+    }
+  },
+  {
+    "url": "https://github.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL aligns with a known legitimate property, older registration history, and mainstream hosting signals.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true,
+      "levenshtein_distance_to_brand": 3,
+      "tld_risk_score": 0.2,
+      "domain_age_days": 1895,
+      "has_unicode_chars": false,
+      "path_depth": 1,
+      "path_complexity": 3.1699
+    },
+    "metadata": {
+      "brand_target": "github",
+      "source": "synthetic_url_engine",
+      "whois": {
+        "domain": "github.com",
+        "registrar": "GoDaddy.com, LLC",
+        "created_at": "2021-01-26T00:50:58.570765Z",
+        "updated_at": "2022-05-14T00:50:58.570765Z",
+        "expiry_at": "2031-01-24T00:50:58.570765Z",
+        "privacy_protection": false
+      },
+      "hosting": {
+        "asn": "AS16509",
+        "provider": "Amazon AWS",
+        "infra": "cloud"
+      }
+    }
+  }
+]

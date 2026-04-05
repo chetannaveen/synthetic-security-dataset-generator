@@ -3,28 +3,45 @@
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "path_traversal",
     "severity": "high",
+    "cwe_id": "CWE-22",
     "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
     "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 47,
+        "end": 94
+      }
+    ],
     "label": "vulnerable",
     "category": "path_traversal",
     "explanation": "User input controls a filesystem path with insufficient normalization.",
@@ -32,19 +49,33 @@
       "snippet_length": 94,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
+    "cwe_id": "CWE-502",
     "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 39,
+        "end": 69
+      }
+    ],
     "label": "vulnerable",
     "category": "insecure_deserialization",
     "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
@@ -52,19 +83,33 @@
       "snippet_length": 69,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "weak_crypto",
     "severity": "medium",
+    "cwe_id": "CWE-327",
     "code_snippet": "import hashlib\n\ndef digest(password):\n    return hashlib.md5(password.encode()).hexdigest()\n",
     "safe_version": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 38,
+        "end": 92
+      }
+    ],
     "label": "vulnerable",
     "category": "weak_crypto",
     "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
@@ -72,19 +117,85 @@
       "snippet_length": 92,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "sql_injection",
     "severity": "high",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "sql_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 141,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "xss",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 164,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "sql_injection",
+    "severity": "high",
+    "cwe_id": "CWE-89",
     "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
     "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 33,
+        "end": 98
+      }
+    ],
     "label": "vulnerable",
     "category": "sql_injection",
     "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
@@ -92,19 +203,33 @@
       "snippet_length": 140,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
+    "cwe_id": "CWE-79",
     "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 34,
+        "end": 104
+      }
+    ],
     "label": "vulnerable",
     "category": "xss",
     "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
@@ -112,59 +237,593 @@
       "snippet_length": 106,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "weak_crypto",
     "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
+    "safe_version": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 173,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "command_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 193,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "insecure_deserialization",
+    "severity": "high",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "insecure_deserialization",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 65,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 47,
+        "end": 94
+      }
+    ],
+    "label": "vulnerable",
+    "category": "path_traversal",
+    "explanation": "User input controls a filesystem path with insufficient normalization.",
+    "features": {
+      "snippet_length": 94,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "path_traversal",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 229,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "command_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 193,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 152,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "insecure_deserialization",
+    "severity": "high",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "insecure_deserialization",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 65,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "path_traversal",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 229,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 29,
+        "end": 79
+      }
+    ],
+    "label": "vulnerable",
+    "category": "command_injection",
+    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "features": {
+      "snippet_length": 79,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "path_traversal",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 229,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "sql_injection",
+    "severity": "high",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "sql_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 141,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "path_traversal",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 229,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 152,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "xss",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 164,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "insecure_deserialization",
+    "severity": "high",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 39,
+        "end": 69
+      }
+    ],
+    "label": "vulnerable",
+    "category": "insecure_deserialization",
+    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "features": {
+      "snippet_length": 69,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "command_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 193,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "insecure_deserialization",
+    "severity": "high",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "insecure_deserialization",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 65,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [
+      3
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 3,
+        "start": 62,
+        "end": 128
+      }
+    ],
+    "label": "vulnerable",
+    "category": "weak_crypto",
+    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
+    "features": {
+      "snippet_length": 130,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 29,
+        "end": 79
+      }
+    ],
+    "label": "vulnerable",
+    "category": "command_injection",
+    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "features": {
+      "snippet_length": 79,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
     "code_snippet": "import hashlib\n\ndef digest(password):\n    return hashlib.md5(password.encode()).hexdigest()\n",
     "safe_version": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 38,
+        "end": 92
+      }
+    ],
     "label": "vulnerable",
     "category": "weak_crypto",
     "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
@@ -172,39 +831,33 @@
       "snippet_length": 92,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
+    "cwe_id": "CWE-502",
     "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 39,
+        "end": 69
+      }
+    ],
     "label": "vulnerable",
     "category": "insecure_deserialization",
     "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
@@ -212,99 +865,33 @@
       "snippet_length": 69,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
-    "features": {
-      "snippet_length": 130,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
+    "cwe_id": "CWE-502",
     "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 39,
+        "end": 69
+      }
+    ],
     "label": "vulnerable",
     "category": "insecure_deserialization",
     "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
@@ -312,139 +899,33 @@
       "snippet_length": 69,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
-    "features": {
-      "snippet_length": 130,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
+    "cwe_id": "CWE-79",
     "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 34,
+        "end": 104
+      }
+    ],
     "label": "vulnerable",
     "category": "xss",
     "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
@@ -452,239 +933,573 @@
       "snippet_length": 106,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "insecure_deserialization",
-    "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
-    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
-    "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
-    "features": {
-      "snippet_length": 69,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "insecure_deserialization",
-    "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
-    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
-    "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
-    "features": {
-      "snippet_length": 69,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
-    "vulnerability_type": "weak_crypto",
+    "vulnerability_type": "xss",
     "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "xss",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 130,
+      "snippet_length": 164,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 47,
+        "end": 94
+      }
+    ],
+    "label": "vulnerable",
+    "category": "path_traversal",
+    "explanation": "User input controls a filesystem path with insufficient normalization.",
+    "features": {
+      "snippet_length": 94,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 79,
+      "snippet_length": 193,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 47,
+        "end": 94
+      }
+    ],
+    "label": "vulnerable",
+    "category": "path_traversal",
+    "explanation": "User input controls a filesystem path with insufficient normalization.",
+    "features": {
+      "snippet_length": 94,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "command_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 193,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "sql_injection",
+    "severity": "high",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 33,
+        "end": 98
+      }
+    ],
+    "label": "vulnerable",
+    "category": "sql_injection",
+    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
+    "features": {
+      "snippet_length": 140,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "xss",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 164,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "insecure_deserialization",
+    "severity": "high",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "insecure_deserialization",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 65,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 34,
+        "end": 104
+      }
+    ],
+    "label": "vulnerable",
+    "category": "xss",
+    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "features": {
+      "snippet_length": 106,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 34,
+        "end": 104
+      }
+    ],
+    "label": "vulnerable",
+    "category": "xss",
+    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "features": {
+      "snippet_length": 106,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "weak_crypto",
     "severity": "medium",
-    "code_snippet": "import hashlib\n\ndef digest(password):\n    return hashlib.md5(password.encode()).hexdigest()\n",
+    "cwe_id": "CWE-327",
+    "code_snippet": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
     "safe_version": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 173,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 47,
+        "end": 94
+      }
+    ],
+    "label": "vulnerable",
+    "category": "path_traversal",
+    "explanation": "User input controls a filesystem path with insufficient normalization.",
+    "features": {
+      "snippet_length": 94,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 152,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 34,
+        "end": 104
+      }
+    ],
+    "label": "vulnerable",
+    "category": "xss",
+    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "features": {
+      "snippet_length": 106,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 29,
+        "end": 79
+      }
+    ],
+    "label": "vulnerable",
+    "category": "command_injection",
+    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "features": {
+      "snippet_length": 79,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "insecure_deserialization",
+    "severity": "high",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "insecure_deserialization",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 65,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [
+      3
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 3,
+        "start": 62,
+        "end": 128
+      }
+    ],
     "label": "vulnerable",
     "category": "weak_crypto",
     "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
     "features": {
-      "snippet_length": 92,
+      "snippet_length": 130,
       "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 2
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "insecure_deserialization",
-    "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
-    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
-    "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
-    "features": {
-      "snippet_length": 69,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
+    "cwe_id": "CWE-78",
     "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 29,
+        "end": 79
+      }
+    ],
     "label": "vulnerable",
     "category": "command_injection",
     "explanation": "Untrusted input reaches a shell command interpreter.",
@@ -692,39 +1507,59 @@
       "snippet_length": 79,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "command_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 193,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
     "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 29,
+        "end": 79
+      }
+    ],
     "label": "vulnerable",
     "category": "command_injection",
     "explanation": "Untrusted input reaches a shell command interpreter.",
@@ -732,79 +1567,111 @@
       "snippet_length": 79,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
-    "vulnerability_type": "xss",
+    "vulnerability_type": "weak_crypto",
     "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 106,
+      "snippet_length": 152,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 152,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
+    "cwe_id": "CWE-79",
     "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 34,
+        "end": 104
+      }
+    ],
     "label": "vulnerable",
     "category": "xss",
     "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
@@ -812,59 +1679,249 @@
       "snippet_length": 106,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "weak_crypto",
+    "severity": "medium",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "weak_crypto",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 152,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 106,
+      "snippet_length": 164,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "command_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 193,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "weak_crypto",
     "severity": "medium",
-    "code_snippet": "import hashlib\n\ndef digest(password):\n    return hashlib.md5(password.encode()).hexdigest()\n",
+    "cwe_id": "CWE-327",
+    "code_snippet": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
     "safe_version": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 92,
+      "snippet_length": 173,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "xss",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 164,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "command_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 193,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "sql_injection",
+    "severity": "high",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "sql_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 141,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "command_injection",
+    "severity": "critical",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 29,
+        "end": 79
+      }
+    ],
+    "label": "vulnerable",
+    "category": "command_injection",
+    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "features": {
+      "snippet_length": 79,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 4,
+      "vulnerability_line_count": 1
+    },
+    "metadata": {
+      "severity": "critical",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "path_traversal",
     "severity": "high",
+    "cwe_id": "CWE-22",
     "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
     "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 47,
+        "end": 94
+      }
+    ],
     "label": "vulnerable",
     "category": "path_traversal",
     "explanation": "User input controls a filesystem path with insufficient normalization.",
@@ -872,79 +1929,111 @@
       "snippet_length": 94,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
     }
   },
   {
-    "language": "javascript",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
+    "language": "python",
+    "vulnerability_type": "sql_injection",
+    "severity": "high",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "sql_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 130,
+      "snippet_length": 141,
       "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 79,
+      "snippet_length": 193,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "javascript",
+    "vulnerability_type": "xss",
+    "severity": "medium",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "xss",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 164,
+      "has_safe_version": true,
+      "language": "javascript",
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "medium",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
+    "cwe_id": "CWE-502",
     "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 39,
+        "end": 69
+      }
+    ],
     "label": "vulnerable",
     "category": "insecure_deserialization",
     "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
@@ -952,639 +2041,283 @@
       "snippet_length": 69,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
-    "features": {
-      "snippet_length": 130,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
-    "vulnerability_type": "insecure_deserialization",
+    "vulnerability_type": "sql_injection",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
-    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
-    "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "sql_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 141,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
-    "features": {
-      "snippet_length": 130,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "insecure_deserialization",
+    "vulnerability_type": "sql_injection",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
-    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 33,
+        "end": 98
+      }
+    ],
     "label": "vulnerable",
-    "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "category": "sql_injection",
+    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 140,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
-    "features": {
-      "snippet_length": 130,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 106,
+      "snippet_length": 164,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
-    "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
-    "features": {
-      "snippet_length": 130,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerability_type": "path_traversal",
+    "severity": "high",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
+    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 47,
+        "end": 94
+      }
+    ],
     "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "category": "path_traversal",
+    "explanation": "User input controls a filesystem path with insufficient normalization.",
     "features": {
-      "snippet_length": 79,
+      "snippet_length": 94,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
+    }
+  },
+  {
+    "language": "python",
+    "vulnerability_type": "sql_injection",
+    "severity": "high",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
+    "category": "sql_injection",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
+    "features": {
+      "snippet_length": 141,
+      "has_safe_version": true,
+      "language": "python",
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
+    },
+    "metadata": {
+      "severity": "high",
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "weak_crypto",
     "severity": "medium",
-    "code_snippet": "import hashlib\n\ndef digest(password):\n    return hashlib.md5(password.encode()).hexdigest()\n",
+    "cwe_id": "CWE-327",
+    "code_snippet": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
     "safe_version": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 92,
+      "snippet_length": 173,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "sql_injection",
     "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
     "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 140,
+      "snippet_length": 141,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "command_injection",
-    "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
-    "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
-    "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
-    "features": {
-      "snippet_length": 79,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 4
-    },
-    "metadata": {
-      "severity": "critical",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "insecure_deserialization",
-    "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
-    "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
-    "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
-    "features": {
-      "snippet_length": 69,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "javascript",
-    "vulnerability_type": "xss",
-    "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
-    "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
-    "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
-    "features": {
-      "snippet_length": 106,
-      "has_safe_version": true,
-      "language": "javascript",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "path_traversal",
-    "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
-    "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
-    "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
-    "features": {
-      "snippet_length": 94,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "weak_crypto",
-    "severity": "medium",
-    "code_snippet": "import hashlib\n\ndef digest(password):\n    return hashlib.md5(password.encode()).hexdigest()\n",
-    "safe_version": "import hashlib\nimport os\n\ndef digest(password, salt=None):\n    salt = salt or os.urandom(16)\n    return hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 310000).hex()\n",
-    "label": "vulnerable",
-    "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
-    "features": {
-      "snippet_length": 92,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 2
-    },
-    "metadata": {
-      "severity": "medium",
-      "source": "synthetic_code_engine"
-    }
-  },
-  {
-    "language": "python",
-    "vulnerability_type": "sql_injection",
-    "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
-    "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
-    "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
-    "features": {
-      "snippet_length": 140,
-      "has_safe_version": true,
-      "language": "python",
-      "severity_rank": 3
-    },
-    "metadata": {
-      "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "weak_crypto",
     "severity": "medium",
-    "code_snippet": "const crypto = require('crypto');\nfunction digest(password) {\n  return crypto.createHash('md5').update(password).digest('hex');\n}\n",
+    "cwe_id": "CWE-327",
+    "code_snippet": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
     "safe_version": "const crypto = require('crypto');\nfunction digest(password, salt) {\n  return crypto.pbkdf2Sync(password, salt, 310000, 32, 'sha256').toString('hex');\n}\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "weak_crypto",
-    "explanation": "Deprecated or reversible cryptographic primitives are used for secrets.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 130,
+      "snippet_length": 152,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-327",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 106,
+      "snippet_length": 164,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
+    "cwe_id": "CWE-78",
     "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
+    "vulnerable_line_numbers": [
+      4
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 4,
+        "start": 29,
+        "end": 79
+      }
+    ],
     "label": "vulnerable",
     "category": "command_injection",
     "explanation": "Untrusted input reaches a shell command interpreter.",
@@ -1592,59 +2325,85 @@
       "snippet_length": 79,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "sql_injection",
     "severity": "high",
+    "cwe_id": "CWE-89",
     "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
     "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 33,
+        "end": 98
+      }
+    ],
     "label": "vulnerable",
     "category": "sql_injection",
     "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
@@ -1652,59 +2411,85 @@
       "snippet_length": 140,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "sql_injection",
     "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
     "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 140,
+      "snippet_length": 141,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "sql_injection",
     "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
     "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 140,
+      "snippet_length": 141,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
+    "cwe_id": "CWE-79",
     "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 34,
+        "end": 104
+      }
+    ],
     "label": "vulnerable",
     "category": "xss",
     "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
@@ -1712,139 +2497,189 @@
       "snippet_length": 106,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "path_traversal",
     "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
     "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 94,
+      "snippet_length": 229,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 79,
+      "snippet_length": 193,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 79,
+      "snippet_length": 193,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "sql_injection",
     "severity": "high",
+    "cwe_id": "CWE-89",
     "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
     "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
+    "vulnerable_line_numbers": [
+      2
+    ],
+    "vulnerability_spans": [
+      {
+        "line": 2,
+        "start": 33,
+        "end": 98
+      }
+    ],
     "label": "vulnerable",
     "category": "sql_injection",
     "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
@@ -1852,151 +2687,196 @@
       "snippet_length": 140,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 1
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "path_traversal",
     "severity": "high",
-    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    return Path('/srv/data', name).read_text()\n",
+    "cwe_id": "CWE-22",
+    "code_snippet": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
     "safe_version": "from pathlib import Path\n\ndef read_file(name):\n    base = Path('/srv/data').resolve()\n    target = (base / name).resolve()\n    if base not in target.parents:\n        raise ValueError('invalid path')\n    return target.read_text()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "path_traversal",
-    "explanation": "User input controls a filesystem path with insufficient normalization.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 94,
+      "snippet_length": 229,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-22",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "command_injection",
     "severity": "critical",
-    "code_snippet": "import os\n\ndef backup(path):\n    os.system(f\"tar -czf /tmp/backup.tgz {path}\")\n",
+    "cwe_id": "CWE-78",
+    "code_snippet": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
     "safe_version": "import subprocess\nfrom pathlib import Path\n\ndef backup(path):\n    safe_path = Path(path).resolve(strict=True)\n    subprocess.run([\"tar\", \"-czf\", \"/tmp/backup.tgz\", str(safe_path)], check=True)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "command_injection",
-    "explanation": "Untrusted input reaches a shell command interpreter.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 79,
+      "snippet_length": 193,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 4
+      "severity_rank": 4,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "critical",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-78",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "insecure_deserialization",
     "severity": "high",
-    "code_snippet": "import pickle\n\ndef load_profile(blob):\n    return pickle.loads(blob)\n",
+    "cwe_id": "CWE-502",
+    "code_snippet": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
     "safe_version": "import json\n\ndef load_profile(blob):\n    return json.loads(blob)\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "insecure_deserialization",
-    "explanation": "Serialized attacker-controlled data is deserialized into executable objects.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 69,
+      "snippet_length": 65,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-502",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "python",
     "vulnerability_type": "sql_injection",
     "severity": "high",
-    "code_snippet": "def lookup_user(conn, username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return conn.execute(query).fetchall()\n",
+    "cwe_id": "CWE-89",
+    "code_snippet": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
     "safe_version": "def lookup_user(conn, username):\n    query = \"SELECT * FROM users WHERE username = ?\"\n    return conn.execute(query, (username,)).fetchall()\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "sql_injection",
-    "explanation": "User-controlled input is concatenated into a SQL query without parameterization.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 140,
+      "snippet_length": 141,
       "has_safe_version": true,
       "language": "python",
-      "severity_rank": 3
+      "severity_rank": 3,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "high",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-89",
+      "dataset_mode": "classification"
     }
   },
   {
     "language": "javascript",
     "vulnerability_type": "xss",
     "severity": "medium",
-    "code_snippet": "function renderComment(comment) {\n  document.getElementById('feed').innerHTML += `<li>${comment}</li>`;\n}\n",
+    "cwe_id": "CWE-79",
+    "code_snippet": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
     "safe_version": "function renderComment(comment) {\n  const item = document.createElement('li');\n  item.textContent = comment;\n  document.getElementById('feed').appendChild(item);\n}\n",
-    "label": "vulnerable",
+    "vulnerable_line_numbers": [],
+    "vulnerability_spans": [],
+    "label": "safe",
     "category": "xss",
-    "explanation": "Untrusted data is inserted into an HTML response without output encoding.",
+    "explanation": "Code uses the safe remediation pattern for this weakness family.",
     "features": {
-      "snippet_length": 106,
+      "snippet_length": 164,
       "has_safe_version": true,
       "language": "javascript",
-      "severity_rank": 2
+      "severity_rank": 2,
+      "vulnerability_line_count": 0
     },
     "metadata": {
       "severity": "medium",
-      "source": "synthetic_code_engine"
+      "source": "synthetic_code_engine",
+      "cwe_id": "CWE-79",
+      "dataset_mode": "classification"
     }
   }
 ]

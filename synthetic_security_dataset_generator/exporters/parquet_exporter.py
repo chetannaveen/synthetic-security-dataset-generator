@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from typing import Any
 
 from synthetic_security_dataset_generator.utils.record_utils import flatten_record
 
 
-class JsonExporter:
+class ParquetExporter:
     def export(
         self,
         records: list[dict[str, Any]],
@@ -15,16 +14,14 @@ class JsonExporter:
         flatten_nested: bool = False,
         stream_write: bool = False,
     ) -> Path:
+        try:
+            import pyarrow as pa
+            import pyarrow.parquet as pq
+        except ImportError as exc:
+            raise RuntimeError("Parquet export requires optional dependency 'pyarrow'.") from exc
+
         destination.parent.mkdir(parents=True, exist_ok=True)
         rows = [flatten_record(record) if flatten_nested else record for record in records]
-        if stream_write:
-            with destination.open("w", encoding="utf-8") as handle:
-                handle.write("[\n")
-                for index, row in enumerate(rows):
-                    if index:
-                        handle.write(",\n")
-                    handle.write(json.dumps(row))
-                handle.write("\n]")
-        else:
-            destination.write_text(json.dumps(rows, indent=2), encoding="utf-8")
+        table = pa.Table.from_pylist(rows)
+        pq.write_table(table, destination)
         return destination

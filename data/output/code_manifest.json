@@ -1,0 +1,35 @@
+{
+  "dataset_name": "code",
+  "dataset_version": "v0.2.0",
+  "record_count": 100,
+  "generation_config": {
+    "count": 100,
+    "malicious_ratio": 0.35,
+    "seed": 1337,
+    "attack_types": [],
+    "format": "json",
+    "code_dataset_mode": "classification"
+  },
+  "label_distribution": {
+    "safe": 65,
+    "vulnerable": 35
+  },
+  "category_distribution": {
+    "insecure_deserialization": 21,
+    "path_traversal": 13,
+    "weak_crypto": 15,
+    "sql_injection": 15,
+    "xss": 17,
+    "command_injection": 19
+  },
+  "feature_list": [
+    "has_safe_version",
+    "language",
+    "severity_rank",
+    "snippet_length",
+    "vulnerability_line_count"
+  ],
+  "outputs": {
+    "full": "data/output/code.json"
+  }
+}

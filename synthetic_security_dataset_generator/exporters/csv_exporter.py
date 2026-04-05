@@ -5,15 +5,24 @@ import json
 from pathlib import Path
 from typing import Any
 
+from synthetic_security_dataset_generator.utils.record_utils import flatten_record
+
 
 class CsvExporter:
-    def export(self, records: list[dict[str, Any]], destination: Path) -> Path:
+    def export(
+        self,
+        records: list[dict[str, Any]],
+        destination: Path,
+        flatten_nested: bool = False,
+        stream_write: bool = False,
+    ) -> Path:
         destination.parent.mkdir(parents=True, exist_ok=True)
-        fieldnames = self._collect_fields(records)
+        rows = [flatten_record(record) if flatten_nested else record for record in records]
+        fieldnames = self._collect_fields(rows)
         with destination.open("w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(handle, fieldnames=fieldnames)
             writer.writeheader()
-            for row in records:
+            for row in rows:
                 writer.writerow({key: self._serialize(row.get(key)) for key in fieldnames})
         return destination
 

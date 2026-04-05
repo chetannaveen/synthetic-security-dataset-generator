@@ -42,10 +42,12 @@ class BaseGenerator(ABC):
     def summarize(self, dataset: list[dict[str, Any]]) -> dict[str, Any]:
         labels = Counter(item.get("label", "unknown") for item in dataset)
         categories = Counter(item.get("category", "unknown") for item in dataset)
+        features = sorted({feature for item in dataset for feature in item.get("features", {}).keys()})
         return {
             "dataset": self.dataset_name,
             "records": len(dataset),
             "labels": dict(labels),
             "categories": dict(categories),
+            "feature_list": features,
             "seed": self.config.seed,
         }
