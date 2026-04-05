@@ -1,0 +1,1 @@
+"""Static heuristics and templates."""

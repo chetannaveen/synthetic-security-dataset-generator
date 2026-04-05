@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthetic-security-dataset-generator"
+version = "0.1.0"
+description = "Production-quality synthetic security dataset generator for cybersecurity and AI training."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Codex" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+ssdg = "synthetic_security_dataset_generator.cli.main:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["synthetic_security_dataset_generator*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

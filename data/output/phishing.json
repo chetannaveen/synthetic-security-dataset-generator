@@ -1,0 +1,1702 @@
+[
+  {
+    "url": "https://amazon.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://bankofameric1.security/update",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 4.0049,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-billing.microsoft.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting microsoft, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 40,
+      "entropy": 3.9964,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--pple-43d.com/secure/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 16,
+      "entropy": 3.5778,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://amazon-verify-portal.net/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting amazon, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 24,
+      "entropy": 3.8868,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--googl-fsa.net/account/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 17,
+      "entropy": 3.4548,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://paypal-verify.net/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting paypal, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 17,
+      "entropy": 3.6169,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "paypal",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://amazon.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-verify.bankofamerica.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting bankofamerica, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 43,
+      "entropy": 3.9171,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://chase-support-portal.co/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting chase, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 23,
+      "entropy": 3.5884,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "chase",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://wikipedia.org/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://dropbox-account.co/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting dropbox, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 18,
+      "entropy": 3.4613,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "dropbox",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://amazon-secure-portal.security/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting amazon, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 29,
+      "entropy": 3.9523,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft-update.com/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting microsoft, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 20,
+      "entropy": 3.7842,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://dropbox-account-portal.info/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting dropbox, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 27,
+      "entropy": 3.8064,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "dropbox",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--rnicrosoft-3bh.com/login/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 3.7544,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--googl-fsa.net/billing/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 17,
+      "entropy": 3.4548,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://arnazon.com/update",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 2.914,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--rnicrosoft-3bh.com/update/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 3.7544,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://paypal-account-portal.com/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting paypal, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 25,
+      "entropy": 3.5133,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "paypal",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/support",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://dropb0x.com/update",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/support",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--rnicrosoft-3bh.com/support/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 3.7544,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--rnicrosoft-3bh.com/billing/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 3.7544,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/support",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://wikipedia.org/support",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-support.amazon.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting amazon, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 37,
+      "entropy": 3.9927,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-billing.microsoft.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting microsoft, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 40,
+      "entropy": 3.9964,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--googl-fsa.net/billing/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 17,
+      "entropy": 3.4548,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://chase-login.security/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting chase, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 20,
+      "entropy": 3.9219,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "chase",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--rnicrosoft-3bh.com/support/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 3.7544,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://app1e.security/login",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 14,
+      "entropy": 3.5216,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft-update.security/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting microsoft, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 25,
+      "entropy": 3.8937,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-billing.apple.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting apple, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 36,
+      "entropy": 4.0413,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://app1e.security/account",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 14,
+      "entropy": 3.5216,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://bankofamerica-account.info/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting bankofamerica, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 26,
+      "entropy": 3.6903,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-secure.microsoft.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting microsoft, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 39,
+      "entropy": 3.6089,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://chase-support.info/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting chase, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 18,
+      "entropy": 3.8366,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "chase",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://amazon.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-login.google.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting google, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 35,
+      "entropy": 3.8186,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/support",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://apple.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 9,
+      "entropy": 2.9477,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://bankofamerica-login.com/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting bankofamerica, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 23,
+      "entropy": 3.7623,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://wikipedia.org/support",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://wikipedia.org/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://paypal-verify-portal.security/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting paypal, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 29,
+      "entropy": 3.8573,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "paypal",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://bankofameric1.co/update",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 16,
+      "entropy": 3.625,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://apple.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 9,
+      "entropy": 2.9477,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://chase-login.info/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting chase, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 16,
+      "entropy": 3.625,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "chase",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://chas1.co/support",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 8,
+      "entropy": 2.75,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://xn--pple-43d.com/verify/index.html",
+    "label": "phishing",
+    "category": "punycode",
+    "explanation": "URL exhibits punycode indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 16,
+      "entropy": 3.5778,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://dropbox-billing.net/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting dropbox, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 19,
+      "entropy": 3.7216,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "dropbox",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-secure.google.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting google, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 36,
+      "entropy": 3.6303,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://wikipedia.org/support",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://bankofamerica-verify.info/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting bankofamerica, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 25,
+      "entropy": 3.7533,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://wikipedia.org/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.3347,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://secure-secure.apple.verify-user.com/session",
+    "label": "phishing",
+    "category": "subdomain_abuse",
+    "explanation": "URL exhibits subdomain_abuse indicators targeting apple, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 35,
+      "entropy": 3.6815,
+      "number_of_subdomains": 2,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google-billing-portal.security/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting google, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 30,
+      "entropy": 3.8981,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://apple.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 9,
+      "entropy": 2.9477,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "apple",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://chase-login-portal.org/account/review",
+    "label": "phishing",
+    "category": "keyword_abuse",
+    "explanation": "URL exhibits keyword_abuse indicators targeting chase, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 3.7888,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "chase",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://chase-billing.net/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting chase, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 17,
+      "entropy": 3.6169,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "chase",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://bankofamerica-billing.info/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting bankofamerica, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 26,
+      "entropy": 3.7193,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://bankofamerica-login.co/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting bankofamerica, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 22,
+      "entropy": 3.7544,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "bankofamerica",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://rnicrosoft.info/billing",
+    "label": "phishing",
+    "category": "typosquatting",
+    "explanation": "URL exhibits typosquatting indicators, consistent with phishing infrastructure.",
+    "features": {
+      "domain_length": 15,
+      "entropy": 3.0566,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://amazon.com/account/security",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://microsoft.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 13,
+      "entropy": 3.027,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "microsoft",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://github.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 3.3219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://dropbox-account.info/signin",
+    "label": "suspicious",
+    "category": "suspicious_pattern",
+    "explanation": "URL contains phishing-adjacent keywords and branding cues targeting dropbox, but without overt malicious indicators.",
+    "features": {
+      "domain_length": 20,
+      "entropy": 3.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": true,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "dropbox",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://google.com/",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.6464,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "google",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://amazon.com/docs",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 10,
+      "entropy": 2.7219,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": true
+    },
+    "metadata": {
+      "brand_target": "amazon",
+      "source": "synthetic_url_engine"
+    }
+  },
+  {
+    "url": "https://nytimes.com/products",
+    "label": "benign",
+    "category": "legitimate",
+    "explanation": "URL structure aligns with a legitimate brand or common public web property.",
+    "features": {
+      "domain_length": 11,
+      "entropy": 3.2776,
+      "number_of_subdomains": 0,
+      "contains_keyword": false,
+      "looks_like_brand": false
+    },
+    "metadata": {
+      "brand_target": null,
+      "source": "synthetic_url_engine"
+    }
+  }
+]

@@ -1,0 +1,5802 @@
+[
+  {
+    "user_id": "user-7996",
+    "events": [
+      {
+        "user_id": "user-7996",
+        "timestamp": "2026-04-03T04:02:44.252129Z",
+        "offset_minutes": 30,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.226"
+      },
+      {
+        "user_id": "user-7996",
+        "timestamp": "2026-04-03T04:11:44.252129Z",
+        "offset_minutes": 39,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.111"
+      },
+      {
+        "user_id": "user-7996",
+        "timestamp": "2026-04-03T04:28:44.252129Z",
+        "offset_minutes": 56,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.190"
+      },
+      {
+        "user_id": "user-7996",
+        "timestamp": "2026-04-03T04:40:44.252129Z",
+        "offset_minutes": 68,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.15"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0588,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-7996",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6690",
+    "events": [
+      {
+        "user_id": "user-6690",
+        "timestamp": "2026-04-02T23:32:44.252183Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.54"
+      },
+      {
+        "user_id": "user-6690",
+        "timestamp": "2026-04-02T23:35:44.252183Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "Chicago",
+        "ip": "198.51.100.91"
+      },
+      {
+        "user_id": "user-6690",
+        "timestamp": "2026-04-02T23:38:44.252183Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "Chicago",
+        "ip": "198.51.100.169"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-6690",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4502",
+    "events": [
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:34:44.252213Z",
+        "offset_minutes": 2,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.157"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:36:44.252213Z",
+        "offset_minutes": 4,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.41"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:37:44.252213Z",
+        "offset_minutes": 5,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.101"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:38:44.252213Z",
+        "offset_minutes": 6,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.240"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:39:44.252213Z",
+        "offset_minutes": 7,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.160"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:41:44.252213Z",
+        "offset_minutes": 9,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.8"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:42:44.252213Z",
+        "offset_minutes": 10,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.79"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:44:44.252213Z",
+        "offset_minutes": 12,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.224"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:46:44.252213Z",
+        "offset_minutes": 14,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.235"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:48:44.252213Z",
+        "offset_minutes": 16,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.149"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:50:44.252213Z",
+        "offset_minutes": 18,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.37"
+      },
+      {
+        "user_id": "user-4502",
+        "timestamp": "2026-04-03T23:52:44.252213Z",
+        "offset_minutes": 20,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.99"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4502",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8549",
+    "events": [
+      {
+        "user_id": "user-8549",
+        "timestamp": "2026-04-04T23:32:44.252302Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.216"
+      },
+      {
+        "user_id": "user-8549",
+        "timestamp": "2026-04-05T06:32:44.252302Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.239"
+      },
+      {
+        "user_id": "user-8549",
+        "timestamp": "2026-04-05T06:42:44.252302Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "London",
+        "ip": "203.0.113.71"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8549",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9056",
+    "events": [
+      {
+        "user_id": "user-9056",
+        "timestamp": "2026-04-02T04:52:44.252327Z",
+        "offset_minutes": 20,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.36"
+      },
+      {
+        "user_id": "user-9056",
+        "timestamp": "2026-04-02T05:01:44.252327Z",
+        "offset_minutes": 29,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.220"
+      },
+      {
+        "user_id": "user-9056",
+        "timestamp": "2026-04-02T05:25:44.252327Z",
+        "offset_minutes": 53,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.149"
+      },
+      {
+        "user_id": "user-9056",
+        "timestamp": "2026-04-02T05:45:44.252327Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.51"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9056",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8279",
+    "events": [
+      {
+        "user_id": "user-8279",
+        "timestamp": "2026-04-04T09:47:44.252360Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.78"
+      },
+      {
+        "user_id": "user-8279",
+        "timestamp": "2026-04-04T09:56:44.252360Z",
+        "offset_minutes": 24,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.126"
+      },
+      {
+        "user_id": "user-8279",
+        "timestamp": "2026-04-04T10:26:44.252360Z",
+        "offset_minutes": 54,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.55"
+      },
+      {
+        "user_id": "user-8279",
+        "timestamp": "2026-04-04T10:45:44.252360Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.137"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8279",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5534",
+    "events": [
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:33:44.252394Z",
+        "offset_minutes": 1,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.165"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:35:44.252394Z",
+        "offset_minutes": 3,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.5"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:36:44.252394Z",
+        "offset_minutes": 4,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.120"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:37:44.252394Z",
+        "offset_minutes": 5,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.239"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:39:44.252394Z",
+        "offset_minutes": 7,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.45"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:40:44.252394Z",
+        "offset_minutes": 8,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.61"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:41:44.252394Z",
+        "offset_minutes": 9,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.182"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:43:44.252394Z",
+        "offset_minutes": 11,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.183"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:45:44.252394Z",
+        "offset_minutes": 13,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.193"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:47:44.252394Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.177"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:49:44.252394Z",
+        "offset_minutes": 17,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.203"
+      },
+      {
+        "user_id": "user-5534",
+        "timestamp": "2026-04-04T10:50:44.252394Z",
+        "offset_minutes": 18,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.21"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5534",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5903",
+    "events": [
+      {
+        "user_id": "user-5903",
+        "timestamp": "2026-04-03T23:32:44.252481Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.28"
+      },
+      {
+        "user_id": "user-5903",
+        "timestamp": "2026-04-04T06:32:44.252481Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.21"
+      },
+      {
+        "user_id": "user-5903",
+        "timestamp": "2026-04-04T06:42:44.252481Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "London",
+        "ip": "203.0.113.41"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5903",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7630",
+    "events": [
+      {
+        "user_id": "user-7630",
+        "timestamp": "2026-04-03T16:53:44.252507Z",
+        "offset_minutes": 21,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.59"
+      },
+      {
+        "user_id": "user-7630",
+        "timestamp": "2026-04-03T17:22:44.252507Z",
+        "offset_minutes": 50,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.202"
+      },
+      {
+        "user_id": "user-7630",
+        "timestamp": "2026-04-03T17:43:44.252507Z",
+        "offset_minutes": 71,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.85"
+      },
+      {
+        "user_id": "user-7630",
+        "timestamp": "2026-04-03T18:08:44.252507Z",
+        "offset_minutes": 96,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.119"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0417,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-7630",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8751",
+    "events": [
+      {
+        "user_id": "user-8751",
+        "timestamp": "2026-04-03T23:42:44.252539Z",
+        "offset_minutes": 10,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.18"
+      },
+      {
+        "user_id": "user-8751",
+        "timestamp": "2026-04-04T00:10:44.252539Z",
+        "offset_minutes": 38,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.170"
+      },
+      {
+        "user_id": "user-8751",
+        "timestamp": "2026-04-04T00:22:44.252539Z",
+        "offset_minutes": 50,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.93"
+      },
+      {
+        "user_id": "user-8751",
+        "timestamp": "2026-04-04T00:38:44.252539Z",
+        "offset_minutes": 66,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.149"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0606,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8751",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7203",
+    "events": [
+      {
+        "user_id": "user-7203",
+        "timestamp": "2026-04-04T21:01:44.252571Z",
+        "offset_minutes": 29,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.234"
+      },
+      {
+        "user_id": "user-7203",
+        "timestamp": "2026-04-04T21:16:44.252571Z",
+        "offset_minutes": 44,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.16"
+      },
+      {
+        "user_id": "user-7203",
+        "timestamp": "2026-04-04T21:41:44.252571Z",
+        "offset_minutes": 69,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.141"
+      },
+      {
+        "user_id": "user-7203",
+        "timestamp": "2026-04-04T21:52:44.252571Z",
+        "offset_minutes": 80,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.217"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.05,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-7203",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5560",
+    "events": [
+      {
+        "user_id": "user-5560",
+        "timestamp": "2026-04-02T05:32:44.252604Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.235"
+      },
+      {
+        "user_id": "user-5560",
+        "timestamp": "2026-04-02T05:35:44.252604Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "San Francisco",
+        "ip": "198.51.102.74"
+      },
+      {
+        "user_id": "user-5560",
+        "timestamp": "2026-04-02T05:38:44.252604Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "San Francisco",
+        "ip": "198.51.102.40"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-5560",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1115",
+    "events": [
+      {
+        "user_id": "user-1115",
+        "timestamp": "2026-04-02T18:55:44.252628Z",
+        "offset_minutes": 23,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.96"
+      },
+      {
+        "user_id": "user-1115",
+        "timestamp": "2026-04-02T19:04:44.252628Z",
+        "offset_minutes": 32,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.197"
+      },
+      {
+        "user_id": "user-1115",
+        "timestamp": "2026-04-02T19:33:44.252628Z",
+        "offset_minutes": 61,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.83"
+      },
+      {
+        "user_id": "user-1115",
+        "timestamp": "2026-04-02T19:41:44.252628Z",
+        "offset_minutes": 69,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.194"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.058,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-1115",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1926",
+    "events": [
+      {
+        "user_id": "user-1926",
+        "timestamp": "2026-04-04T12:51:44.252661Z",
+        "offset_minutes": 19,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.206"
+      },
+      {
+        "user_id": "user-1926",
+        "timestamp": "2026-04-04T13:12:44.252661Z",
+        "offset_minutes": 40,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.160"
+      },
+      {
+        "user_id": "user-1926",
+        "timestamp": "2026-04-04T13:33:44.252661Z",
+        "offset_minutes": 61,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.102"
+      },
+      {
+        "user_id": "user-1926",
+        "timestamp": "2026-04-04T13:56:44.252661Z",
+        "offset_minutes": 84,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.45"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0476,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-1926",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1196",
+    "events": [
+      {
+        "user_id": "user-1196",
+        "timestamp": "2026-04-02T08:45:44.252692Z",
+        "offset_minutes": 13,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.49"
+      },
+      {
+        "user_id": "user-1196",
+        "timestamp": "2026-04-02T08:55:44.252692Z",
+        "offset_minutes": 23,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.109"
+      },
+      {
+        "user_id": "user-1196",
+        "timestamp": "2026-04-02T09:09:44.252692Z",
+        "offset_minutes": 37,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.23"
+      },
+      {
+        "user_id": "user-1196",
+        "timestamp": "2026-04-02T09:34:44.252692Z",
+        "offset_minutes": 62,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.164"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0645,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-1196",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9568",
+    "events": [
+      {
+        "user_id": "user-9568",
+        "timestamp": "2026-04-04T03:47:44.252723Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.227"
+      },
+      {
+        "user_id": "user-9568",
+        "timestamp": "2026-04-04T04:14:44.252723Z",
+        "offset_minutes": 42,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.216"
+      },
+      {
+        "user_id": "user-9568",
+        "timestamp": "2026-04-04T04:24:44.252723Z",
+        "offset_minutes": 52,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.245"
+      },
+      {
+        "user_id": "user-9568",
+        "timestamp": "2026-04-04T04:39:44.252723Z",
+        "offset_minutes": 67,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.129"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0597,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9568",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4048",
+    "events": [
+      {
+        "user_id": "user-4048",
+        "timestamp": "2026-04-02T16:53:44.252754Z",
+        "offset_minutes": 21,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.246"
+      },
+      {
+        "user_id": "user-4048",
+        "timestamp": "2026-04-02T17:17:44.252754Z",
+        "offset_minutes": 45,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.140"
+      },
+      {
+        "user_id": "user-4048",
+        "timestamp": "2026-04-02T17:34:44.252754Z",
+        "offset_minutes": 62,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.27"
+      },
+      {
+        "user_id": "user-4048",
+        "timestamp": "2026-04-02T18:04:44.252754Z",
+        "offset_minutes": 92,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.237"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0435,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4048",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5612",
+    "events": [
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:34:44.252787Z",
+        "offset_minutes": 2,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.212"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:36:44.252787Z",
+        "offset_minutes": 4,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.199"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:38:44.252787Z",
+        "offset_minutes": 6,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.234"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:39:44.252787Z",
+        "offset_minutes": 7,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.230"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:40:44.252787Z",
+        "offset_minutes": 8,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.103"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:42:44.252787Z",
+        "offset_minutes": 10,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.206"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:44:44.252787Z",
+        "offset_minutes": 12,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.251"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:45:44.252787Z",
+        "offset_minutes": 13,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.185"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:47:44.252787Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.254"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:49:44.252787Z",
+        "offset_minutes": 17,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.144"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:50:44.252787Z",
+        "offset_minutes": 18,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.118"
+      },
+      {
+        "user_id": "user-5612",
+        "timestamp": "2026-04-04T17:52:44.252787Z",
+        "offset_minutes": 20,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.9"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5612",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3370",
+    "events": [
+      {
+        "user_id": "user-3370",
+        "timestamp": "2026-04-04T05:47:44.252873Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.206"
+      },
+      {
+        "user_id": "user-3370",
+        "timestamp": "2026-04-04T06:14:44.252873Z",
+        "offset_minutes": 42,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.105"
+      },
+      {
+        "user_id": "user-3370",
+        "timestamp": "2026-04-04T06:27:44.252873Z",
+        "offset_minutes": 55,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.35"
+      },
+      {
+        "user_id": "user-3370",
+        "timestamp": "2026-04-04T06:41:44.252873Z",
+        "offset_minutes": 69,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.170"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.058,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3370",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5346",
+    "events": [
+      {
+        "user_id": "user-5346",
+        "timestamp": "2026-04-02T22:50:44.252904Z",
+        "offset_minutes": 18,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.18"
+      },
+      {
+        "user_id": "user-5346",
+        "timestamp": "2026-04-02T23:09:44.252904Z",
+        "offset_minutes": 37,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.159"
+      },
+      {
+        "user_id": "user-5346",
+        "timestamp": "2026-04-02T23:23:44.252904Z",
+        "offset_minutes": 51,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.42"
+      },
+      {
+        "user_id": "user-5346",
+        "timestamp": "2026-04-02T23:50:44.252904Z",
+        "offset_minutes": 78,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.225"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0513,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5346",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8738",
+    "events": [
+      {
+        "user_id": "user-8738",
+        "timestamp": "2026-04-03T13:42:44.252935Z",
+        "offset_minutes": 10,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.173"
+      },
+      {
+        "user_id": "user-8738",
+        "timestamp": "2026-04-03T13:58:44.252935Z",
+        "offset_minutes": 26,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.124"
+      },
+      {
+        "user_id": "user-8738",
+        "timestamp": "2026-04-03T14:14:44.252935Z",
+        "offset_minutes": 42,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.39"
+      },
+      {
+        "user_id": "user-8738",
+        "timestamp": "2026-04-03T14:25:44.252935Z",
+        "offset_minutes": 53,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.196"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0755,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8738",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4355",
+    "events": [
+      {
+        "user_id": "user-4355",
+        "timestamp": "2026-04-04T06:02:44.252967Z",
+        "offset_minutes": 30,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.42"
+      },
+      {
+        "user_id": "user-4355",
+        "timestamp": "2026-04-04T06:14:44.252967Z",
+        "offset_minutes": 42,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.12"
+      },
+      {
+        "user_id": "user-4355",
+        "timestamp": "2026-04-04T06:43:44.252967Z",
+        "offset_minutes": 71,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.1"
+      },
+      {
+        "user_id": "user-4355",
+        "timestamp": "2026-04-04T06:52:44.252967Z",
+        "offset_minutes": 80,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.61"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.05,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4355",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6762",
+    "events": [
+      {
+        "user_id": "user-6762",
+        "timestamp": "2026-04-04T08:46:44.252998Z",
+        "offset_minutes": 14,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.169"
+      },
+      {
+        "user_id": "user-6762",
+        "timestamp": "2026-04-04T08:56:44.252998Z",
+        "offset_minutes": 24,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.188"
+      },
+      {
+        "user_id": "user-6762",
+        "timestamp": "2026-04-04T09:20:44.252998Z",
+        "offset_minutes": 48,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.109"
+      },
+      {
+        "user_id": "user-6762",
+        "timestamp": "2026-04-04T09:47:44.252998Z",
+        "offset_minutes": 75,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.135"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0533,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6762",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7613",
+    "events": [
+      {
+        "user_id": "user-7613",
+        "timestamp": "2026-04-04T12:32:44.253031Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.208"
+      },
+      {
+        "user_id": "user-7613",
+        "timestamp": "2026-04-04T12:35:44.253031Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "Chicago",
+        "ip": "198.51.100.48"
+      },
+      {
+        "user_id": "user-7613",
+        "timestamp": "2026-04-04T12:38:44.253031Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "Chicago",
+        "ip": "198.51.100.184"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-7613",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6904",
+    "events": [
+      {
+        "user_id": "user-6904",
+        "timestamp": "2026-04-03T20:56:44.253055Z",
+        "offset_minutes": 24,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.170"
+      },
+      {
+        "user_id": "user-6904",
+        "timestamp": "2026-04-03T21:05:44.253055Z",
+        "offset_minutes": 33,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.186"
+      },
+      {
+        "user_id": "user-6904",
+        "timestamp": "2026-04-03T21:20:44.253055Z",
+        "offset_minutes": 48,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.26"
+      },
+      {
+        "user_id": "user-6904",
+        "timestamp": "2026-04-03T21:37:44.253055Z",
+        "offset_minutes": 65,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.143"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0615,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6904",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6192",
+    "events": [
+      {
+        "user_id": "user-6192",
+        "timestamp": "2026-04-03T11:49:44.253087Z",
+        "offset_minutes": 17,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.235"
+      },
+      {
+        "user_id": "user-6192",
+        "timestamp": "2026-04-03T11:58:44.253087Z",
+        "offset_minutes": 26,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.66"
+      },
+      {
+        "user_id": "user-6192",
+        "timestamp": "2026-04-03T12:19:44.253087Z",
+        "offset_minutes": 47,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.83"
+      },
+      {
+        "user_id": "user-6192",
+        "timestamp": "2026-04-03T12:37:44.253087Z",
+        "offset_minutes": 65,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.177"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0615,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6192",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9864",
+    "events": [
+      {
+        "user_id": "user-9864",
+        "timestamp": "2026-04-03T13:32:44.253119Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.225"
+      },
+      {
+        "user_id": "user-9864",
+        "timestamp": "2026-04-03T20:32:44.253119Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.83"
+      },
+      {
+        "user_id": "user-9864",
+        "timestamp": "2026-04-03T20:42:44.253119Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "London",
+        "ip": "203.0.113.227"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9864",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3290",
+    "events": [
+      {
+        "user_id": "user-3290",
+        "timestamp": "2026-04-02T17:32:44.253145Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.165"
+      },
+      {
+        "user_id": "user-3290",
+        "timestamp": "2026-04-03T00:32:44.253145Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "Singapore",
+        "ip": "203.0.114.204"
+      },
+      {
+        "user_id": "user-3290",
+        "timestamp": "2026-04-03T00:42:44.253145Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "Singapore",
+        "ip": "203.0.114.146"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3290",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3772",
+    "events": [
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:33:44.253171Z",
+        "offset_minutes": 1,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.19"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:34:44.253171Z",
+        "offset_minutes": 2,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.189"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:36:44.253171Z",
+        "offset_minutes": 4,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.204"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:38:44.253171Z",
+        "offset_minutes": 6,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.145"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:40:44.253171Z",
+        "offset_minutes": 8,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.101"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:42:44.253171Z",
+        "offset_minutes": 10,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.46"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:43:44.253171Z",
+        "offset_minutes": 11,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.85"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:44:44.253171Z",
+        "offset_minutes": 12,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.165"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:46:44.253171Z",
+        "offset_minutes": 14,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.28"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:47:44.253171Z",
+        "offset_minutes": 15,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.34"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:49:44.253171Z",
+        "offset_minutes": 17,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.34"
+      },
+      {
+        "user_id": "user-3772",
+        "timestamp": "2026-04-02T23:50:44.253171Z",
+        "offset_minutes": 18,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.130"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3772",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6684",
+    "events": [
+      {
+        "user_id": "user-6684",
+        "timestamp": "2026-04-02T16:32:44.253258Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.5"
+      },
+      {
+        "user_id": "user-6684",
+        "timestamp": "2026-04-02T16:35:44.253258Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "San Francisco",
+        "ip": "198.51.102.199"
+      },
+      {
+        "user_id": "user-6684",
+        "timestamp": "2026-04-02T16:38:44.253258Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "San Francisco",
+        "ip": "198.51.102.240"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-6684",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-2527",
+    "events": [
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:34:44.253282Z",
+        "offset_minutes": 2,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.197"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:35:44.253282Z",
+        "offset_minutes": 3,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.16"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:36:44.253282Z",
+        "offset_minutes": 4,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.60"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:37:44.253282Z",
+        "offset_minutes": 5,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.189"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:38:44.253282Z",
+        "offset_minutes": 6,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.150"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:39:44.253282Z",
+        "offset_minutes": 7,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.199"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:40:44.253282Z",
+        "offset_minutes": 8,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.64"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:42:44.253282Z",
+        "offset_minutes": 10,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.241"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:44:44.253282Z",
+        "offset_minutes": 12,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.248"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:46:44.253282Z",
+        "offset_minutes": 14,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.183"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:47:44.253282Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.137"
+      },
+      {
+        "user_id": "user-2527",
+        "timestamp": "2026-04-02T22:49:44.253282Z",
+        "offset_minutes": 17,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.112"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.7059,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-2527",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7542",
+    "events": [
+      {
+        "user_id": "user-7542",
+        "timestamp": "2026-04-03T18:32:44.253368Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.196"
+      },
+      {
+        "user_id": "user-7542",
+        "timestamp": "2026-04-03T18:35:44.253368Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "New York",
+        "ip": "198.51.101.163"
+      },
+      {
+        "user_id": "user-7542",
+        "timestamp": "2026-04-03T18:38:44.253368Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "New York",
+        "ip": "198.51.101.19"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-7542",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4827",
+    "events": [
+      {
+        "user_id": "user-4827",
+        "timestamp": "2026-04-05T00:02:44.253391Z",
+        "offset_minutes": 30,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.133"
+      },
+      {
+        "user_id": "user-4827",
+        "timestamp": "2026-04-05T00:15:44.253391Z",
+        "offset_minutes": 43,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.104"
+      },
+      {
+        "user_id": "user-4827",
+        "timestamp": "2026-04-05T00:31:44.253391Z",
+        "offset_minutes": 59,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.193"
+      },
+      {
+        "user_id": "user-4827",
+        "timestamp": "2026-04-05T00:58:44.253391Z",
+        "offset_minutes": 86,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.151"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0465,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4827",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5193",
+    "events": [
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:33:44.253425Z",
+        "offset_minutes": 1,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.138"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:35:44.253425Z",
+        "offset_minutes": 3,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.113"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:36:44.253425Z",
+        "offset_minutes": 4,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.146"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:37:44.253425Z",
+        "offset_minutes": 5,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.101"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:38:44.253425Z",
+        "offset_minutes": 6,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.13"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:39:44.253425Z",
+        "offset_minutes": 7,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.130"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:41:44.253425Z",
+        "offset_minutes": 9,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.73"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:43:44.253425Z",
+        "offset_minutes": 11,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.134"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:44:44.253425Z",
+        "offset_minutes": 12,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.173"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:46:44.253425Z",
+        "offset_minutes": 14,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.153"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:47:44.253425Z",
+        "offset_minutes": 15,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.161"
+      },
+      {
+        "user_id": "user-5193",
+        "timestamp": "2026-04-02T14:49:44.253425Z",
+        "offset_minutes": 17,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.123"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.7059,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5193",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5522",
+    "events": [
+      {
+        "user_id": "user-5522",
+        "timestamp": "2026-04-03T09:45:44.253509Z",
+        "offset_minutes": 13,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.227"
+      },
+      {
+        "user_id": "user-5522",
+        "timestamp": "2026-04-03T10:08:44.253509Z",
+        "offset_minutes": 36,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.137"
+      },
+      {
+        "user_id": "user-5522",
+        "timestamp": "2026-04-03T10:25:44.253509Z",
+        "offset_minutes": 53,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.217"
+      },
+      {
+        "user_id": "user-5522",
+        "timestamp": "2026-04-03T10:45:44.253509Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.139"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5522",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9637",
+    "events": [
+      {
+        "user_id": "user-9637",
+        "timestamp": "2026-04-02T18:32:44.253543Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.9"
+      },
+      {
+        "user_id": "user-9637",
+        "timestamp": "2026-04-02T18:35:44.253543Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "New York",
+        "ip": "198.51.101.38"
+      },
+      {
+        "user_id": "user-9637",
+        "timestamp": "2026-04-02T18:38:44.253543Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "New York",
+        "ip": "198.51.101.88"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-9637",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-2789",
+    "events": [
+      {
+        "user_id": "user-2789",
+        "timestamp": "2026-04-02T22:43:44.253567Z",
+        "offset_minutes": 11,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.217"
+      },
+      {
+        "user_id": "user-2789",
+        "timestamp": "2026-04-02T23:08:44.253567Z",
+        "offset_minutes": 36,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.240"
+      },
+      {
+        "user_id": "user-2789",
+        "timestamp": "2026-04-02T23:23:44.253567Z",
+        "offset_minutes": 51,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.59"
+      },
+      {
+        "user_id": "user-2789",
+        "timestamp": "2026-04-02T23:42:44.253567Z",
+        "offset_minutes": 70,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.68"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0571,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-2789",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8264",
+    "events": [
+      {
+        "user_id": "user-8264",
+        "timestamp": "2026-04-03T19:32:44.253601Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.128"
+      },
+      {
+        "user_id": "user-8264",
+        "timestamp": "2026-04-03T19:57:44.253601Z",
+        "offset_minutes": 25,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.80"
+      },
+      {
+        "user_id": "user-8264",
+        "timestamp": "2026-04-03T20:02:44.253601Z",
+        "offset_minutes": 30,
+        "action": "view_dashboard",
+        "location": "London",
+        "ip": "203.0.113.18"
+      }
+    ],
+    "label": "anomaly",
+    "category": "impossible_travel",
+    "explanation": "Two distant login locations occurred too close in time for legitimate travel.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.1,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8264",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1550",
+    "events": [
+      {
+        "user_id": "user-1550",
+        "timestamp": "2026-04-02T00:46:44.253626Z",
+        "offset_minutes": 14,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.177"
+      },
+      {
+        "user_id": "user-1550",
+        "timestamp": "2026-04-02T01:16:44.253626Z",
+        "offset_minutes": 44,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.231"
+      },
+      {
+        "user_id": "user-1550",
+        "timestamp": "2026-04-02T01:31:44.253626Z",
+        "offset_minutes": 59,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.50"
+      },
+      {
+        "user_id": "user-1550",
+        "timestamp": "2026-04-02T01:55:44.253626Z",
+        "offset_minutes": 83,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.202"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0482,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-1550",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8142",
+    "events": [
+      {
+        "user_id": "user-8142",
+        "timestamp": "2026-04-02T19:43:44.253657Z",
+        "offset_minutes": 11,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.224"
+      },
+      {
+        "user_id": "user-8142",
+        "timestamp": "2026-04-02T19:52:44.253657Z",
+        "offset_minutes": 20,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.207"
+      },
+      {
+        "user_id": "user-8142",
+        "timestamp": "2026-04-02T20:00:44.253657Z",
+        "offset_minutes": 28,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.36"
+      },
+      {
+        "user_id": "user-8142",
+        "timestamp": "2026-04-02T20:29:44.253657Z",
+        "offset_minutes": 57,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.59"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0702,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8142",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6868",
+    "events": [
+      {
+        "user_id": "user-6868",
+        "timestamp": "2026-04-02T00:32:44.253691Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.52"
+      },
+      {
+        "user_id": "user-6868",
+        "timestamp": "2026-04-02T07:32:44.253691Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.18"
+      },
+      {
+        "user_id": "user-6868",
+        "timestamp": "2026-04-02T07:42:44.253691Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "London",
+        "ip": "203.0.113.250"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6868",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9207",
+    "events": [
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:34:44.253717Z",
+        "offset_minutes": 2,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.139"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:36:44.253717Z",
+        "offset_minutes": 4,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.241"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:37:44.253717Z",
+        "offset_minutes": 5,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.74"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:38:44.253717Z",
+        "offset_minutes": 6,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.9"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:39:44.253717Z",
+        "offset_minutes": 7,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.189"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:41:44.253717Z",
+        "offset_minutes": 9,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.225"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:42:44.253717Z",
+        "offset_minutes": 10,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.39"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:43:44.253717Z",
+        "offset_minutes": 11,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.136"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:44:44.253717Z",
+        "offset_minutes": 12,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.185"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:46:44.253717Z",
+        "offset_minutes": 14,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.43"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:48:44.253717Z",
+        "offset_minutes": 16,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.65"
+      },
+      {
+        "user_id": "user-9207",
+        "timestamp": "2026-04-04T07:50:44.253717Z",
+        "offset_minutes": 18,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.111"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9207",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4159",
+    "events": [
+      {
+        "user_id": "user-4159",
+        "timestamp": "2026-04-03T12:49:44.253801Z",
+        "offset_minutes": 17,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.177"
+      },
+      {
+        "user_id": "user-4159",
+        "timestamp": "2026-04-03T13:05:44.253801Z",
+        "offset_minutes": 33,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.232"
+      },
+      {
+        "user_id": "user-4159",
+        "timestamp": "2026-04-03T13:35:44.253801Z",
+        "offset_minutes": 63,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.98"
+      },
+      {
+        "user_id": "user-4159",
+        "timestamp": "2026-04-03T13:46:44.253801Z",
+        "offset_minutes": 74,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.159"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0541,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4159",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3987",
+    "events": [
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:34:44.253835Z",
+        "offset_minutes": 2,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.218"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:36:44.253835Z",
+        "offset_minutes": 4,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.111"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:38:44.253835Z",
+        "offset_minutes": 6,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.173"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:39:44.253835Z",
+        "offset_minutes": 7,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.95"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:40:44.253835Z",
+        "offset_minutes": 8,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.125"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:41:44.253835Z",
+        "offset_minutes": 9,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.141"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:42:44.253835Z",
+        "offset_minutes": 10,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.215"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:44:44.253835Z",
+        "offset_minutes": 12,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.220"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:46:44.253835Z",
+        "offset_minutes": 14,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.191"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:47:44.253835Z",
+        "offset_minutes": 15,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.62"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:49:44.253835Z",
+        "offset_minutes": 17,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.137"
+      },
+      {
+        "user_id": "user-3987",
+        "timestamp": "2026-04-03T07:50:44.253835Z",
+        "offset_minutes": 18,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.116"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3987",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4802",
+    "events": [
+      {
+        "user_id": "user-4802",
+        "timestamp": "2026-04-02T05:00:44.253921Z",
+        "offset_minutes": 28,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.123"
+      },
+      {
+        "user_id": "user-4802",
+        "timestamp": "2026-04-02T05:26:44.253921Z",
+        "offset_minutes": 54,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.105"
+      },
+      {
+        "user_id": "user-4802",
+        "timestamp": "2026-04-02T05:41:44.253921Z",
+        "offset_minutes": 69,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.33"
+      },
+      {
+        "user_id": "user-4802",
+        "timestamp": "2026-04-02T05:56:44.253921Z",
+        "offset_minutes": 84,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.249"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0476,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4802",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5210",
+    "events": [
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:34:44.253955Z",
+        "offset_minutes": 2,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.170"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:36:44.253955Z",
+        "offset_minutes": 4,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.66"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:38:44.253955Z",
+        "offset_minutes": 6,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.7"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:39:44.253955Z",
+        "offset_minutes": 7,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.198"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:40:44.253955Z",
+        "offset_minutes": 8,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.184"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:41:44.253955Z",
+        "offset_minutes": 9,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.24"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:42:44.253955Z",
+        "offset_minutes": 10,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.49"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:44:44.253955Z",
+        "offset_minutes": 12,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.44"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:45:44.253955Z",
+        "offset_minutes": 13,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.63"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:46:44.253955Z",
+        "offset_minutes": 14,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.253"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:47:44.253955Z",
+        "offset_minutes": 15,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.203"
+      },
+      {
+        "user_id": "user-5210",
+        "timestamp": "2026-04-03T21:49:44.253955Z",
+        "offset_minutes": 17,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.182"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.7059,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5210",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-2809",
+    "events": [
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:33:44.254042Z",
+        "offset_minutes": 1,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.71"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:35:44.254042Z",
+        "offset_minutes": 3,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.82"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:37:44.254042Z",
+        "offset_minutes": 5,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.191"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:38:44.254042Z",
+        "offset_minutes": 6,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.78"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:40:44.254042Z",
+        "offset_minutes": 8,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.116"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:42:44.254042Z",
+        "offset_minutes": 10,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.202"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:44:44.254042Z",
+        "offset_minutes": 12,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.121"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:45:44.254042Z",
+        "offset_minutes": 13,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.234"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:47:44.254042Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.122"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:49:44.254042Z",
+        "offset_minutes": 17,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.13"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:50:44.254042Z",
+        "offset_minutes": 18,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.107"
+      },
+      {
+        "user_id": "user-2809",
+        "timestamp": "2026-04-03T11:51:44.254042Z",
+        "offset_minutes": 19,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.22"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6316,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-2809",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-2951",
+    "events": [
+      {
+        "user_id": "user-2951",
+        "timestamp": "2026-04-03T20:52:44.254126Z",
+        "offset_minutes": 20,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.248"
+      },
+      {
+        "user_id": "user-2951",
+        "timestamp": "2026-04-03T21:22:44.254126Z",
+        "offset_minutes": 50,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.116"
+      },
+      {
+        "user_id": "user-2951",
+        "timestamp": "2026-04-03T21:40:44.254126Z",
+        "offset_minutes": 68,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.63"
+      },
+      {
+        "user_id": "user-2951",
+        "timestamp": "2026-04-03T21:58:44.254126Z",
+        "offset_minutes": 86,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.202"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0465,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-2951",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9986",
+    "events": [
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:34:44.254160Z",
+        "offset_minutes": 2,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.156"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:35:44.254160Z",
+        "offset_minutes": 3,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.34"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:36:44.254160Z",
+        "offset_minutes": 4,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.52"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:38:44.254160Z",
+        "offset_minutes": 6,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.161"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:40:44.254160Z",
+        "offset_minutes": 8,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.211"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:41:44.254160Z",
+        "offset_minutes": 9,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.249"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:43:44.254160Z",
+        "offset_minutes": 11,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.60"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:45:44.254160Z",
+        "offset_minutes": 13,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.6"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:46:44.254160Z",
+        "offset_minutes": 14,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.112"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:47:44.254160Z",
+        "offset_minutes": 15,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.142"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:49:44.254160Z",
+        "offset_minutes": 17,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.60"
+      },
+      {
+        "user_id": "user-9986",
+        "timestamp": "2026-04-04T12:51:44.254160Z",
+        "offset_minutes": 19,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.20"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6316,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9986",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3981",
+    "events": [
+      {
+        "user_id": "user-3981",
+        "timestamp": "2026-04-03T18:57:44.254244Z",
+        "offset_minutes": 25,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.29"
+      },
+      {
+        "user_id": "user-3981",
+        "timestamp": "2026-04-03T19:22:44.254244Z",
+        "offset_minutes": 50,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.25"
+      },
+      {
+        "user_id": "user-3981",
+        "timestamp": "2026-04-03T19:43:44.254244Z",
+        "offset_minutes": 71,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.249"
+      },
+      {
+        "user_id": "user-3981",
+        "timestamp": "2026-04-03T20:12:44.254244Z",
+        "offset_minutes": 100,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.242"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.04,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3981",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3136",
+    "events": [
+      {
+        "user_id": "user-3136",
+        "timestamp": "2026-04-04T03:32:44.254278Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.51"
+      },
+      {
+        "user_id": "user-3136",
+        "timestamp": "2026-04-04T10:32:44.254278Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.63"
+      },
+      {
+        "user_id": "user-3136",
+        "timestamp": "2026-04-04T10:42:44.254278Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "London",
+        "ip": "203.0.113.105"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3136",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4488",
+    "events": [
+      {
+        "user_id": "user-4488",
+        "timestamp": "2026-04-02T22:47:44.254305Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.144"
+      },
+      {
+        "user_id": "user-4488",
+        "timestamp": "2026-04-02T23:02:44.254305Z",
+        "offset_minutes": 30,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.247"
+      },
+      {
+        "user_id": "user-4488",
+        "timestamp": "2026-04-02T23:17:44.254305Z",
+        "offset_minutes": 45,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.159"
+      },
+      {
+        "user_id": "user-4488",
+        "timestamp": "2026-04-02T23:35:44.254305Z",
+        "offset_minutes": 63,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.191"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0635,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4488",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5971",
+    "events": [
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:34:44.254339Z",
+        "offset_minutes": 2,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.208"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:35:44.254339Z",
+        "offset_minutes": 3,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.214"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:36:44.254339Z",
+        "offset_minutes": 4,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.183"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:38:44.254339Z",
+        "offset_minutes": 6,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.164"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:39:44.254339Z",
+        "offset_minutes": 7,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.254"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:41:44.254339Z",
+        "offset_minutes": 9,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.161"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:43:44.254339Z",
+        "offset_minutes": 11,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.105"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:45:44.254339Z",
+        "offset_minutes": 13,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.172"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:46:44.254339Z",
+        "offset_minutes": 14,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.212"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:48:44.254339Z",
+        "offset_minutes": 16,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.88"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:49:44.254339Z",
+        "offset_minutes": 17,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.36"
+      },
+      {
+        "user_id": "user-5971",
+        "timestamp": "2026-04-03T17:50:44.254339Z",
+        "offset_minutes": 18,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.22"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5971",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3428",
+    "events": [
+      {
+        "user_id": "user-3428",
+        "timestamp": "2026-04-03T09:53:44.254424Z",
+        "offset_minutes": 21,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.68"
+      },
+      {
+        "user_id": "user-3428",
+        "timestamp": "2026-04-03T10:14:44.254424Z",
+        "offset_minutes": 42,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.127"
+      },
+      {
+        "user_id": "user-3428",
+        "timestamp": "2026-04-03T10:33:44.254424Z",
+        "offset_minutes": 61,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.8"
+      },
+      {
+        "user_id": "user-3428",
+        "timestamp": "2026-04-03T10:43:44.254424Z",
+        "offset_minutes": 71,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.221"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0563,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3428",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3167",
+    "events": [
+      {
+        "user_id": "user-3167",
+        "timestamp": "2026-04-03T19:47:44.254457Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.97"
+      },
+      {
+        "user_id": "user-3167",
+        "timestamp": "2026-04-03T19:56:44.254457Z",
+        "offset_minutes": 24,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.59"
+      },
+      {
+        "user_id": "user-3167",
+        "timestamp": "2026-04-03T20:26:44.254457Z",
+        "offset_minutes": 54,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.42"
+      },
+      {
+        "user_id": "user-3167",
+        "timestamp": "2026-04-03T20:56:44.254457Z",
+        "offset_minutes": 84,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.67"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0476,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3167",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9995",
+    "events": [
+      {
+        "user_id": "user-9995",
+        "timestamp": "2026-04-04T02:47:44.254488Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.71"
+      },
+      {
+        "user_id": "user-9995",
+        "timestamp": "2026-04-04T03:10:44.254488Z",
+        "offset_minutes": 38,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.55"
+      },
+      {
+        "user_id": "user-9995",
+        "timestamp": "2026-04-04T03:35:44.254488Z",
+        "offset_minutes": 63,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.14"
+      },
+      {
+        "user_id": "user-9995",
+        "timestamp": "2026-04-04T03:51:44.254488Z",
+        "offset_minutes": 79,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.81"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0506,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9995",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8742",
+    "events": [
+      {
+        "user_id": "user-8742",
+        "timestamp": "2026-04-04T20:32:44.254521Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.154"
+      },
+      {
+        "user_id": "user-8742",
+        "timestamp": "2026-04-04T20:35:44.254521Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "San Francisco",
+        "ip": "198.51.102.103"
+      },
+      {
+        "user_id": "user-8742",
+        "timestamp": "2026-04-04T20:38:44.254521Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "San Francisco",
+        "ip": "198.51.102.113"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-8742",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6235",
+    "events": [
+      {
+        "user_id": "user-6235",
+        "timestamp": "2026-04-04T11:49:44.254545Z",
+        "offset_minutes": 17,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.168"
+      },
+      {
+        "user_id": "user-6235",
+        "timestamp": "2026-04-04T11:59:44.254545Z",
+        "offset_minutes": 27,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.19"
+      },
+      {
+        "user_id": "user-6235",
+        "timestamp": "2026-04-04T12:16:44.254545Z",
+        "offset_minutes": 44,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.186"
+      },
+      {
+        "user_id": "user-6235",
+        "timestamp": "2026-04-04T12:38:44.254545Z",
+        "offset_minutes": 66,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.70"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0606,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6235",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5508",
+    "events": [
+      {
+        "user_id": "user-5508",
+        "timestamp": "2026-04-04T18:46:44.254577Z",
+        "offset_minutes": 14,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.221"
+      },
+      {
+        "user_id": "user-5508",
+        "timestamp": "2026-04-04T19:10:44.254577Z",
+        "offset_minutes": 38,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.254"
+      },
+      {
+        "user_id": "user-5508",
+        "timestamp": "2026-04-04T19:24:44.254577Z",
+        "offset_minutes": 52,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.52"
+      },
+      {
+        "user_id": "user-5508",
+        "timestamp": "2026-04-04T19:53:44.254577Z",
+        "offset_minutes": 81,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.215"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0494,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5508",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1587",
+    "events": [
+      {
+        "user_id": "user-1587",
+        "timestamp": "2026-04-04T10:00:44.254608Z",
+        "offset_minutes": 28,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.138"
+      },
+      {
+        "user_id": "user-1587",
+        "timestamp": "2026-04-04T10:16:44.254608Z",
+        "offset_minutes": 44,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.67"
+      },
+      {
+        "user_id": "user-1587",
+        "timestamp": "2026-04-04T10:32:44.254608Z",
+        "offset_minutes": 60,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.86"
+      },
+      {
+        "user_id": "user-1587",
+        "timestamp": "2026-04-04T10:45:44.254608Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.222"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-1587",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4302",
+    "events": [
+      {
+        "user_id": "user-4302",
+        "timestamp": "2026-04-02T15:55:44.254640Z",
+        "offset_minutes": 23,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.209"
+      },
+      {
+        "user_id": "user-4302",
+        "timestamp": "2026-04-02T16:07:44.254640Z",
+        "offset_minutes": 35,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.21"
+      },
+      {
+        "user_id": "user-4302",
+        "timestamp": "2026-04-02T16:19:44.254640Z",
+        "offset_minutes": 47,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.27"
+      },
+      {
+        "user_id": "user-4302",
+        "timestamp": "2026-04-02T16:30:44.254640Z",
+        "offset_minutes": 58,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.112"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.069,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4302",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8637",
+    "events": [
+      {
+        "user_id": "user-8637",
+        "timestamp": "2026-04-04T17:52:44.254671Z",
+        "offset_minutes": 20,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.19"
+      },
+      {
+        "user_id": "user-8637",
+        "timestamp": "2026-04-04T18:11:44.254671Z",
+        "offset_minutes": 39,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.129"
+      },
+      {
+        "user_id": "user-8637",
+        "timestamp": "2026-04-04T18:19:44.254671Z",
+        "offset_minutes": 47,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.233"
+      },
+      {
+        "user_id": "user-8637",
+        "timestamp": "2026-04-04T18:40:44.254671Z",
+        "offset_minutes": 68,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.16"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0588,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8637",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7368",
+    "events": [
+      {
+        "user_id": "user-7368",
+        "timestamp": "2026-04-04T16:47:44.254702Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.168"
+      },
+      {
+        "user_id": "user-7368",
+        "timestamp": "2026-04-04T17:08:44.254702Z",
+        "offset_minutes": 36,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.83"
+      },
+      {
+        "user_id": "user-7368",
+        "timestamp": "2026-04-04T17:36:44.254702Z",
+        "offset_minutes": 64,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.133"
+      },
+      {
+        "user_id": "user-7368",
+        "timestamp": "2026-04-04T17:52:44.254702Z",
+        "offset_minutes": 80,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.204"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.05,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-7368",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9779",
+    "events": [
+      {
+        "user_id": "user-9779",
+        "timestamp": "2026-04-03T15:46:44.254733Z",
+        "offset_minutes": 14,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.119"
+      },
+      {
+        "user_id": "user-9779",
+        "timestamp": "2026-04-03T15:55:44.254733Z",
+        "offset_minutes": 23,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.46"
+      },
+      {
+        "user_id": "user-9779",
+        "timestamp": "2026-04-03T16:19:44.254733Z",
+        "offset_minutes": 47,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.194"
+      },
+      {
+        "user_id": "user-9779",
+        "timestamp": "2026-04-03T16:45:44.254733Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.37"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9779",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8283",
+    "events": [
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:33:44.254766Z",
+        "offset_minutes": 1,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.151"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:34:44.254766Z",
+        "offset_minutes": 2,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.189"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:35:44.254766Z",
+        "offset_minutes": 3,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.206"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:37:44.254766Z",
+        "offset_minutes": 5,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.131"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:38:44.254766Z",
+        "offset_minutes": 6,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.173"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:40:44.254766Z",
+        "offset_minutes": 8,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.240"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:42:44.254766Z",
+        "offset_minutes": 10,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.98"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:43:44.254766Z",
+        "offset_minutes": 11,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.221"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:45:44.254766Z",
+        "offset_minutes": 13,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.95"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:47:44.254766Z",
+        "offset_minutes": 15,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.77"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:48:44.254766Z",
+        "offset_minutes": 16,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.35"
+      },
+      {
+        "user_id": "user-8283",
+        "timestamp": "2026-04-03T19:50:44.254766Z",
+        "offset_minutes": 18,
+        "action": "update_profile",
+        "location": "Chicago",
+        "ip": "198.51.100.111"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8283",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9291",
+    "events": [
+      {
+        "user_id": "user-9291",
+        "timestamp": "2026-04-03T17:32:44.254852Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.47"
+      },
+      {
+        "user_id": "user-9291",
+        "timestamp": "2026-04-04T00:32:44.254852Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "Singapore",
+        "ip": "203.0.114.104"
+      },
+      {
+        "user_id": "user-9291",
+        "timestamp": "2026-04-04T00:42:44.254852Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "Singapore",
+        "ip": "203.0.114.72"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9291",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4501",
+    "events": [
+      {
+        "user_id": "user-4501",
+        "timestamp": "2026-04-03T01:44:44.254877Z",
+        "offset_minutes": 12,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.105"
+      },
+      {
+        "user_id": "user-4501",
+        "timestamp": "2026-04-03T01:58:44.254877Z",
+        "offset_minutes": 26,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.107"
+      },
+      {
+        "user_id": "user-4501",
+        "timestamp": "2026-04-03T02:08:44.254877Z",
+        "offset_minutes": 36,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.112"
+      },
+      {
+        "user_id": "user-4501",
+        "timestamp": "2026-04-03T02:22:44.254877Z",
+        "offset_minutes": 50,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.182"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.08,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4501",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8295",
+    "events": [
+      {
+        "user_id": "user-8295",
+        "timestamp": "2026-04-04T03:41:44.254910Z",
+        "offset_minutes": 9,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.220"
+      },
+      {
+        "user_id": "user-8295",
+        "timestamp": "2026-04-04T03:49:44.254910Z",
+        "offset_minutes": 17,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.6"
+      },
+      {
+        "user_id": "user-8295",
+        "timestamp": "2026-04-04T04:16:44.254910Z",
+        "offset_minutes": 44,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.155"
+      },
+      {
+        "user_id": "user-8295",
+        "timestamp": "2026-04-04T04:38:44.254910Z",
+        "offset_minutes": 66,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.238"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0606,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8295",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5470",
+    "events": [
+      {
+        "user_id": "user-5470",
+        "timestamp": "2026-04-02T16:48:44.254984Z",
+        "offset_minutes": 16,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.61"
+      },
+      {
+        "user_id": "user-5470",
+        "timestamp": "2026-04-02T17:01:44.254984Z",
+        "offset_minutes": 29,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.210"
+      },
+      {
+        "user_id": "user-5470",
+        "timestamp": "2026-04-02T17:27:44.254984Z",
+        "offset_minutes": 55,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.250"
+      },
+      {
+        "user_id": "user-5470",
+        "timestamp": "2026-04-02T17:45:44.254984Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.33"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5470",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5843",
+    "events": [
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:34:44.255017Z",
+        "offset_minutes": 2,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.68"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:35:44.255017Z",
+        "offset_minutes": 3,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.247"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:37:44.255017Z",
+        "offset_minutes": 5,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.214"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:39:44.255017Z",
+        "offset_minutes": 7,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.157"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:40:44.255017Z",
+        "offset_minutes": 8,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.38"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:41:44.255017Z",
+        "offset_minutes": 9,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.232"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:42:44.255017Z",
+        "offset_minutes": 10,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.219"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:43:44.255017Z",
+        "offset_minutes": 11,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.208"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:45:44.255017Z",
+        "offset_minutes": 13,
+        "action": "update_profile",
+        "location": "New York",
+        "ip": "198.51.101.147"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:47:44.255017Z",
+        "offset_minutes": 15,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.246"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:48:44.255017Z",
+        "offset_minutes": 16,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.4"
+      },
+      {
+        "user_id": "user-5843",
+        "timestamp": "2026-04-03T11:50:44.255017Z",
+        "offset_minutes": 18,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.68"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.6667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5843",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8692",
+    "events": [
+      {
+        "user_id": "user-8692",
+        "timestamp": "2026-04-04T19:47:44.255103Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.18"
+      },
+      {
+        "user_id": "user-8692",
+        "timestamp": "2026-04-04T20:13:44.255103Z",
+        "offset_minutes": 41,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.189"
+      },
+      {
+        "user_id": "user-8692",
+        "timestamp": "2026-04-04T20:26:44.255103Z",
+        "offset_minutes": 54,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.205"
+      },
+      {
+        "user_id": "user-8692",
+        "timestamp": "2026-04-04T20:42:44.255103Z",
+        "offset_minutes": 70,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.74"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0571,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8692",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4940",
+    "events": [
+      {
+        "user_id": "user-4940",
+        "timestamp": "2026-04-03T15:32:44.255136Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.163"
+      },
+      {
+        "user_id": "user-4940",
+        "timestamp": "2026-04-03T15:57:44.255136Z",
+        "offset_minutes": 25,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.174"
+      },
+      {
+        "user_id": "user-4940",
+        "timestamp": "2026-04-03T16:02:44.255136Z",
+        "offset_minutes": 30,
+        "action": "view_dashboard",
+        "location": "London",
+        "ip": "203.0.113.24"
+      }
+    ],
+    "label": "anomaly",
+    "category": "impossible_travel",
+    "explanation": "Two distant login locations occurred too close in time for legitimate travel.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.1,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4940",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9728",
+    "events": [
+      {
+        "user_id": "user-9728",
+        "timestamp": "2026-04-04T13:41:44.255160Z",
+        "offset_minutes": 9,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.247"
+      },
+      {
+        "user_id": "user-9728",
+        "timestamp": "2026-04-04T13:55:44.255160Z",
+        "offset_minutes": 23,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.178"
+      },
+      {
+        "user_id": "user-9728",
+        "timestamp": "2026-04-04T14:16:44.255160Z",
+        "offset_minutes": 44,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.242"
+      },
+      {
+        "user_id": "user-9728",
+        "timestamp": "2026-04-04T14:27:44.255160Z",
+        "offset_minutes": 55,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.191"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0727,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9728",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1686",
+    "events": [
+      {
+        "user_id": "user-1686",
+        "timestamp": "2026-04-02T06:32:44.255193Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.100"
+      },
+      {
+        "user_id": "user-1686",
+        "timestamp": "2026-04-02T06:35:44.255193Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "San Francisco",
+        "ip": "198.51.102.215"
+      },
+      {
+        "user_id": "user-1686",
+        "timestamp": "2026-04-02T06:38:44.255193Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "San Francisco",
+        "ip": "198.51.102.195"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-1686",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3157",
+    "events": [
+      {
+        "user_id": "user-3157",
+        "timestamp": "2026-04-02T13:45:44.255216Z",
+        "offset_minutes": 13,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.175"
+      },
+      {
+        "user_id": "user-3157",
+        "timestamp": "2026-04-02T14:15:44.255216Z",
+        "offset_minutes": 43,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.12"
+      },
+      {
+        "user_id": "user-3157",
+        "timestamp": "2026-04-02T14:30:44.255216Z",
+        "offset_minutes": 58,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.91"
+      },
+      {
+        "user_id": "user-3157",
+        "timestamp": "2026-04-02T14:43:44.255216Z",
+        "offset_minutes": 71,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.56"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0563,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3157",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1453",
+    "events": [
+      {
+        "user_id": "user-1453",
+        "timestamp": "2026-04-02T14:44:44.255248Z",
+        "offset_minutes": 12,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.140"
+      },
+      {
+        "user_id": "user-1453",
+        "timestamp": "2026-04-02T15:08:44.255248Z",
+        "offset_minutes": 36,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.220"
+      },
+      {
+        "user_id": "user-1453",
+        "timestamp": "2026-04-02T15:32:44.255248Z",
+        "offset_minutes": 60,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.171"
+      },
+      {
+        "user_id": "user-1453",
+        "timestamp": "2026-04-02T15:45:44.255248Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.163"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-1453",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7737",
+    "events": [
+      {
+        "user_id": "user-7737",
+        "timestamp": "2026-04-03T13:50:44.255280Z",
+        "offset_minutes": 18,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.198"
+      },
+      {
+        "user_id": "user-7737",
+        "timestamp": "2026-04-03T14:01:44.255280Z",
+        "offset_minutes": 29,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.123"
+      },
+      {
+        "user_id": "user-7737",
+        "timestamp": "2026-04-03T14:14:44.255280Z",
+        "offset_minutes": 42,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.121"
+      },
+      {
+        "user_id": "user-7737",
+        "timestamp": "2026-04-03T14:38:44.255280Z",
+        "offset_minutes": 66,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.46"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0606,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-7737",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9695",
+    "events": [
+      {
+        "user_id": "user-9695",
+        "timestamp": "2026-04-04T05:51:44.255311Z",
+        "offset_minutes": 19,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.83"
+      },
+      {
+        "user_id": "user-9695",
+        "timestamp": "2026-04-04T06:10:44.255311Z",
+        "offset_minutes": 38,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.6"
+      },
+      {
+        "user_id": "user-9695",
+        "timestamp": "2026-04-04T06:26:44.255311Z",
+        "offset_minutes": 54,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.249"
+      },
+      {
+        "user_id": "user-9695",
+        "timestamp": "2026-04-04T06:36:44.255311Z",
+        "offset_minutes": 64,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.203"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0625,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9695",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5951",
+    "events": [
+      {
+        "user_id": "user-5951",
+        "timestamp": "2026-04-02T18:43:44.255343Z",
+        "offset_minutes": 11,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.245"
+      },
+      {
+        "user_id": "user-5951",
+        "timestamp": "2026-04-02T18:57:44.255343Z",
+        "offset_minutes": 25,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.22"
+      },
+      {
+        "user_id": "user-5951",
+        "timestamp": "2026-04-02T19:18:44.255343Z",
+        "offset_minutes": 46,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.83"
+      },
+      {
+        "user_id": "user-5951",
+        "timestamp": "2026-04-02T19:44:44.255343Z",
+        "offset_minutes": 72,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.213"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0556,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5951",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6225",
+    "events": [
+      {
+        "user_id": "user-6225",
+        "timestamp": "2026-04-02T01:32:44.255889Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.161"
+      },
+      {
+        "user_id": "user-6225",
+        "timestamp": "2026-04-02T08:32:44.255889Z",
+        "offset_minutes": 420,
+        "action": "login",
+        "location": "Singapore",
+        "ip": "203.0.114.27"
+      },
+      {
+        "user_id": "user-6225",
+        "timestamp": "2026-04-02T08:42:44.255889Z",
+        "offset_minutes": 430,
+        "action": "download_report",
+        "location": "Singapore",
+        "ip": "203.0.114.113"
+      }
+    ],
+    "label": "anomaly",
+    "category": "new_geo",
+    "explanation": "User logged in from a new geography outside their historical baseline.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.007,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6225",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9362",
+    "events": [
+      {
+        "user_id": "user-9362",
+        "timestamp": "2026-04-02T20:45:44.255923Z",
+        "offset_minutes": 13,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.104"
+      },
+      {
+        "user_id": "user-9362",
+        "timestamp": "2026-04-02T21:00:44.255923Z",
+        "offset_minutes": 28,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.241"
+      },
+      {
+        "user_id": "user-9362",
+        "timestamp": "2026-04-02T21:30:44.255923Z",
+        "offset_minutes": 58,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.232"
+      },
+      {
+        "user_id": "user-9362",
+        "timestamp": "2026-04-02T21:40:44.255923Z",
+        "offset_minutes": 68,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.11"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0588,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9362",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8912",
+    "events": [
+      {
+        "user_id": "user-8912",
+        "timestamp": "2026-04-04T23:41:44.255958Z",
+        "offset_minutes": 9,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.66"
+      },
+      {
+        "user_id": "user-8912",
+        "timestamp": "2026-04-04T23:53:44.255958Z",
+        "offset_minutes": 21,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.223"
+      },
+      {
+        "user_id": "user-8912",
+        "timestamp": "2026-04-05T00:07:44.255958Z",
+        "offset_minutes": 35,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.195"
+      },
+      {
+        "user_id": "user-8912",
+        "timestamp": "2026-04-05T00:16:44.255958Z",
+        "offset_minutes": 44,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.2"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0909,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8912",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5651",
+    "events": [
+      {
+        "user_id": "user-5651",
+        "timestamp": "2026-04-03T04:32:44.255992Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.156"
+      },
+      {
+        "user_id": "user-5651",
+        "timestamp": "2026-04-03T04:35:44.255992Z",
+        "offset_minutes": 3,
+        "action": "grant_admin_role",
+        "location": "San Francisco",
+        "ip": "198.51.102.150"
+      },
+      {
+        "user_id": "user-5651",
+        "timestamp": "2026-04-03T04:38:44.255992Z",
+        "offset_minutes": 6,
+        "action": "disable_mfa",
+        "location": "San Francisco",
+        "ip": "198.51.102.157"
+      }
+    ],
+    "label": "anomaly",
+    "category": "privilege_escalation",
+    "explanation": "User attempts privileged actions without matching role history.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 1,
+      "action_velocity": 0.5,
+      "contains_admin_action": true
+    },
+    "metadata": {
+      "user_id": "user-5651",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9886",
+    "events": [
+      {
+        "user_id": "user-9886",
+        "timestamp": "2026-04-03T23:45:44.256016Z",
+        "offset_minutes": 13,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.36"
+      },
+      {
+        "user_id": "user-9886",
+        "timestamp": "2026-04-03T23:53:44.256016Z",
+        "offset_minutes": 21,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.28"
+      },
+      {
+        "user_id": "user-9886",
+        "timestamp": "2026-04-04T00:08:44.256016Z",
+        "offset_minutes": 36,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.42"
+      },
+      {
+        "user_id": "user-9886",
+        "timestamp": "2026-04-04T00:19:44.256016Z",
+        "offset_minutes": 47,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.131"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0851,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9886",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-9026",
+    "events": [
+      {
+        "user_id": "user-9026",
+        "timestamp": "2026-04-04T12:47:44.256049Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.41"
+      },
+      {
+        "user_id": "user-9026",
+        "timestamp": "2026-04-04T13:08:44.256049Z",
+        "offset_minutes": 36,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.17"
+      },
+      {
+        "user_id": "user-9026",
+        "timestamp": "2026-04-04T13:37:44.256049Z",
+        "offset_minutes": 65,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.183"
+      },
+      {
+        "user_id": "user-9026",
+        "timestamp": "2026-04-04T13:57:44.256049Z",
+        "offset_minutes": 85,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.100"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0471,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-9026",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4163",
+    "events": [
+      {
+        "user_id": "user-4163",
+        "timestamp": "2026-04-04T05:32:44.256081Z",
+        "offset_minutes": 0,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.148"
+      },
+      {
+        "user_id": "user-4163",
+        "timestamp": "2026-04-04T05:57:44.256081Z",
+        "offset_minutes": 25,
+        "action": "login",
+        "location": "London",
+        "ip": "203.0.113.197"
+      },
+      {
+        "user_id": "user-4163",
+        "timestamp": "2026-04-04T06:02:44.256081Z",
+        "offset_minutes": 30,
+        "action": "view_dashboard",
+        "location": "London",
+        "ip": "203.0.113.254"
+      }
+    ],
+    "label": "anomaly",
+    "category": "impossible_travel",
+    "explanation": "Two distant login locations occurred too close in time for legitimate travel.",
+    "features": {
+      "event_count": 3,
+      "distinct_locations": 2,
+      "action_velocity": 0.1,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4163",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4049",
+    "events": [
+      {
+        "user_id": "user-4049",
+        "timestamp": "2026-04-03T01:48:44.256106Z",
+        "offset_minutes": 16,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.159"
+      },
+      {
+        "user_id": "user-4049",
+        "timestamp": "2026-04-03T02:08:44.256106Z",
+        "offset_minutes": 36,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.42"
+      },
+      {
+        "user_id": "user-4049",
+        "timestamp": "2026-04-03T02:38:44.256106Z",
+        "offset_minutes": 66,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.156"
+      },
+      {
+        "user_id": "user-4049",
+        "timestamp": "2026-04-03T02:59:44.256106Z",
+        "offset_minutes": 87,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.134"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.046,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4049",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7875",
+    "events": [
+      {
+        "user_id": "user-7875",
+        "timestamp": "2026-04-02T20:40:44.256200Z",
+        "offset_minutes": 8,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.227"
+      },
+      {
+        "user_id": "user-7875",
+        "timestamp": "2026-04-02T20:56:44.256200Z",
+        "offset_minutes": 24,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.76"
+      },
+      {
+        "user_id": "user-7875",
+        "timestamp": "2026-04-02T21:21:44.256200Z",
+        "offset_minutes": 49,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.180"
+      },
+      {
+        "user_id": "user-7875",
+        "timestamp": "2026-04-02T21:32:44.256200Z",
+        "offset_minutes": 60,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.33"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0667,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-7875",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8888",
+    "events": [
+      {
+        "user_id": "user-8888",
+        "timestamp": "2026-04-02T18:49:44.256232Z",
+        "offset_minutes": 17,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.83"
+      },
+      {
+        "user_id": "user-8888",
+        "timestamp": "2026-04-02T19:01:44.256232Z",
+        "offset_minutes": 29,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.213"
+      },
+      {
+        "user_id": "user-8888",
+        "timestamp": "2026-04-02T19:12:44.256232Z",
+        "offset_minutes": 40,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.8"
+      },
+      {
+        "user_id": "user-8888",
+        "timestamp": "2026-04-02T19:22:44.256232Z",
+        "offset_minutes": 50,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.99"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.08,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8888",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4323",
+    "events": [
+      {
+        "user_id": "user-4323",
+        "timestamp": "2026-04-04T11:42:44.256263Z",
+        "offset_minutes": 10,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.15"
+      },
+      {
+        "user_id": "user-4323",
+        "timestamp": "2026-04-04T12:08:44.256263Z",
+        "offset_minutes": 36,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.76"
+      },
+      {
+        "user_id": "user-4323",
+        "timestamp": "2026-04-04T12:22:44.256263Z",
+        "offset_minutes": 50,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.136"
+      },
+      {
+        "user_id": "user-4323",
+        "timestamp": "2026-04-04T12:45:44.256263Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.72"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4323",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-4139",
+    "events": [
+      {
+        "user_id": "user-4139",
+        "timestamp": "2026-04-04T11:47:44.256296Z",
+        "offset_minutes": 15,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.33"
+      },
+      {
+        "user_id": "user-4139",
+        "timestamp": "2026-04-04T12:06:44.256296Z",
+        "offset_minutes": 34,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.17"
+      },
+      {
+        "user_id": "user-4139",
+        "timestamp": "2026-04-04T12:17:44.256296Z",
+        "offset_minutes": 45,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.113"
+      },
+      {
+        "user_id": "user-4139",
+        "timestamp": "2026-04-04T12:25:44.256296Z",
+        "offset_minutes": 53,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.128"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0755,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-4139",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-1186",
+    "events": [
+      {
+        "user_id": "user-1186",
+        "timestamp": "2026-04-03T04:00:44.256327Z",
+        "offset_minutes": 28,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.165"
+      },
+      {
+        "user_id": "user-1186",
+        "timestamp": "2026-04-03T04:29:44.256327Z",
+        "offset_minutes": 57,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.241"
+      },
+      {
+        "user_id": "user-1186",
+        "timestamp": "2026-04-03T04:47:44.256327Z",
+        "offset_minutes": 75,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.204"
+      },
+      {
+        "user_id": "user-1186",
+        "timestamp": "2026-04-03T05:17:44.256327Z",
+        "offset_minutes": 105,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.149"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0381,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-1186",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-3064",
+    "events": [
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:34:44.256361Z",
+        "offset_minutes": 2,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.19"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:36:44.256361Z",
+        "offset_minutes": 4,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.65"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:38:44.256361Z",
+        "offset_minutes": 6,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.161"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:39:44.256361Z",
+        "offset_minutes": 7,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.76"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:40:44.256361Z",
+        "offset_minutes": 8,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.43"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:42:44.256361Z",
+        "offset_minutes": 10,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.96"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:44:44.256361Z",
+        "offset_minutes": 12,
+        "action": "update_profile",
+        "location": "San Francisco",
+        "ip": "198.51.102.220"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:45:44.256361Z",
+        "offset_minutes": 13,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.75"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:46:44.256361Z",
+        "offset_minutes": 14,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.228"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:47:44.256361Z",
+        "offset_minutes": 15,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.84"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:48:44.256361Z",
+        "offset_minutes": 16,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.11"
+      },
+      {
+        "user_id": "user-3064",
+        "timestamp": "2026-04-04T02:49:44.256361Z",
+        "offset_minutes": 17,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.73"
+      }
+    ],
+    "label": "anomaly",
+    "category": "high_frequency_actions",
+    "explanation": "Session contains an unusual concentration of actions within a short time window.",
+    "features": {
+      "event_count": 12,
+      "distinct_locations": 1,
+      "action_velocity": 0.7059,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-3064",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6821",
+    "events": [
+      {
+        "user_id": "user-6821",
+        "timestamp": "2026-04-02T14:58:44.256446Z",
+        "offset_minutes": 26,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.167"
+      },
+      {
+        "user_id": "user-6821",
+        "timestamp": "2026-04-02T15:16:44.256446Z",
+        "offset_minutes": 44,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.182"
+      },
+      {
+        "user_id": "user-6821",
+        "timestamp": "2026-04-02T15:41:44.256446Z",
+        "offset_minutes": 69,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.137"
+      },
+      {
+        "user_id": "user-6821",
+        "timestamp": "2026-04-02T16:00:44.256446Z",
+        "offset_minutes": 88,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.191"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0455,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6821",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5184",
+    "events": [
+      {
+        "user_id": "user-5184",
+        "timestamp": "2026-04-03T08:58:44.256478Z",
+        "offset_minutes": 26,
+        "action": "login",
+        "location": "Chicago",
+        "ip": "198.51.100.141"
+      },
+      {
+        "user_id": "user-5184",
+        "timestamp": "2026-04-03T09:26:44.256478Z",
+        "offset_minutes": 54,
+        "action": "view_dashboard",
+        "location": "Chicago",
+        "ip": "198.51.100.59"
+      },
+      {
+        "user_id": "user-5184",
+        "timestamp": "2026-04-03T09:38:44.256478Z",
+        "offset_minutes": 66,
+        "action": "download_report",
+        "location": "Chicago",
+        "ip": "198.51.100.194"
+      },
+      {
+        "user_id": "user-5184",
+        "timestamp": "2026-04-03T09:48:44.256478Z",
+        "offset_minutes": 76,
+        "action": "logout",
+        "location": "Chicago",
+        "ip": "198.51.100.205"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0526,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5184",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-2901",
+    "events": [
+      {
+        "user_id": "user-2901",
+        "timestamp": "2026-04-04T09:51:44.256509Z",
+        "offset_minutes": 19,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.142"
+      },
+      {
+        "user_id": "user-2901",
+        "timestamp": "2026-04-04T09:59:44.256509Z",
+        "offset_minutes": 27,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.83"
+      },
+      {
+        "user_id": "user-2901",
+        "timestamp": "2026-04-04T10:22:44.256509Z",
+        "offset_minutes": 50,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.161"
+      },
+      {
+        "user_id": "user-2901",
+        "timestamp": "2026-04-04T10:51:44.256509Z",
+        "offset_minutes": 79,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.237"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0506,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-2901",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-6659",
+    "events": [
+      {
+        "user_id": "user-6659",
+        "timestamp": "2026-04-02T12:48:44.256541Z",
+        "offset_minutes": 16,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.190"
+      },
+      {
+        "user_id": "user-6659",
+        "timestamp": "2026-04-02T13:03:44.256541Z",
+        "offset_minutes": 31,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.13"
+      },
+      {
+        "user_id": "user-6659",
+        "timestamp": "2026-04-02T13:30:44.256541Z",
+        "offset_minutes": 58,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.184"
+      },
+      {
+        "user_id": "user-6659",
+        "timestamp": "2026-04-02T14:00:44.256541Z",
+        "offset_minutes": 88,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.138"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0455,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-6659",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-8060",
+    "events": [
+      {
+        "user_id": "user-8060",
+        "timestamp": "2026-04-02T09:00:44.256576Z",
+        "offset_minutes": 28,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.78"
+      },
+      {
+        "user_id": "user-8060",
+        "timestamp": "2026-04-02T09:09:44.256576Z",
+        "offset_minutes": 37,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.203"
+      },
+      {
+        "user_id": "user-8060",
+        "timestamp": "2026-04-02T09:20:44.256576Z",
+        "offset_minutes": 48,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.82"
+      },
+      {
+        "user_id": "user-8060",
+        "timestamp": "2026-04-02T09:45:44.256576Z",
+        "offset_minutes": 73,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.97"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0548,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-8060",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-7374",
+    "events": [
+      {
+        "user_id": "user-7374",
+        "timestamp": "2026-04-04T06:49:44.256608Z",
+        "offset_minutes": 17,
+        "action": "login",
+        "location": "San Francisco",
+        "ip": "198.51.102.140"
+      },
+      {
+        "user_id": "user-7374",
+        "timestamp": "2026-04-04T07:13:44.256608Z",
+        "offset_minutes": 41,
+        "action": "view_dashboard",
+        "location": "San Francisco",
+        "ip": "198.51.102.243"
+      },
+      {
+        "user_id": "user-7374",
+        "timestamp": "2026-04-04T07:22:44.256608Z",
+        "offset_minutes": 50,
+        "action": "download_report",
+        "location": "San Francisco",
+        "ip": "198.51.102.138"
+      },
+      {
+        "user_id": "user-7374",
+        "timestamp": "2026-04-04T07:34:44.256608Z",
+        "offset_minutes": 62,
+        "action": "logout",
+        "location": "San Francisco",
+        "ip": "198.51.102.206"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0645,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-7374",
+      "source": "synthetic_behavior_engine"
+    }
+  },
+  {
+    "user_id": "user-5050",
+    "events": [
+      {
+        "user_id": "user-5050",
+        "timestamp": "2026-04-02T00:56:44.256639Z",
+        "offset_minutes": 24,
+        "action": "login",
+        "location": "New York",
+        "ip": "198.51.101.52"
+      },
+      {
+        "user_id": "user-5050",
+        "timestamp": "2026-04-02T01:25:44.256639Z",
+        "offset_minutes": 53,
+        "action": "view_dashboard",
+        "location": "New York",
+        "ip": "198.51.101.179"
+      },
+      {
+        "user_id": "user-5050",
+        "timestamp": "2026-04-02T01:40:44.256639Z",
+        "offset_minutes": 68,
+        "action": "download_report",
+        "location": "New York",
+        "ip": "198.51.101.60"
+      },
+      {
+        "user_id": "user-5050",
+        "timestamp": "2026-04-02T02:02:44.256639Z",
+        "offset_minutes": 90,
+        "action": "logout",
+        "location": "New York",
+        "ip": "198.51.101.226"
+      }
+    ],
+    "label": "normal",
+    "category": "normal",
+    "explanation": "Routine user behavior.",
+    "features": {
+      "event_count": 4,
+      "distinct_locations": 1,
+      "action_velocity": 0.0444,
+      "contains_admin_action": false
+    },
+    "metadata": {
+      "user_id": "user-5050",
+      "source": "synthetic_behavior_engine"
+    }
+  }
+]
